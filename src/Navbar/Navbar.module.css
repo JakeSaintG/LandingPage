@@ -1,0 +1,35 @@
+nav {
+    list-style-type: none;
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    box-shadow: 8px 8px 16px #b7c4c7, -8px -8px 16px #f7ffff;
+}
+
+nav::after {
+    color: red; 
+    content: ".";
+    height: 10px;
+    position: absolute;
+}
+
+.nav_item {
+    text-decoration: none;
+    padding: 1rem;
+    margin: 1rem;
+    color: black;
+}
+
+a:active {
+    border-radius: 15px;
+    background: #d7e7ea;
+    box-shadow: inset 8px 8px 16px #b7c4c7, inset -8px -8px 16px #f7ffff;
+}
+
+.socials {
+    margin-left: auto;
+    width: 5%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-decoration: none;
+}
