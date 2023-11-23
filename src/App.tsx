@@ -1,12 +1,18 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Navbar from './Navbar';
+import AboutSection from './AboutSection';
+import ProjectSection from './ProjectSection';
 
 function App() {
   return (
     <div className="App">
       <Navbar />
+      <AboutSection />
+      {/* <ExperienceSection /> */}
+      <ProjectSection />
+      {/* <AwardsSection /> */}
+      {/* <ContactSection /> */}
     </div>
   );
 }

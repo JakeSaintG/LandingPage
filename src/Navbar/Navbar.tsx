@@ -9,35 +9,38 @@ import {
 
 export default function Navbar() {
     return (
-        <>
-            <nav className={styles.nav}>
-                <a className={styles.nav_item} href="#section">
-                    WIP-About
-                </a>
-                <a className={styles.nav_item} href="#section">
-                    WIP-Projects
-                </a>
-                <a className={styles.nav_item} href="#section">
-                    WIP-Awards
-                </a>
-                <a className={styles.nav_item} href="#section">
-                    WIP-Experience
-                </a>
-                <div className={`${styles.nav_item} ${styles.socials}`}>
-                    <a href="https://www.linkedin.com/in/jake-st-germain/">
-                        <FontAwesomeIcon icon={faLinkedinIn} />
-                    </a>
+        <nav className={styles.nav}>
+            <div className={styles.nav_logo}>Logo</div>
+            
+            <a className={styles.nav_item} href="#section">
+                About
+            </a>
+            <a className={styles.nav_item} href="#section">
+                Experience
+            </a>
+            <a className={styles.nav_item} href="#section">
+                Projects
+            </a>
+            <a className={styles.nav_item} href="#section">
+                Awards
+            </a>
+            <a className={styles.nav_item} href="#section">
+                Contact
+            </a>
 
-                    <a href="https://github.com/JakeSaintG">
-                        <FontAwesomeIcon icon={faGithub} />
-                    </a>
+            <div className={styles.socials}>
+                <a href="https://www.linkedin.com/in/jake-st-germain/">
+                    <FontAwesomeIcon icon={faLinkedinIn} />
+                </a>
 
-                    <a href="https://www.tiktok.com/@jakesaintg">
-                        <FontAwesomeIcon icon={faTiktok} />
-                    </a>
-                </div>
-            </nav>
-            <div className=''></div>
-        </>
+                <a href="https://github.com/JakeSaintG">
+                    <FontAwesomeIcon icon={faGithub} />
+                </a>
+
+                <a href="https://www.tiktok.com/@jakesaintg">
+                    <FontAwesomeIcon icon={faTiktok} />
+                </a>
+            </div>
+        </nav>
     )
 }

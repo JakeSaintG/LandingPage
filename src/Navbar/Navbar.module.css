@@ -7,29 +7,47 @@ nav {
 }
 
 nav::after {
-    color: red; 
-    content: ".";
-    height: 10px;
+    content: " ";
+    height: 5px;
     position: absolute;
+    width: 100%;
+    background-color: green;
+    top: 64px;
+}
+
+.nav_logo,
+.nav_item,
+.socials {
+    margin: 5px 1rem 10px 1rem;
+}
+
+.nav_logo {
+    height: 54px;
+    width: 54px;
 }
 
 .nav_item {
     text-decoration: none;
     padding: 1rem;
-    margin: 1rem;
     color: black;
 }
 
-a:active {
+.nav_item:active {
     border-radius: 15px;
     background: #d7e7ea;
     box-shadow: inset 8px 8px 16px #b7c4c7, inset -8px -8px 16px #f7ffff;
 }
 
 .socials {
-    margin-left: auto;
     width: 5%;
     display: grid;
+    padding: 1rem;
     grid-template-columns: 1fr 1fr 1fr;
+    min-width: 3.5rem;
+    margin-left: auto;
+}
+
+.socials a {
     text-decoration: none;
+    color: black;
 }
