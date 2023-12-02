@@ -4,9 +4,9 @@ nav {
     position: relative;
     flex-direction: row;
     box-shadow: 8px 8px 16px #b7c4c7, -8px -8px 16px #f7ffff;
-    background-color: #d7e7ea;
     position: fixed;
     width: 100vw;
+    background-color: #e7e7e7;
 
     /* Margin - offsetting the position: fixed behavior */
     margin-top: calc( -69px + -1rem);
@@ -17,7 +17,7 @@ nav::after {
     height: 5px;
     position: absolute;
     width: 100%;
-    background-color: green;
+    background: linear-gradient(90deg, rgba(119,51,68,1) 0%, rgba(173,116,116,1) 12%, rgba(227,181,164,1) 24%, rgba(236,207,195,1) 36%, rgba(245,233,226,1) 50%, rgba(236,207,195,1) 62%, rgba(227,181,164,1) 74%, rgba(173,116,116,1) 86%, rgba(119,51,68,1) 100%);
     top: 64px;
 }
 

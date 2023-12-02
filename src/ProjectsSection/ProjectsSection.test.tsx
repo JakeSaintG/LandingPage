@@ -1,4 +1,4 @@
-import Navbar from './ProjectSection'
+import Navbar from './ProjectsSection'
 import { render, screen } from '@testing-library/react'
 
 test('renders text from about section', () => {

@@ -12,19 +12,16 @@ export default function Navbar() {
         <nav className={styles.nav}>
             <div className={styles.nav_logo}>Logo</div>
             
-            <a className={styles.nav_item} href="#section">
+            <a className={styles.nav_item} href="#aboutSection">
                 About
             </a>
-            <a className={styles.nav_item} href="#section">
+            <a className={styles.nav_item} href="#experienceSection">
                 Experience
             </a>
-            <a className={styles.nav_item} href="#section">
+            <a className={styles.nav_item} href="#projectsSection">
                 Projects
             </a>
-            <a className={styles.nav_item} href="#section">
-                Awards
-            </a>
-            <a className={styles.nav_item} href="#section">
+            <a className={styles.nav_item} href="#contactSection">
                 Contact
             </a>
 

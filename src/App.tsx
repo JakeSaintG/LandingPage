@@ -2,9 +2,9 @@ import React from 'react';
 import './App.css';
 import Navbar from './Navbar';
 import AboutSection from './AboutSection';
-import ProjectSection from './ProjectSection';
-import AwardsSection from './AwardsSection';
+import ProjectsSection from './ProjectsSection';
 import ExperienceSection from './ExperienceSection';
+import ContactSection from './ContactSection';
 
 function App() {
   return (
@@ -12,9 +12,8 @@ function App() {
       <Navbar />
       <AboutSection />
       <ExperienceSection />
-      <ProjectSection />
-      <AwardsSection />
-      {/* <ContactSection /> */}
+      <ProjectsSection />
+      <ContactSection />
     </div>
   );
 }
