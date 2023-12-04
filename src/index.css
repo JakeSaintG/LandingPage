@@ -1,5 +1,4 @@
 :root {
-    
     /* Dark Mode */
     --dark-mode-background: #404e4d;
 
@@ -9,8 +8,10 @@
     --raised-large-boxshadow: 27px 27px 55px #364241, -27px -27px 55px #4a5a59;
     --raised-small-boxshadow: 15px 15px 30px #364241, -15px -15px 30px #4a5a59;
 
-    --inset-large-boxshadow: inset 27px 27px 55px #364241, inset -27px -27px 55px #4a5a59;
-    --inset-small-boxshadow: inset 15px 15px 30px #364241, inset -15px -15px 30px #4a5a59;
+    --inset-large-boxshadow: inset 27px 27px 55px #364241,
+        inset -27px -27px 55px #4a5a59;
+    --inset-small-boxshadow: inset 15px 15px 30px #364241,
+        inset -15px -15px 30px #4a5a59;
 
     /* Light Mode */
     --light-mode-background: #e7e7e7;
@@ -21,8 +22,10 @@
     --raised-large-boxshadow: 27px 27px 55px #c4c4c4, -27px -27px 55px #ffffff;
     --raised-small-boxshadow: 15px 15px 30px #c4c4c4, -15px -15px 30px #ffffff;
 
-    --inset-large-boxshadow: inset 27px 27px 55px #c4c4c4, inset -27px -27px 55px #ffffff;
-    --inset-small-boxshadow: inset 15px 15px 30px #c4c4c4, inset -15px -15px 30px #ffffff;
+    --inset-large-boxshadow: inset 27px 27px 55px #c4c4c4,
+        inset -27px -27px 55px #ffffff;
+    --inset-small-boxshadow: inset 15px 15px 30px #c4c4c4,
+        inset -15px -15px 30px #ffffff;
 
     /* 
         Color palette:
@@ -32,7 +35,6 @@
             light       #ECCFC3
             lightest    #F5E9E2
     */
-
 }
 
 body {

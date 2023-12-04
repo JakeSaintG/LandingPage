@@ -1,0 +1,52 @@
+.showSettings {
+    display: none;
+}
+
+.showLandingPage {
+    display: block;
+}
+
+::backdrop {
+    background: none;
+}
+
+dialog {
+    border: none;
+    background: none;
+    border-radius: 15px;
+    height: 40%;
+    width: 40%;
+    box-shadow: 20px 20px 65px #c4c4c4, -20px -20px 65px #ffffff;
+}
+
+.dialogContents {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.dialogContents > div {
+    flex-grow: 2;
+    box-shadow: inset 10px 10px 25px #c4c4c4, inset -10px -10px 25px #ffffff;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.dialogContents > div > button {
+    all: unset;
+    cursor: pointer;
+    user-select: none;
+    padding: 0.5rem;
+    border-radius: 25px;
+    background: linear-gradient(145deg, #f7f7f7, #d0d0d0);
+    box-shadow: 5px 5px 11px #c4c4c4, -5px -5px 11px #ffffff;
+    font-family: inherit;
+    font-size: medium;
+}
+
+.dialogContents > div > button:active {
+    background: none;
+}

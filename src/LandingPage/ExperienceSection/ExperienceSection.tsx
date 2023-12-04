@@ -1,9 +1,9 @@
-import styles from './ExperienceSection.module.css'
+import styles from './ExperienceSection.module.css';
 
 export default function ExperienceSection() {
     return (
-        <section className={styles.experienceSection} id='experienceSection'>
-            <h1>Experience</h1>
+        <section className={styles.experienceSection} id="experienceSection">
+            <h2>Experience</h2>
             <div className={styles.experience}>
                 <p>ICU Nurse</p>
                 <p>Code Louisville Student</p>
@@ -13,5 +13,5 @@ export default function ExperienceSection() {
                 <p>Awards</p>
             </div>
         </section>
-    )
+    );
 }

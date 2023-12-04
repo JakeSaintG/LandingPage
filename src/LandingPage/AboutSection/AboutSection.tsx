@@ -1,4 +1,4 @@
-import styles from './AboutSection.module.css'
+import styles from './AboutSection.module.css';
 
 export default function AboutSection() {
     return (
@@ -9,5 +9,5 @@ export default function AboutSection() {
                 <div className={styles.elevatorPitch}>placeholder</div>
             </div>
         </section>
-    )
+    );
 }

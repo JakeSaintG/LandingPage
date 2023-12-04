@@ -45,15 +45,15 @@ nav::after {
 }
 
 .socials {
-    width: 5%;
+    width: 10%;
     display: grid;
     padding: 1rem;
-    grid-template-columns: 1fr 1fr 1fr;
-    min-width: 3.5rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    min-width: 4rem;
     margin-left: auto;
 }
 
-.socials a {
+.socials * {
     text-decoration: none;
     color: black;
 }
