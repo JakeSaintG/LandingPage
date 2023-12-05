@@ -8,4 +8,17 @@
     border-radius: 15px;
     box-shadow: 8px 8px 16px #b7c4c7, -8px -8px 16px #f7ffff;
     height: calc(100% - 52px - 2rem);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.experience > div {
+    padding: 1rem;
+    border-radius: 15px;
+}
+
+.experienceDetails {
+    padding: 1rem;
+    border-radius: 15px;
+    box-shadow: inset 8px 8px 16px #b7c4c7, inset -8px -8px 16px #f7ffff;
 }

@@ -16,5 +16,12 @@
 .elevatorPitch {
     padding: 1rem;
     border-radius: 15px;
+    display: flex;
+    flex-direction: column;
     box-shadow: inset 8px 8px 16px #b7c4c7, inset -8px -8px 16px #f7ffff;
+}
+
+.elevatorPitch > p {
+
+    margin: auto 10px;
 }
