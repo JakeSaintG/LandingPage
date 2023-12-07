@@ -46,7 +46,7 @@ export default function App() {
                 </div>
             </dialog>
             <Navbar toggleSettings={toggleSettingsMenu} />
-            <div className={pageState}>
+            <div className={`${pageState} main-landing-page`}>
                 <AboutSection />
                 <ExperienceSection />
                 <ProjectsSection />

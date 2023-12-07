@@ -6,6 +6,12 @@
     display: block;
 }
 
+.main-landing-page::before {
+    height: 65px;
+    display: block;
+    content: " ";
+}
+
 ::backdrop {
     background: none;
 }

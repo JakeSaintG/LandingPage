@@ -3,13 +3,13 @@ nav {
     display: flex;
     position: relative;
     flex-direction: row;
-    box-shadow: 8px 8px 16px #b7c4c7, -8px -8px 16px #f7ffff;
+    box-shadow: 0 8px 16px #b7c4c7;
     position: fixed;
     width: 100vw;
     background-color: #e7e7e7;
 
     /* Margin - offsetting the position: fixed behavior */
-    margin-top: calc( -69px + -1rem);
+    /* margin-top: -2rem; */
 }
 
 nav::after {
