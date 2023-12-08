@@ -3,10 +3,17 @@
     height: calc(100vh - 69px - 2rem);
 }
 
+.dark_mode_content {
+    box-shadow: 8px 8px 30px #364241, -8px -8px 30px #4a5a59;
+}
+
+.light_mode_content {
+    box-shadow: 8px 8px 16px #b7c4c7, -8px -8px 16px #f7ffff;
+}
+
 .content {
     padding: 1rem;
     border-radius: 15px;
-    box-shadow: 8px 8px 16px #b7c4c7, -8px -8px 16px #f7ffff;
     height: calc(100% - 52px - 2rem);
 }
 
