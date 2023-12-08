@@ -1,10 +1,11 @@
-import styles from './ContactSection.module.css';
+import PageSection from '../../GeneralComponents/PageSection';
+
+const contentStyle: React.CSSProperties = {};
 
 export default function ContactSection() {
     return (
-        <section className={styles.contactSection} id="contactSection">
-            <h2>Contact</h2>
-            <div className={styles.contact}></div>
-        </section>
+        <PageSection title='Contact' id="contactSection" style={contentStyle}>
+            PlaceHolder
+        </PageSection>
     );
 }
