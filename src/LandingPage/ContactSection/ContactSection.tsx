@@ -1,4 +1,5 @@
 import PageSection from '../../GeneralComponents/PageSection';
+import styles from './ContactSection.module.css';
 
 const contentStyle: React.CSSProperties = {};
 

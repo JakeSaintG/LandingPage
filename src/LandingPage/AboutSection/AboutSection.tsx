@@ -1,4 +1,7 @@
+import PageSection from '../../GeneralComponents/PageSection';
 import styles from './AboutSection.module.css';
+
+const contentStyle: React.CSSProperties = { display: 'grid', gridTemplateColumns:'1fr 1fr' };
 
 const elevatorPitch = `Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
 sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim 
@@ -9,20 +12,17 @@ non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`;
 
 export default function AboutSection() {
     return (
-        <section className={styles.aboutSection} id="aboutSection">
-            <h1>Jake St. Germain</h1>
-            <div className={styles.about}>
-                <div>placeholder</div>
-                <div className={styles.elevatorPitch}>
-                    <p>{elevatorPitch}</p>
+        <PageSection title='Jake St. Germain' id="aboutSection" style={contentStyle}>
+            <div>placeholder</div>
+            <div className={styles.elevatorPitch}>
+                <p>{elevatorPitch}</p>
 
-                    {/* TODO: make this a rotating tidbit or saying "carosel"
-                        "Registered nurse and registered nerd."
-                        "Cat enthusiast"
-                    */}
-                    <p>tidbit</p>
-                </div>
+                {/* TODO: make this a rotating tidbit or saying "carosel"
+                    "Registered nurse and registered nerd."
+                    "Cat enthusiast"
+                */}
+                <p>tidbit</p>
             </div>
-        </section>
+        </PageSection>
     );
 }
