@@ -1,20 +1,20 @@
+import PageSection from '../../GeneralComponents/PageSection';
 import styles from './ExperienceSection.module.css';
 
 export default function ExperienceSection() {
+    const contentStyle: React.CSSProperties = { display: 'grid', gridTemplateColumns:'1fr 1fr' };
+    
     return (
-        <section className={styles.experienceSection} id="experienceSection">
-            <h2>Experience</h2>
-            <div className={styles.experience}>
-                <div className={styles.experienceDetails}>placeholder</div>
-                <div>
-                    <p>ICU Nurse</p>
-                    <p>Code Louisville Student</p>
-                    <p>Software Developer Intern</p>
-                    <p>Code Louisville Mentor</p>
-                    <p>Software Developer</p>
-                    <p>Awards</p>
-                </div>
+        <PageSection title='Experience' id="experienceSection" style={contentStyle} className={styles.experienceSection}>
+            <div className={styles.experiences}>placeholder</div>
+            <div className={styles.experienceDetails}>
+                <p>ICU Nurse</p>
+                <p>Code Louisville Student</p>
+                <p>Software Developer Intern</p>
+                <p>Code Louisville Mentor</p>
+                <p>Software Developer</p>
+                <p>Awards</p>
             </div>
-        </section>
+        </PageSection>
     );
 }
