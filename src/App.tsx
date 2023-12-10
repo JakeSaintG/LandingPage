@@ -9,6 +9,7 @@ import ContactSection from './LandingPage/ContactSection';
 export default function App() {
     let [settingsState, setSettingsMenu] = useState(false);
     let [pageState, setDialog] = useState('default');
+    let [isDarkMode, setPageVisuaMode] = useState('dark');
     const dialogRef = useRef<HTMLDialogElement | null>(null);
 
     const openDialog = () => {
@@ -30,6 +31,11 @@ export default function App() {
         pageState === 'showSettings' ? openDialog() : closeDialog();
     };
 
+    const handleModeChange = () => {
+        setPageVisuaMode(isDarkMode === 'dark' ? isDarkMode = 'light' : isDarkMode = 'dark');
+        console.log(`currently: ${isDarkMode} mode`);
+    };
+
     return (
         //TODO: Animate the transition between page and settings
         //TODO: Move dialog to own component openDialog()/closeDialog() may make that tricky
@@ -38,6 +44,10 @@ export default function App() {
                 <div className="dialogContents">
                     <h2>Settings</h2>
                     <div>
+                    <label className="switch">
+                        <input type="checkbox" value={isDarkMode} onChange={handleModeChange} />
+                        <span className="slider round"></span>
+                    </label>
                         <p>None yet!</p>
                         <button id="close" onClick={toggleSettingsMenu}>
                             Close
