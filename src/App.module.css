@@ -8,6 +8,11 @@
     color: var(--light-mode-background);
 }
 
+.main_landing_page {
+    gap: 1rem;
+    padding-bottom: 1rem;
+}
+
 .main_landing_page::before {
     height: 65px;
     display: block;
@@ -31,12 +36,12 @@ dialog {
 }
 
 .dialog_dark_mode {
-    box-shadow: 20px 20px 65px #364241, -20px -20px 65px #4a5a59;
+    box-shadow: var(--dark-raised-boxshadow);
     color: var(--light-mode-background);
 }
 
 .dialog_light_mode {
-    box-shadow: 20px 20px 65px #c4c4c4, -20px -20px 65px #ffffff;
+    box-shadow: var(--light-raised-boxshadow);
     color: var(--dark-mode-background);
 }
 
@@ -49,11 +54,11 @@ dialog {
 }
 
 .dialog_contents_dark_mode > div {
-    box-shadow: inset 10px 10px 25px #364241, inset -10px -10px 25px #4a5a59;
+    box-shadow: var(--dark-inset-boxshadow);
 }
 
 .dialog_contents_light_mode > div {
-    box-shadow: inset 10px 10px 25px #c4c4c4, inset -10px -10px 25px #ffffff;
+    box-shadow: var(--light-inset-boxshadow);
 }
 
 .dialog_contents {
@@ -84,12 +89,12 @@ dialog {
 
 .dialog_contents_dark_mode > div > button {
     background: linear-gradient(145deg, #445352, #3a4645);
-    box-shadow: 5px 5px 11px #364241, -5px -5px 11px #4a5a59;
+    box-shadow: var(--dark-raised-boxshadow);
 }
 
 .dialog_contents_light_mode > div > button {
     background: linear-gradient(145deg, #f7f7f7, #d0d0d0);
-    box-shadow: 5px 5px 11px #c4c4c4, -5px -5px 11px #ffffff;
+    box-shadow: var(--light-raised-boxshadow);
 }
 
 .dialog_contents > div > button:active {

@@ -6,14 +6,16 @@ interface Props extends React.HTMLAttributes<HTMLElement>{
     style: React.CSSProperties
     title: string
     id: string
+    visualMode: string
 }
 
-// flip this to style.dark_mode_content
-let colorMode = styles.light_mode_content;
+let colorMode: string;
 
 export default function PageSection( props: Props ) {
-    const { children, style, title, id } = props
-    
+    const { children, style, title, id, visualMode } = props;
+
+    visualMode === 'dark_mode' ? colorMode = styles.dark_mode_content : colorMode = styles.light_mode_content;
+
     return (
         <section className={styles.page_section} id={id} >
             <h1>{title}</h1>

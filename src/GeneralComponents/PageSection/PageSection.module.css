@@ -1,14 +1,14 @@
 .page_section {
-    margin: 1rem;
     height: calc(100vh - 69px - 2rem);
+    margin: 0 1rem;
 }
 
 .dark_mode_content {
-    box-shadow: 8px 8px 30px #364241, -8px -8px 30px #4a5a59;
+    box-shadow: var(--dark-raised-boxshadow);
 }
 
 .light_mode_content {
-    box-shadow: 8px 8px 16px #b7c4c7, -8px -8px 16px #f7ffff;
+    box-shadow: var(--light-raised-boxshadow);
 }
 
 .content {

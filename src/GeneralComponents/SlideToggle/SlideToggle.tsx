@@ -10,9 +10,9 @@ export default function PageSection( props: Props ) {
     const { value, onChange } = props
     
     return (
-        <label className="switch">
+        <label className={styles.switch}>
             <input type="checkbox" value={value} onChange={onChange} />
-            <span className="slider round"></span>
+            <span className={`${styles.slider} ${styles.round}`}></span>
         </label>
     );
 }

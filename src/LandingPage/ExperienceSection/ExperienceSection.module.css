@@ -1,10 +1,16 @@
-.experiences {
-    padding: 1rem;
-    border-radius: 15px;
-    box-shadow: inset 8px 8px 16px #b7c4c7, inset -8px -8px 16px #f7ffff;
+.dark_mode_details {
+    box-shadow: var(--dark-inset-boxshadow);
 }
 
-.experienceDetails {
+.light_mode_details {
+    box-shadow: var(--light-inset-boxshadow);
+}
+
+.experience {
+    padding: 1rem;
+}
+
+.experience_details {
     padding: 1rem;
     border-radius: 15px;
 }

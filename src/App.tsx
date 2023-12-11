@@ -1,6 +1,5 @@
-import React, { useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import styles from './App.module.css';
-import './App.css';
 import Navbar from './Navbar';
 import AboutSection from './LandingPage/AboutSection';
 import ProjectsSection from './LandingPage/ProjectsSection';
@@ -9,8 +8,7 @@ import ContactSection from './LandingPage/ContactSection';
 import SlideToggle from './GeneralComponents/SlideToggle';
 
 export default function App() {
-    
-    
+
     let [settingsVisibility, setSettingsVisibility] = useState(false);
     let [pageState, setDialog] = useState('default');
     let [pageVisualMode, setPageVisualMode] = useState('light_mode');
@@ -35,6 +33,7 @@ export default function App() {
         pageState === 'show_settings' ? openDialog() : closeDialog();
     };
 
+    // TODO: A fade animation between light and dark mode may be less jarring
     const handleModeChange = () => {
         setPageVisualMode(pageVisualMode === 'dark_mode' ? pageVisualMode = 'light_mode' : pageVisualMode = 'dark_mode');
     };
@@ -57,10 +56,10 @@ export default function App() {
             </dialog>
             <Navbar toggleSettings={toggleSettingsMenu} visualMode={pageVisualMode} />
             <div className={`${styles[pageState]} ${styles.main_landing_page}`}>
-                <AboutSection />
-                <ExperienceSection />
-                <ProjectsSection />
-                <ContactSection />
+                <AboutSection visualMode={pageVisualMode} />
+                <ExperienceSection visualMode={pageVisualMode} />
+                <ProjectsSection visualMode={pageVisualMode} />
+                <ContactSection visualMode={pageVisualMode} />
             </div>
         </div>
     );

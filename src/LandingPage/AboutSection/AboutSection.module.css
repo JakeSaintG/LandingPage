@@ -1,11 +1,18 @@
-.elevatorPitch {
+.dark_mode_pitch {
+    box-shadow: var(--dark-inset-boxshadow);
+}
+
+.light_mode_pitch {
+    box-shadow: var(--light-inset-boxshadow);
+}
+
+.elevator_pitch {
     padding: 1rem;
     border-radius: 15px;
     display: flex;
     flex-direction: column;
-    box-shadow: inset 8px 8px 16px #b7c4c7, inset -8px -8px 16px #f7ffff;
 }
 
-.elevatorPitch > p {
+.elevator_pitch > p {
     margin: auto 10px;
 }
