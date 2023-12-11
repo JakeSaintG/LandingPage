@@ -1,15 +1,19 @@
 import React, { useRef, useState } from 'react';
+import styles from './App.module.css';
 import './App.css';
 import Navbar from './Navbar';
 import AboutSection from './LandingPage/AboutSection';
 import ProjectsSection from './LandingPage/ProjectsSection';
 import ExperienceSection from './LandingPage/ExperienceSection';
 import ContactSection from './LandingPage/ContactSection';
+import SlideToggle from './GeneralComponents/SlideToggle';
 
 export default function App() {
-    let [settingsState, setSettingsMenu] = useState(false);
+    
+    
+    let [settingsVisibility, setSettingsVisibility] = useState(false);
     let [pageState, setDialog] = useState('default');
-    let [isDarkMode, setPageVisuaMode] = useState('dark');
+    let [pageVisualMode, setPageVisualMode] = useState('light_mode');
     const dialogRef = useRef<HTMLDialogElement | null>(null);
 
     const openDialog = () => {
@@ -21,47 +25,43 @@ export default function App() {
     };
 
     const toggleSettingsMenu = () => {
-        setSettingsMenu((settingsState = !settingsState));
+        setSettingsVisibility((settingsVisibility = !settingsVisibility));
         setDialog(
-            settingsState
-                ? (pageState = 'showSettings')
-                : (pageState = 'showLandingPage')
+            settingsVisibility
+                ? (pageState = 'show_settings')
+                : (pageState = 'show_landing_page')
         );
 
-        pageState === 'showSettings' ? openDialog() : closeDialog();
+        pageState === 'show_settings' ? openDialog() : closeDialog();
     };
 
     const handleModeChange = () => {
-        setPageVisuaMode(isDarkMode === 'dark' ? isDarkMode = 'light' : isDarkMode = 'dark');
-        console.log(`currently: ${isDarkMode} mode`);
+        setPageVisualMode(pageVisualMode === 'dark_mode' ? pageVisualMode = 'light_mode' : pageVisualMode = 'dark_mode');
     };
 
     return (
         //TODO: Animate the transition between page and settings
         //TODO: Move dialog to own component openDialog()/closeDialog() may make that tricky
-        <>
-            <dialog id="dialog" ref={dialogRef}>
-                <div className="dialogContents">
+        <div className={styles[pageVisualMode]}>
+            <dialog ref={dialogRef} className={styles[`dialog_${pageVisualMode}`]}>
+                <div className={`${styles.dialog_contents} ${styles[`dialog_contents_${pageVisualMode}`]}`}>
                     <h2>Settings</h2>
                     <div>
-                    <label className="switch">
-                        <input type="checkbox" value={isDarkMode} onChange={handleModeChange} />
-                        <span className="slider round"></span>
-                    </label>
+                        < SlideToggle value={pageVisualMode} onChange={handleModeChange} />
                         <p>None yet!</p>
-                        <button id="close" onClick={toggleSettingsMenu}>
+                        <button onClick={toggleSettingsMenu}>
                             Close
                         </button>
                     </div>
                 </div>
             </dialog>
-            <Navbar toggleSettings={toggleSettingsMenu} />
-            <div className={`${pageState} main-landing-page`}>
+            <Navbar toggleSettings={toggleSettingsMenu} visualMode={pageVisualMode} />
+            <div className={`${styles[pageState]} ${styles.main_landing_page}`}>
                 <AboutSection />
                 <ExperienceSection />
                 <ProjectsSection />
                 <ContactSection />
             </div>
-        </>
+        </div>
     );
 }

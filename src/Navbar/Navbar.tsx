@@ -7,9 +7,18 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 import { faGear } from '@fortawesome/free-solid-svg-icons';
 
-export default function Navbar(props: any) {
+interface Props extends React.HTMLAttributes<HTMLElement>{
+    visualMode: string
+    toggleSettings: any
+}
+
+export default function Navbar(props: Props) {
+    let mode: string;
+
+    props.visualMode === 'dark_mode' ? mode = 'dark_mode_nav' : mode = 'light_mode_nav';
+    
     return (
-        <nav className={styles.nav}>
+        <nav className={`${styles.nav} ${styles[mode]}`}>
             <div className={styles.nav_logo}>Logo</div>
 
             <a className={styles.nav_item} href="#aboutSection">

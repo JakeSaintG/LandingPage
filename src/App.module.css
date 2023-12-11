@@ -1,0 +1,97 @@
+.light_mode {
+    background-color: var(--light-mode-background);
+    color: var(--dark-mode-background);
+}
+
+.dark_mode {
+    background-color: var(--dark-mode-background);
+    color: var(--light-mode-background);
+}
+
+.main_landing_page::before {
+    height: 65px;
+    display: block;
+    content: ' ';
+}
+
+.show_settings {
+    display: none;
+}
+
+.show_landing_page {
+    display: block;
+}
+
+dialog {
+    border: none;
+    background: none;
+    border-radius: 15px;
+    height: 40%;
+    width: 40%;
+}
+
+.dialog_dark_mode {
+    box-shadow: 20px 20px 65px #364241, -20px -20px 65px #4a5a59;
+    color: var(--light-mode-background);
+}
+
+.dialog_light_mode {
+    box-shadow: 20px 20px 65px #c4c4c4, -20px -20px 65px #ffffff;
+    color: var(--dark-mode-background);
+}
+
+.dialog_dark_mode::backdrop {
+    background-color: var(--dark-mode-background);
+}
+
+.dialog_light_mode::backdrop {
+    background-color: var(--light-mode-background);
+}
+
+.dialog_contents_dark_mode > div {
+    box-shadow: inset 10px 10px 25px #364241, inset -10px -10px 25px #4a5a59;
+}
+
+.dialog_contents_light_mode > div {
+    box-shadow: inset 10px 10px 25px #c4c4c4, inset -10px -10px 25px #ffffff;
+}
+
+.dialog_contents {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.dialog_contents > div {
+    flex-grow: 2;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.dialog_contents > div > button {
+    all: unset;
+    cursor: pointer;
+    user-select: none;
+    padding: 0.5rem;
+    border-radius: 25px;
+
+    font-family: inherit;
+    font-size: medium;
+}
+
+.dialog_contents_dark_mode > div > button {
+    background: linear-gradient(145deg, #445352, #3a4645);
+    box-shadow: 5px 5px 11px #364241, -5px -5px 11px #4a5a59;
+}
+
+.dialog_contents_light_mode > div > button {
+    background: linear-gradient(145deg, #f7f7f7, #d0d0d0);
+    box-shadow: 5px 5px 11px #c4c4c4, -5px -5px 11px #ffffff;
+}
+
+.dialog_contents > div > button:active {
+    background: none;
+}

@@ -1,15 +1,20 @@
+.dark_mode_nav {
+    background-color: var(--dark-mode-background);
+    box-shadow: 0 8px 16px #364241;
+}
+
+.light_mode_nav {
+    background-color: var(--light-mode-background);
+    box-shadow: 0 8px 16px #b7c4c7;
+}
+
 nav {
     list-style-type: none;
     display: flex;
     position: relative;
     flex-direction: row;
-    box-shadow: 0 8px 16px #b7c4c7;
     position: fixed;
     width: 100vw;
-    background-color: #e7e7e7;
-
-    /* Margin - offsetting the position: fixed behavior */
-    /* margin-top: -2rem; */
 }
 
 nav::after {
@@ -35,13 +40,22 @@ nav::after {
 .nav_item {
     text-decoration: none;
     padding: 1rem;
-    color: black;
 }
 
 .nav_item:active {
     border-radius: 15px;
     background: #d7e7ea;
     box-shadow: inset 8px 8px 16px #b7c4c7, inset -8px -8px 16px #f7ffff;
+}
+
+.dark_mode_nav > .socials *,
+.dark_mode_nav > .nav_item {
+    color: var(--light-mode-background);
+}
+
+.light_mode_nav > .socials *,
+.light_mode_nav > .nav_item {
+    color: var(--dark-mode-background);
 }
 
 .socials {
@@ -55,5 +69,4 @@ nav::after {
 
 .socials * {
     text-decoration: none;
-    color: black;
 }
