@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import PageSection from '../../GeneralComponents/PageSection';
 import styles from './ExperienceSection.module.css';
 
@@ -59,21 +59,20 @@ const workExperience = [
 ];
 
 export default function ExperienceSection(props: Props) {
-    const experienceDetailsRef = useRef<HTMLParagraphElement| null>(null);
     const { visualMode } = props;
+    let [bar, setBar] = useState(workExperience[0].highlights);
+    let key = 0;
 
     visualMode === 'dark_mode' ? detailsVisualMode = styles.dark_mode_details : detailsVisualMode = styles.light_mode_details;
 
     const returnWorkExperience = (careerId: string) => {
-        // TODO: it may be better to map over the items and make a p element (ngFor style)
-        let highlights = workExperience.find(e => e.title === careerId)!.highlights.join(' | ');
-        experienceDetailsRef.current!.innerText = highlights;
+        setBar(bar = workExperience.find(e => e.title === careerId)!.highlights);
     }
 
     return (
         <PageSection title='Experience' id="experienceSection" style={contentStyle} visualMode={visualMode}>
             <div className={`${styles.experience_details} ${detailsVisualMode}`}>
-                <p ref={experienceDetailsRef}></p>
+                <ul>{bar.map(e => <li key={key++}>{e}</li>)}</ul>
             </div>
             <div className={styles.experience}>
                 <h3>Current:</h3>
