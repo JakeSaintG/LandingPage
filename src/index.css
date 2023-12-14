@@ -25,6 +25,7 @@
             light       #ECCFC3
             lightest    #F5E9E2
     */
+
 }
 
 body {
@@ -39,8 +40,4 @@ body {
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
         monospace;
-}
-
-section {
-    scroll-margin-top: calc(1rem + 69px);
 }
