@@ -10,7 +10,7 @@
     padding: 1rem;
 }
 
-.experience > button {
+.profession {
     all: unset;
     cursor: pointer;
     user-select: none;
@@ -21,20 +21,17 @@
     border-radius: 10px;
 }
 
-.experience > button:hover {
+.profession:hover {
     box-shadow: -2px 2px 5px #b7c4c7, 2px -2px 5px #f7ffff;
     text-decoration: underline;
 }
 
-.experience > button:active {
+.selected_profession,
+.profession:active {
     box-shadow: inset -2px 2px 5px #b7c4c7, inset 2px -2px 5px #f7ffff;
 }
 
 .experience_details {
     padding: 1rem;
     border-radius: 15px;
-}
-
-.selected_profession {
-    color: red;
 }

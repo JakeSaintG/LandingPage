@@ -76,14 +76,14 @@ export default function ExperienceSection(props: Props) {
             </div>
             <div className={styles.experience}>
                 <h3>Current:</h3>
-                <button id='dev-fulltime' onClick={returnWorkExperience}>Software Developer</button>
-                <button id='mentor' onClick={returnWorkExperience}>Code Louisville Mentor</button>
+                <button className={styles.profession} id='dev-fulltime' onClick={returnWorkExperience}>Software Developer</button>
+                <button className={styles.profession} id='mentor' onClick={returnWorkExperience}>Code Louisville Mentor</button>
                 
                 <h3>Previous:</h3>
-                <button id='dev-intern' onClick={returnWorkExperience}>Software Developer Intern</button>
-                <button id='dev-student' onClick={returnWorkExperience}>Code Louisville Student</button>
-                <button id='nurse' onClick={returnWorkExperience}>ICU Nurse</button>
-                <button id='awards' onClick={returnWorkExperience}>Awards</button>
+                <button className={styles.profession} id='dev-intern' onClick={returnWorkExperience}>Software Developer Intern</button>
+                <button className={styles.profession} id='dev-student' onClick={returnWorkExperience}>Code Louisville Student</button>
+                <button className={styles.profession} id='nurse' onClick={returnWorkExperience}>ICU Nurse</button>
+                <button className={styles.profession} id='awards' onClick={returnWorkExperience}>Awards</button>
             </div>
         </PageSection>
     );
