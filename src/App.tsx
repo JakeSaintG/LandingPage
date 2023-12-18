@@ -8,7 +8,6 @@ import ContactSection from './LandingPage/ContactSection';
 import SlideToggle from './GeneralComponents/SlideToggle';
 
 export default function App() {
-
     let [settingsVisibility, setSettingsVisibility] = useState(false);
     let [pageState, setDialog] = useState('default');
     let [pageVisualMode, setPageVisualMode] = useState('light_mode');
@@ -35,26 +34,41 @@ export default function App() {
 
     // TODO: A fade animation between light and dark mode may be less jarring
     const handleModeChange = () => {
-        setPageVisualMode(pageVisualMode === 'dark_mode' ? pageVisualMode = 'light_mode' : pageVisualMode = 'dark_mode');
+        setPageVisualMode(
+            pageVisualMode === 'dark_mode'
+                ? (pageVisualMode = 'light_mode')
+                : (pageVisualMode = 'dark_mode')
+        );
     };
 
     return (
         //TODO: Animate the transition between page and settings
         //TODO: Move dialog to own component openDialog()/closeDialog() may make that tricky
         <div className={styles[pageVisualMode]}>
-            <dialog ref={dialogRef} className={styles[`dialog_${pageVisualMode}`]}>
-                <div className={`${styles.dialog_contents} ${styles[`dialog_contents_${pageVisualMode}`]}`}>
+            <dialog
+                ref={dialogRef}
+                className={styles[`dialog_${pageVisualMode}`]}
+            >
+                <div
+                    className={`${styles.dialog_contents} ${
+                        styles[`dialog_contents_${pageVisualMode}`]
+                    }`}
+                >
                     <h2>Settings</h2>
                     <div>
-                        < SlideToggle value={pageVisualMode} onChange={handleModeChange} />
+                        <SlideToggle
+                            value={pageVisualMode}
+                            onChange={handleModeChange}
+                        />
                         <p>None yet!</p>
-                        <button onClick={toggleSettingsMenu}>
-                            Close
-                        </button>
+                        <button onClick={toggleSettingsMenu}>Close</button>
                     </div>
                 </div>
             </dialog>
-            <Navbar toggleSettings={toggleSettingsMenu} visualMode={pageVisualMode} />
+            <Navbar
+                toggleSettings={toggleSettingsMenu}
+                visualMode={pageVisualMode}
+            />
             <div className={`${styles[pageState]} ${styles.main_landing_page}`}>
                 <AboutSection visualMode={pageVisualMode} />
                 <ExperienceSection visualMode={pageVisualMode} />
