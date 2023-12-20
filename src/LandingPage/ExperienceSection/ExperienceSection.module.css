@@ -10,6 +10,7 @@
     padding: 1rem;
 }
 
+.selected_profession,
 .profession {
     all: unset;
     cursor: pointer;

@@ -67,12 +67,14 @@ const workExperience = [
 export default function ExperienceSection(props: Props) {
     const { visualMode } = props;
     let [workHighlights, setWorkHighlights] = useState(workExperience[0].highlights);
+    let [activeClass, setActiveClass] = useState('dev-fulltime');
     let key = 0;
 
     visualMode === 'dark_mode' ? detailsVisualMode = styles.dark_mode_details : detailsVisualMode = styles.light_mode_details;
 
     const returnWorkExperience = (event: MouseEvent<HTMLElement>) => {
         setWorkHighlights(workHighlights = workExperience.find(e => e.title === event.currentTarget.id)!.highlights);
+        setActiveClass(activeClass = event.currentTarget.id);
     }
 
     return (
@@ -82,14 +84,13 @@ export default function ExperienceSection(props: Props) {
             </div>
             <div className={styles.experience}>
                 <h3>Current:</h3>
-                <button className={styles.profession} id='dev-fulltime' onClick={returnWorkExperience}>Software Developer</button>
-                <button className={styles.profession} id='mentor' onClick={returnWorkExperience}>Code Louisville Mentor</button>
-                
+                <button className={`${activeClass === 'dev-fulltime' ? `${styles.selected_profession}` : `${styles.profession}`}`} id='dev-fulltime' onClick={returnWorkExperience}>Software Developer</button>
+                <button className={`${activeClass === 'mentor' ? `${styles.selected_profession}` : `${styles.profession}`}`} id='mentor' onClick={returnWorkExperience}>Code Louisville Mentor</button>
                 <h3>Previous:</h3>
-                <button className={styles.profession} id='dev-intern' onClick={returnWorkExperience}>Software Developer Intern</button>
-                <button className={styles.profession} id='dev-student' onClick={returnWorkExperience}>Code Louisville Student</button>
-                <button className={styles.profession} id='nurse' onClick={returnWorkExperience}>ICU Nurse</button>
-                <button className={styles.profession} id='awards' onClick={returnWorkExperience}>Awards</button>
+                <button className={`${activeClass === 'dev-intern' ? `${styles.selected_profession}` : `${styles.profession}`}`} id='dev-intern' onClick={returnWorkExperience}>Software Developer Intern</button>
+                <button className={`${activeClass === 'dev-student' ? `${styles.selected_profession}` : `${styles.profession}`}`} id='dev-student' onClick={returnWorkExperience}>Code Louisville Student</button>
+                <button className={`${activeClass === 'nurse' ? `${styles.selected_profession}` : `${styles.profession}`}`} id='nurse' onClick={returnWorkExperience}>ICU Nurse</button>
+                <button className={`${activeClass === 'awards' ? `${styles.selected_profession}` : `${styles.profession}`}`} id='awards' onClick={returnWorkExperience}>Awards</button>
             </div>
         </PageSection>
     );
