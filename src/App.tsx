@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import styles from './App.module.css';
 import Navbar from './Navbar';
 import AboutSection from './LandingPage/AboutSection';
@@ -39,12 +39,24 @@ export default function App() {
                 ? (pageVisualMode = 'light_mode')
                 : (pageVisualMode = 'dark_mode')
         );
+
+        if (pageVisualMode === 'dark_mode') {
+            document.body.classList.add(`${styles.dark_mode}`);
+            document.body.classList.remove(`${styles.light_mode}`);
+        } else {
+            document.body.classList.add(`${styles.light_mode}`);
+            document.body.classList.remove(`${styles.dark_mode}`);
+        }
     };
+
+    useEffect(() => {
+        document.body.classList.add(`${styles.light_mode}`);
+    });
 
     return (
         //TODO: Animate the transition between page and settings
         //TODO: Move dialog to own component openDialog()/closeDialog() may make that tricky
-        <div className={styles[pageVisualMode]}>
+        <div>
             <dialog
                 ref={dialogRef}
                 className={styles[`dialog_${pageVisualMode}`]}
