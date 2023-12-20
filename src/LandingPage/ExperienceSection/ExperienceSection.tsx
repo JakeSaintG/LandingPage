@@ -28,17 +28,23 @@ const workExperience = [
     {
         title: "nurse",
         highlights: [
-            "Critical thinking",
-            "Saved lives",
-            "Did my best"
+            "Sought additional training certifications in Pediatric Advanced Life Support (PALS) as well as training in PRISMA.",
+            "Managed life support equipment and worked with multidisciplinary teammates to deliver compassionate care for families and critically ill patients with debilitating conditions or injuries.",
+            "Assessed conditions, symptoms, diagnostic tests, and behaviors of pediatric patients to monitor for life-altering changes, responded using quick critical thinking skills, and worked well with multi-disciplinary teams.",
+            "Responded to rapid changes in patient condition, worked well under pressure, and exercised excellent time management skills with multiple patient assignments.",
+            "Lead a Council of my peers to innovate and improve nursing practice.",
+            "Followed policies and procedures regarding patient privacy and information detailed in HIPAA.",
+            "Adapted quickly to new patient populations, hospital, policies, and procedures to provide support for staff at another (adult) hospital in the same system while they were stretched thin during the COVID-19 pandemic.",
+            "Aided in hospital logistics including moving patients, closing units, and arrangement of nursing assignments."
         ]
     },
     {
         title: "dev-intern",
         highlights: [
-            "Learned things",
-            "Migration",
-            "Updated our apps (ng and .net)"
+            "Updated a large production application from Angular 10 to Angular 12 in a timely manner.",
+            "Implemented a quality-of-life update by adding a REST API endpoint to return information on previously added sets of data. This would auto-populate a picklist on load and allow the user to more easily add relevant codes to a value set.",
+            "Gained experience working in Azure DevOps, Snowflake Data Cloud, and Azure services. ",
+            "Collaborated with a team of software engineers by pairing on projects, reviewing code, and working through solutions to difficult healthcare-related problems"
         ]
     },
     {
