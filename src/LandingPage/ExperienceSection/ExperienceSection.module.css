@@ -23,13 +23,25 @@
 }
 
 .profession:hover {
-    box-shadow: -2px 2px 5px #b7c4c7, 2px -2px 5px #f7ffff;
     text-decoration: underline;
 }
 
-.selected_profession,
-.profession:active {
+.profession_light:hover {
+    box-shadow: -2px 2px 5px #b7c4c7, 2px -2px 5px #f7ffff;
+}
+
+.profession_dark:hover {
+    box-shadow: -2px 2px 5px #364241, 2px -2px 5px #4a5a59;
+}
+
+.selected_profession_light,
+.profession_light:active {
     box-shadow: inset -2px 2px 5px #b7c4c7, inset 2px -2px 5px #f7ffff;
+}
+
+.selected_profession_dark,
+.profession_dark:active {
+    box-shadow: inset -2px 2px 5px #364241, inset 2px -2px 5px #4a5a59;
 }
 
 .experience_details {
