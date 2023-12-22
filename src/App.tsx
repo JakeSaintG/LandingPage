@@ -71,8 +71,9 @@ export default function App() {
                         <SlideToggle
                             value={pageVisualMode}
                             onChange={handleModeChange}
+                            visualMode={pageVisualMode}
                         />
-                        <p>None yet!</p>
+                        <p>The only setting that matters!</p>
                         <button onClick={toggleSettingsMenu}>Close</button>
                     </div>
                 </div>

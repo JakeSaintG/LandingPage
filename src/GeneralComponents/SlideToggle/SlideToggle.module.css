@@ -1,54 +1,90 @@
-
-/* ----------- SLIDER ------------ */
-/* The switch - the box around the slider */
-.switch {
-    position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 34px;
+.switch_button {
+    display: -webkit-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    height: 55px;
 }
 
-.switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
+.switch_outer.slider_dark {
+    box-shadow: inset 0px 5px 10px 0px #364241, 0px 3px 6px -2px #4a5a59;
 }
 
-/* The slider */
-.slider {
-    position: absolute;
+.switch_outer.slider_light {
+    box-shadow: inset 0px 5px 10px 0px #b7c4c7, 0px 3px 6px -2px #f7ffff;
+}
+
+.switch_outer {
+    height: 100%;
+    width: 115px;
+    border-radius: 165px;
+    padding: 6px;
+    box-sizing: border-box;
     cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ccc;
-    -webkit-transition: 0.4s;
-    transition: 0.4s;
+    -webkit-tap-highlight-color: transparent;
 }
 
-.slider:before {
+.switch_button .switch_outer input[type='checkbox'] {
+    opacity: 0;
+    appearance: none;
     position: absolute;
-    content: '';
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
-    background-color: white;
-    -webkit-transition: 0.4s;
-    transition: 0.4s;
 }
 
-input:checked + .slider:before {
-    -webkit-transform: translateX(26px);
-    -ms-transform: translateX(26px);
-    transform: translateX(26px);
+.switch_button .switch_outer .button_toggle {
+    height: 42px;
+    width: 42px;
+    background: linear-gradient(#3b3a4e, #272733);
+    border-radius: 100%;
+    box-shadow: inset 0px 5px 4px 0px #424151, 0px 4px 15px 0px #0f0e17;
+    position: relative;
+    z-index: 2;
+    -webkit-transition: left 0.3s ease-in;
+    transition: left 0.3s ease-in;
+    left: 0;
 }
 
-.slider.round {
-    border-radius: 34px;
+.switch_button .switch_outer input[type='checkbox']:checked + .button .button_toggle {
+    left: 58%;
 }
 
-.slider.round:before {
+.switch_button .switch_outer input[type='checkbox']:checked + .button .button_indicator {
+    -webkit-animation: indicator 1s forwards;
+    animation: indicator 1s forwards;
+}
+
+.switch_button .switch_outer .button {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+}
+
+.switch_button .switch_outer .button_indicator {
+    height: 25px;
+    width: 25px;
+    top: 50%;
+    transform: translateY(-50%);
     border-radius: 50%;
+    border: 3px solid #60d480;
+    box-sizing: border-box;
+    right: 10px;
+    position: relative;
+}
+
+@keyframes indicator {
+    30% {
+        opacity: 0;
+    }
+
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+        border: 3px solid #ef565f;
+        left: -68%;
+    }
 }
