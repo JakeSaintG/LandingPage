@@ -14,6 +14,7 @@ export default function SlideToggle( props: Props ) {
 
     visualMode === 'dark_mode' ? sliderColorMode = styles.slider_dark : sliderColorMode = styles.slider_light;
     
+    //TODO: Make props that allow for passing in svg files for the icons
     return (
         <label className={styles.switch_button} htmlFor="switch">
             <div className={`${styles.switch_outer} ${sliderColorMode}`}>
