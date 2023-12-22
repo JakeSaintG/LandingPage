@@ -34,14 +34,24 @@
 .switch_button .switch_outer .button_toggle {
     height: 42px;
     width: 42px;
-    background: linear-gradient(#3b3a4e, #272733);
     border-radius: 100%;
-    box-shadow: inset 0px 5px 4px 0px #424151, 0px 4px 15px 0px #0f0e17;
     position: relative;
     z-index: 2;
     -webkit-transition: left 0.3s ease-in;
     transition: left 0.3s ease-in;
     left: 0;
+}
+
+.switch_button .switch_outer .button_toggle.slider_dark {
+    background-color: #404e4d;
+    box-shadow: 8px 8px 16px #364241;
+    border: solid 1px #364241;
+}
+
+.switch_button .switch_outer .button_toggle.slider_light {
+    background-color: #e7e7e7;
+    box-shadow: 8px 8px 16px #b7c4c7;
+    
 }
 
 .switch_button .switch_outer input[type='checkbox']:checked + .button .button_toggle {
@@ -67,7 +77,7 @@
     top: 50%;
     transform: translateY(-50%);
     border-radius: 50%;
-    border: 3px solid #60d480;
+    border: 3px solid #404e4d;
     box-sizing: border-box;
     right: 10px;
     position: relative;
@@ -84,7 +94,7 @@
 
     100% {
         opacity: 1;
-        border: 3px solid #ef565f;
+        border: 3px solid #e7e7e7;
         left: -68%;
     }
 }

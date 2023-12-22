@@ -19,7 +19,7 @@ export default function SlideToggle( props: Props ) {
             <div className={`${styles.switch_outer} ${sliderColorMode}`}>
                 <input id="switch" type="checkbox" value={value} onChange={onChange} />
                 <div className={styles.button}>
-                <span className={styles.button_toggle}></span>
+                <span className={`${styles.button_toggle} ${sliderColorMode}`}></span>
                 <span className={styles.button_indicator}></span>
                 </div>
             </div>
