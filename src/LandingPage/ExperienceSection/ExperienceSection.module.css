@@ -42,6 +42,7 @@
 .selected_profession_dark,
 .profession_dark:active {
     box-shadow: inset -2px 2px 5px #364241, inset 2px -2px 5px #4a5a59;
+    /* border: solid 1px #3e4d4c; */
 }
 
 .experience_details {

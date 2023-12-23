@@ -1,0 +1,19 @@
+.projects {
+    border: 1px solid red;
+    border-radius: 15px;
+    height: 100%;
+    display: grid;
+    padding: 1rem;
+}
+
+.project {
+    border: solid blue 1px;
+}
+
+/* 
+    media query
+        3 cols
+
+    Media query
+        4 cols
+*/
