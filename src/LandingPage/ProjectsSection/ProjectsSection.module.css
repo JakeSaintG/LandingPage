@@ -1,13 +1,16 @@
 .projects {
-    border: 1px solid red;
+    box-shadow: var(--light-inset-boxshadow);;
     border-radius: 15px;
-    height: 100%;
+    max-height: 100%;
     display: grid;
     padding: 1rem;
+    gap: 1rem;
 }
 
 .project {
-    border: solid blue 1px;
+    /* border: solid blue 1px; */
+    box-shadow: var(--light-raised-boxshadow);
+    border-radius: 15px;
 }
 
 /* 
