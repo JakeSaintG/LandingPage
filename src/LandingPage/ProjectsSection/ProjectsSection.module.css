@@ -13,10 +13,21 @@
     border-radius: 15px;
 }
 
-/* 
-    media query
-        3 cols
+@media only screen and (min-width: 600px) {
+    .projects{
+    }
+}
 
-    Media query
-        4 cols
-*/
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .projects{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .projects{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+} 

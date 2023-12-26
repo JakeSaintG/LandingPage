@@ -6,8 +6,28 @@
     box-shadow: var(--light-inset-boxshadow);
 }
 
-.experience {
+.experience_details {
     padding: 1rem;
+    border-radius: 15px;
+    overflow-y: scroll;
+    border: solid blue 1px;
+}
+
+.past_experience,
+.current_experience {
+    border: solid green 1px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 40%;
+}
+
+.experience {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    border: solid red 1px;
+    /* height: 100%; */
 }
 
 .selected_profession,
@@ -16,7 +36,7 @@
     cursor: pointer;
     user-select: none;
     display: block;
-    width: 50%;
+    width: 40%;
     margin: 0;
     padding: 1rem;
     border-radius: 10px;
@@ -43,9 +63,4 @@
 .profession_dark:active {
     box-shadow: inset -2px 2px 5px #364241, inset 2px -2px 5px #4a5a59;
     /* border: solid 1px #3e4d4c; */
-}
-
-.experience_details {
-    padding: 1rem;
-    border-radius: 15px;
 }

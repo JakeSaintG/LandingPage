@@ -94,13 +94,18 @@ export default function ExperienceSection(props: Props) {
             </div>
             <div className={styles.experience}>
                 <h3>Current:</h3>
-                <button className={`${buttonVisualMode} ${activeClass === 'dev-fulltime' ? `${activeButtonVisualMode}` : `${styles.profession}`}`} id='dev-fulltime' onClick={returnWorkExperience}>Software Developer</button>
-                <button className={`${buttonVisualMode} ${activeClass === 'mentor' ? `${activeButtonVisualMode}` : `${styles.profession}`}`} id='mentor' onClick={returnWorkExperience}>Code Louisville Mentor</button>
+                <div className={styles.current_experience}>
+                    <button className={`${buttonVisualMode} ${activeClass === 'dev-fulltime' ? `${activeButtonVisualMode}` : `${styles.profession}`}`} id='dev-fulltime' onClick={returnWorkExperience}>Software Developer</button>
+                    <button className={`${buttonVisualMode} ${activeClass === 'mentor' ? `${activeButtonVisualMode}` : `${styles.profession}`}`} id='mentor' onClick={returnWorkExperience}>Code Louisville Mentor</button>
+                </div>
+
                 <h3>Previous:</h3>
-                <button className={`${buttonVisualMode} ${activeClass === 'dev-intern' ? `${activeButtonVisualMode}` : `${styles.profession}`}`} id='dev-intern' onClick={returnWorkExperience}>Software Developer Intern</button>
-                <button className={`${buttonVisualMode} ${activeClass === 'dev-student' ? `${activeButtonVisualMode}` : `${styles.profession}`}`} id='dev-student' onClick={returnWorkExperience}>Code Louisville Student</button>
-                <button className={`${buttonVisualMode} ${activeClass === 'nurse' ? `${activeButtonVisualMode}` : `${styles.profession}`}`} id='nurse' onClick={returnWorkExperience}>ICU Nurse</button>
-                <button className={`${buttonVisualMode} ${activeClass === 'awards' ? `${activeButtonVisualMode}` : `${styles.profession}`}`} id='awards' onClick={returnWorkExperience}>Awards</button>
+                <div className={styles.past_experience}>
+                    <button className={`${buttonVisualMode} ${activeClass === 'dev-intern' ? `${activeButtonVisualMode}` : `${styles.profession}`}`} id='dev-intern' onClick={returnWorkExperience}>Software Developer Intern</button>
+                    <button className={`${buttonVisualMode} ${activeClass === 'dev-student' ? `${activeButtonVisualMode}` : `${styles.profession}`}`} id='dev-student' onClick={returnWorkExperience}>Code Louisville Student</button>
+                    <button className={`${buttonVisualMode} ${activeClass === 'nurse' ? `${activeButtonVisualMode}` : `${styles.profession}`}`} id='nurse' onClick={returnWorkExperience}>ICU Nurse</button>
+                    <button className={`${buttonVisualMode} ${activeClass === 'awards' ? `${activeButtonVisualMode}` : `${styles.profession}`}`} id='awards' onClick={returnWorkExperience}>Awards</button>
+                </div>
             </div>
         </PageSection>
     );
