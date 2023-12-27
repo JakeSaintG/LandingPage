@@ -9,7 +9,8 @@ import SlideToggle from './GeneralComponents/SlideToggle';
 
 export default function App() {
     let [settingsVisibility, setSettingsVisibility] = useState(false);
-    let [pageState, setDialog] = useState('default');
+
+    // TODO: retain visual mode in local storage.
     let [pageVisualMode, setPageVisualMode] = useState('light_mode');
     const dialogRef = useRef<HTMLDialogElement | null>(null);
 
@@ -23,13 +24,7 @@ export default function App() {
 
     const toggleSettingsMenu = () => {
         setSettingsVisibility((settingsVisibility = !settingsVisibility));
-        setDialog(
-            settingsVisibility
-                ? (pageState = 'show_settings')
-                : (pageState = 'show_landing_page')
-        );
-
-        pageState === 'show_settings' ? openDialog() : closeDialog();
+        settingsVisibility ? openDialog() : closeDialog();
     };
 
     // TODO: A fade animation between light and dark mode may be less jarring
@@ -82,7 +77,7 @@ export default function App() {
                 toggleSettings={toggleSettingsMenu}
                 visualMode={pageVisualMode}
             />
-            <div className={`${styles[pageState]} ${styles.main_landing_page}`}>
+            <div className={`${styles.main_landing_page}`}>
                 <AboutSection visualMode={pageVisualMode} />
                 <ExperienceSection visualMode={pageVisualMode} />
                 <ProjectsSection visualMode={pageVisualMode} />

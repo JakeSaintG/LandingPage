@@ -18,14 +18,6 @@
     content: ' ';
 }
 
-.show_settings {
-    display: none;
-}
-
-.show_landing_page {
-    display: block;
-}
-
 dialog {
     border: none;
     background: none;
