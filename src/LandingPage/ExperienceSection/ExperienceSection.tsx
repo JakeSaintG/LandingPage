@@ -9,7 +9,7 @@ interface Props extends React.HTMLAttributes<HTMLElement>{
 let detailsVisualMode: string;
 let buttonVisualMode: string;
 let activeButtonVisualMode: string;
-const contentStyle: React.CSSProperties = { display: 'grid', gridTemplateColumns:'1fr 1fr' };
+const contentStyle: React.CSSProperties = { display: 'grid', gridTemplateColumns:'1fr 1fr', height: 'calc(100% - 52px)' };
 
 const workExperience = [
     {
@@ -93,16 +93,16 @@ export default function ExperienceSection(props: Props) {
                 <ul>{workHighlights.map(e => <li key={key++}>{e}</li>)}</ul>
             </div>
             <div className={styles.experience}>
-                <h3>Current:</h3>
+                <h3 className={styles.current_header} >Current:</h3>
                 <div className={styles.current_experience}>
                     <button className={`${buttonVisualMode} ${activeClass === 'dev-fulltime' ? `${activeButtonVisualMode}` : `${styles.profession}`}`} id='dev-fulltime' onClick={returnWorkExperience}>Software Developer</button>
                     <button className={`${buttonVisualMode} ${activeClass === 'mentor' ? `${activeButtonVisualMode}` : `${styles.profession}`}`} id='mentor' onClick={returnWorkExperience}>Code Louisville Mentor</button>
                 </div>
 
-                <h3>Previous:</h3>
+                <h3 className={styles.past_header}>Previous:</h3>
                 <div className={styles.past_experience}>
-                    <button className={`${buttonVisualMode} ${activeClass === 'dev-intern' ? `${activeButtonVisualMode}` : `${styles.profession}`}`} id='dev-intern' onClick={returnWorkExperience}>Software Developer Intern</button>
-                    <button className={`${buttonVisualMode} ${activeClass === 'dev-student' ? `${activeButtonVisualMode}` : `${styles.profession}`}`} id='dev-student' onClick={returnWorkExperience}>Code Louisville Student</button>
+                    <button className={`${buttonVisualMode} ${activeClass === 'dev-intern' ? `${activeButtonVisualMode}` : `${styles.profession}`}`} id='dev-intern' onClick={returnWorkExperience}>Software Dev Intern</button>
+                    <button className={`${buttonVisualMode} ${activeClass === 'dev-student' ? `${activeButtonVisualMode}` : `${styles.profession}`}`} id='dev-student' onClick={returnWorkExperience}>Code Louisville Student</button> 
                     <button className={`${buttonVisualMode} ${activeClass === 'nurse' ? `${activeButtonVisualMode}` : `${styles.profession}`}`} id='nurse' onClick={returnWorkExperience}>ICU Nurse</button>
                     <button className={`${buttonVisualMode} ${activeClass === 'awards' ? `${activeButtonVisualMode}` : `${styles.profession}`}`} id='awards' onClick={returnWorkExperience}>Awards</button>
                 </div>

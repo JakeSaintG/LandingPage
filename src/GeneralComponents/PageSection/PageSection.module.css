@@ -2,6 +2,11 @@
     scroll-margin-top: calc(1rem + 69px);
     height: calc(100vh - 69px - 2rem);
     margin: 0 1rem;
+    min-height: 370px;
+}
+
+.section_title {
+    
 }
 
 .dark_mode_content {
@@ -15,5 +20,6 @@
 .content {
     padding: 1rem;
     border-radius: 15px;
-    height: calc(100% - 52px - 2rem);
+    height: calc(100% - 52px);
+    min-height: 300px;
 }

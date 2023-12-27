@@ -8,7 +8,6 @@
 }
 
 .project {
-    /* border: solid blue 1px; */
     box-shadow: var(--light-raised-boxshadow);
     border-radius: 15px;
 }

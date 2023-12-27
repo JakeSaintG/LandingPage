@@ -1,3 +1,7 @@
+*{
+    box-sizing: border-box;
+}
+
 :root {
     /* Dark Mode */
     --dark-mode-background: #404e4d;

@@ -18,7 +18,7 @@ export default function PageSection( props: Props ) {
 
     return (
         <section className={styles.page_section} id={id} >
-            <h1>{title}</h1>
+            <h1 className={styles.section_title}>{title}</h1>
             <div className={`${styles.content} ${colorMode}`} style={style}>
                 {children}
             </div>

@@ -65,8 +65,5 @@ nav::after {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     min-width: 4rem;
     margin-left: auto;
-}
-
-.socials * {
-    text-decoration: none;
+    gap: 5px;
 }
