@@ -5,7 +5,7 @@ interface Props extends React.HTMLAttributes<HTMLElement>{
     visualMode: string
 }
 
-const contentStyle: React.CSSProperties = { display: 'grid', gridTemplateColumns:'1fr 1fr' };
+const contentStyle: React.CSSProperties = { };
 
 const elevatorPitch = `Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
 sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim 
@@ -16,26 +16,28 @@ non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`;
 
 export default function AboutSection(props: Props) {
     const { visualMode } = props;
-    let pitchVisualMode: string;
+    let aboutVisualMode: string;
 
-    visualMode === 'dark_mode' ? pitchVisualMode = styles.dark_mode_pitch : pitchVisualMode = styles.light_mode_pitch;
+    visualMode === 'dark_mode' ? aboutVisualMode = styles.about_dark : aboutVisualMode = styles.about_light;
 
     return (
         <PageSection title='Jake St. Germain' id="aboutSection" style={contentStyle} visualMode={visualMode}>
-            <div>placeholder</div>
-            <div className={`${styles.elevator_pitch} ${pitchVisualMode}`}>
-                <p>{elevatorPitch}</p>
+            <div className={styles.about_content}>
+                <div>placeholder</div>
+                <div className={`${styles.elevator_pitch} ${aboutVisualMode}`}>
+                    <p>{elevatorPitch}</p>
 
-                {/* TODO: make this a rotating tidbit or saying "carosel"
-                    "Registered nurse and registered nerd."
-                    "Cat enthusiast"
-                    "Nurse with a byte: Where empathy meets elegant code."
-                    "Cats, code, and compassion: My purr-fect trifecta."
-                    "'fsdkfjfdscjvjkldjs' - my cat on my keyboard"
-                    "Software "architect" and healthcare advocate – shaping a healthier future one line at a time."
-                    "Caring for patients and crafting clean code – because attention to detail is my professional hallmark."
-                */}
-                <p>tidbit</p>
+                    {/* TODO: make this a rotating tidbit or saying "carosel"
+                        "Registered nurse and registered nerd."
+                        "Cat enthusiast"
+                        "Nurse with a byte: Where empathy meets elegant code."
+                        "Cats, code, and compassion: My purr-fect trifecta."
+                        "'fsdkfjfdscjvjkldjs' - my cat on my keyboard"
+                        "Software "architect" and healthcare advocate – shaping a healthier future one line at a time."
+                        "Caring for patients and crafting clean code – because attention to detail is my professional hallmark."
+                    */}
+                    <p>tidbit</p>
+                </div>
             </div>
         </PageSection>
     );

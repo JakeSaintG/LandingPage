@@ -153,6 +153,13 @@
     }
 }
 
+@media only screen and (min-width: 600px) {
+    .experience_content {
+        grid-template-columns: 1fr;
+        grid-template-rows: 60% 40%;
+    }
+}
+
 @media only screen and (min-width: 768px) {
     .experience_content {
         grid-template-columns: 60% 40%;

@@ -21,15 +21,11 @@
     --light-raised-boxshadow: 8px 8px 16px #b7c4c7, -8px -8px 16px #f7ffff;
     --light-inset-boxshadow: inset 8px 8px 16px #b7c4c7, inset -8px -8px 16px #f7ffff;
 
-    /* 
-        Color palette:
-            main        #773344
-            secondary   #AD7474
-            tertiary    #E3B5A4
-            light       #ECCFC3
-            lightest    #F5E9E2
-    */
-
+    --palette-main-color: #773344;
+    --palette-secondary-color: #AD7474;
+    --palette-tertiary-color: #E3B5A4;
+    --palette-light-color: #ECCFC3;
+    --palette-lightest-color: #F5E9E2;
 }
 
 body {
