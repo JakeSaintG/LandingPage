@@ -17,14 +17,12 @@
     }
 }
 
-/* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
     .projects{
         grid-template-columns: 1fr 1fr 1fr;
     }
 }
 
-/* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
     .projects{
         grid-template-columns: 1fr 1fr 1fr 1fr;
