@@ -9,6 +9,7 @@
     display: flex;
     flex-direction: column;
     overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 .elevator_pitch.about_dark {
@@ -19,8 +20,21 @@
     box-shadow: var(--light-inset-boxshadow);
 }
 
-.elevator_pitch > p {
+.elevator_pitch * {
     margin: auto 10px;
+}
+
+.tidbit {
+    display: flex;
+    position: relative;
+    justify-content: center;
+}
+
+.tidbit p {
+    display: inline;
+    position: absolute;
+    width: 250px;
+    text-align: center;
 }
 
 @media only screen and (max-width: 600px) {
