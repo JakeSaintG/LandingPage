@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import PageSection from '../../GeneralComponents/PageSection';
 import styles from './AboutSection.module.css';
 import tidbits from '../../assets/tidbits.json'
@@ -17,6 +17,16 @@ const tibbitAnimation = [
     { transform: "translateX(450px)" }
 ];
 
+let intervalSet = false;
+
+const useInterval = (callback: Function, delay: number) => {
+    if (!intervalSet) {
+        setInterval(callback, delay);
+        intervalSet = true;
+        console.log("wut")
+    }
+}
+
 export default function AboutSection(props: Props) {
     const { visualMode } = props;
     let aboutVisualMode: string;
@@ -26,7 +36,7 @@ export default function AboutSection(props: Props) {
 
     visualMode === 'dark_mode' ? aboutVisualMode = styles.about_dark : aboutVisualMode = styles.about_light;
 
-    setInterval(() => {
+    useInterval(() => {
         let newTidbit: string;
 
         do {
@@ -37,7 +47,10 @@ export default function AboutSection(props: Props) {
         // This (hopefully) ensures that it stays in sync.
         tidbitRef.current?.animate(tibbitAnimation, {duration: 3000}).commitStyles();
         setTidbit(tidbit = newTidbit);
+
+        console.log("double wut");
     }, 4000);
+
 
     return (
         <PageSection title='Jake St. Germain' id="aboutSection" style={contentStyle} visualMode={visualMode}>
