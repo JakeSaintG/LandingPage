@@ -92,10 +92,6 @@
         grid-template-columns: 1fr 1fr;
     }
 
-    .selected_profession,
-    .profession {
-        width: 85%;
-    }
 }
 
 @media only screen and (max-height: 540px) {
@@ -144,21 +140,16 @@
         grid-template-columns: 1fr 1fr;
     }
 
-    .selected_profession,
-    .profession {
-        width: 85%;
-    }
-
     .experience h3 {
         margin-bottom: 0;
     }
 }
 
 @media only screen and (min-width: 600px) {
-    .experience_content {
+    /* .experience_content {
         grid-template-columns: 1fr;
         grid-template-rows: 60% 40%;
-    }
+    } */
 
     .past_experience,
     .current_experience {
@@ -179,8 +170,9 @@
 
     .past_experience,
     .current_experience {
-        display: grid;
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
     }
 
     .experience h3 {
