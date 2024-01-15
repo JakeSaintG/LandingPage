@@ -15,6 +15,7 @@ nav {
     flex-direction: row;
     position: fixed;
     width: 100vw;
+    z-index: 1000;
 }
 
 nav::after {
