@@ -18,11 +18,11 @@ const tibbitAnimation = [
 ];
 
 const useInterval = (callback: Function, delay: number) => {
-    let [test, setTest] = useState(false);
+    let [activeInterval, setActiveInterval] = useState(false);
     
-    if (!test) {
+    if (!activeInterval) {
         setInterval(callback, delay);
-        setTest(test = true);
+        setActiveInterval(activeInterval = true);
     }
 }
 

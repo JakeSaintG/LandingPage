@@ -1,28 +1,12 @@
 import styles from './ProjectsSection.module.css'
 import PageSection from '../../GeneralComponents/PageSection';
+import projects from '../../assets/projects.json'
 
 interface Props extends React.HTMLAttributes<HTMLElement>{
     visualMode: string
 }
 
-const projects = [
-    {
-        name: "test",
-        hosted: null,
-        technologies: [
-            "C#"
-        ]
-    },
-    {
-        name: "test2",
-        hosted: "gh pages link",
-        technologies: [
-            "Angular"
-        ]
-    }
-];
-
-const contentStyle: React.CSSProperties = { display: 'grid', gridTemplateColumns:'1fr' };
+const contentStyle: React.CSSProperties = { display: 'flex', flexDirection: 'column' };
 
 export default function ProjectsSection(props: Props) {
     const { visualMode } = props;
@@ -30,6 +14,9 @@ export default function ProjectsSection(props: Props) {
     
     return (
         <PageSection title='Projects' id="projectsSection" style={contentStyle} visualMode={visualMode}>
+            <div className={styles.projects_desc}>
+                <p>I like to stay busy! Especially when something I find something challenging, new, or intresting to work on. You'll find projects with all kinds of different technologies, languages, or applications here! I also called out some of my favorites.</p>
+            </div>
             <div className={styles.projects}>
                 {projects.map(e =>
                     <div key={key++} className={styles.project}>

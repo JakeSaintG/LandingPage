@@ -1,0 +1,12 @@
+[
+    {
+        "name": "test",
+        "hosted": null,
+        "technologies": ["C#"]
+    },
+    {
+        "name": "test2",
+        "hosted": "gh pages link",
+        "technologies": ["Angular"]
+    }
+]
