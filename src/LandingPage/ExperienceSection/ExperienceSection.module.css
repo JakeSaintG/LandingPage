@@ -52,14 +52,13 @@
 
 .selected_profession,
 .profession {
-    all: unset;
-    cursor: pointer;
-    user-select: none;
-    display: block;
-    width: 45%;
+    background-color: unset;
+    border: none;
+    color: unset;
     margin: 0;
     padding: 1rem;
     border-radius: 10px;
+    text-align: left;
 }
 
 .profession:hover {
@@ -82,51 +81,9 @@
 .selected_profession_dark,
 .profession:active {
     box-shadow: inset -2px 2px 5px #364241, inset 2px -2px 5px #4a5a59;
-    /* border: solid 1px #3e4d4c; */
+    border: solid 1px #3e4d4c;
 }
 
-@media only screen and (max-height: 680px) {
-    .past_experience,
-    .current_experience {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
-
-}
-
-@media only screen and (max-height: 540px) {
-    .experience {
-        display: grid;
-        column-gap: 1rem;
-        grid-template-areas:
-            'currentH pastH'
-            'current past';
-    }
-
-    .experience h3 {
-        margin-top: 0;
-        height: 1.5rem;
-    }
-
-    .past_experience,
-    .current_experience {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        height: auto;
-    }
-
-    .past_experience {
-        display: grid;
-        grid-template-columns: 1fr;
-    }
-}
-
-@media only screen and (max-width: 600px) and (min-height: 540px) {
-    .experience_content {
-        grid-template-rows: 50% 50%;
-    }
-}
 
 @media only screen and (max-width: 600px) {
     .experience_content {
@@ -140,21 +97,31 @@
         grid-template-columns: 1fr 1fr;
     }
 
+    .past_experience button,
+    .current_experience button {
+        padding: .75rem;
+    }
+
     .experience h3 {
         margin-bottom: 0;
     }
 }
 
-@media only screen and (min-width: 600px) {
-    /* .experience_content {
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+    .experience_content {
         grid-template-columns: 1fr;
         grid-template-rows: 60% 40%;
-    } */
+    }
 
     .past_experience,
     .current_experience {
         display: grid;
         grid-template-columns: 1fr 1fr;
+    }
+
+    .past_experience button,
+    .current_experience button {
+        /* TODO: fix button font sizing... too small. Make it different for different size screens */
     }
 
     .experience h3 {
@@ -175,6 +142,11 @@
         flex-wrap: wrap;
     }
 
+    .past_experience button,
+    .current_experience button {
+        width: 90%;
+    }
+
     .experience h3 {
         margin-bottom: 1rem;
     }
@@ -183,5 +155,10 @@
 @media only screen and (min-width: 992px) {
     .experience_content {
         grid-template-columns: 50% 50%;
+    }
+
+    .past_experience button,
+    .current_experience button {
+        width: 50%;
     }
 } 
