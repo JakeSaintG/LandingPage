@@ -7,30 +7,42 @@
     box-shadow: var(--light-inset-boxshadow);;
     border-radius: 15px;
     height: 100%;
-    display: grid;
+    display: flex;
     padding: 1rem;
     gap: 1rem;
-    grid-template-rows: 1fr 1fr;
+    /* grid-template-rows: 1fr 1fr; */
+    overflow-x: auto;
+    /* overflow: auto; */
 }
 
 .project {
     box-shadow: var(--light-raised-boxshadow);
     border-radius: 15px;
+    width: 90%;
 }
 
 @media only screen and (min-width: 600px) {
     .projects{
     }
+
 }
 
 @media only screen and (min-width: 768px) {
     .projects{
-        grid-template-columns: 1fr 1fr 1fr;
+        /* grid-template-columns: 1fr 1fr 1fr; */
+    }
+
+    .project {
+        width: 27%;
     }
 }
 
 @media only screen and (min-width: 992px) {
     .projects{
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+    }
+
+    .project {
+        width: 20%;
     }
 } 
