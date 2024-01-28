@@ -1,21 +1,3 @@
-.projects_desc {
-    height: 33%;
-    min-height: 65px;
-}
-
-.projects {
-    box-shadow: var(--light-inset-boxshadow);;
-    border-radius: 15px;
-    height: 100%;
-    display: grid;
-    padding: 1rem;
-    gap: 1rem;
-    grid-auto-flow: column;
-    grid-template-rows: 1fr 1fr;
-    flex-wrap: wrap;
-    overflow-x: auto;
-}
-
 .project {
     box-shadow: var(--light-raised-boxshadow);
     border-radius: 15px;
