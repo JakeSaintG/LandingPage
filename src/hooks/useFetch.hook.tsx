@@ -16,7 +16,9 @@ export function useFetch(url: string) {
             .finally(() => setLoading(true));
         
         
-        return () => {}
+        return () => {
+            controller.abort();
+        }
     }, [url])
 
     return {loading, data, error}
