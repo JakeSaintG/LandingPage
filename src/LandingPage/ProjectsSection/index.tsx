@@ -1,6 +1,5 @@
 export { default } from './ProjectsSection';
 
-
 /*
 TODO: make a "carosel" for projects
     Allow for chips in each project

@@ -1,8 +1,15 @@
-import ProjectsSection from './Project';
+import Project from './Project';
+import { project } from './Project';
 import { render, screen } from '@testing-library/react';
 
-test('renders text from about section', () => {
-    render(<ProjectsSection visualMode='' />);
+const p: project = {
+    name: "",
+    hosted: "",
+    technologies: [""]
+}
+
+test('renders text from passed in project', () => {
+    render(<Project visualMode='' project={p}/>);
     const linkElement = screen.getByText(/Placeholder/i);
     expect(linkElement).toBeInTheDocument();
 });

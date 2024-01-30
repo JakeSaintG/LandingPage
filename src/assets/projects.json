@@ -12,7 +12,7 @@
     {
         "name": "test2",
         "hosted": "gh pages link",
-        "technologies": ["Angular"]
+        "technologies": ["Angular", "C#", ".NET"]
     },
     {
         "name": "test2",
