@@ -5,6 +5,7 @@ import { render, screen } from '@testing-library/react';
 const p: project = {
     name: "",
     hosted: "",
+    description: "",
     technologies: [""]
 }
 

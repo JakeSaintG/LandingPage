@@ -1,47 +1,38 @@
 [
     {
-        "name": "test",
+        "name": "PokeUtils",
+        "hosted": "gh pages link",
+        "description": "An Angular application built using the Cashmere libary. PokéUtils leverages PokéAPI to provide the user with tools that will enchance their journey into the world of Pokémon! ",
+        "technologies": ["angular"]
+    },
+    {
+        "name": "SpotBot",
         "hosted": null,
-        "technologies": ["C#"]
+        "description": "",
+        "technologies": ["typescript"]
     },
     {
-        "name": "test2",
-        "hosted": "gh pages link",
-        "technologies": ["Angular"]
+        "name": "Daft Punk Sound Board",
+        "hosted": null,
+        "description": "",
+        "technologies": ["html", "javascript"]
     },
     {
-        "name": "test2",
+        "name": "Pokemon Team Builder",
         "hosted": "gh pages link",
-        "technologies": ["Angular", "C#", ".NET"]
+        "description": "",
+        "technologies": ["html", "javascript"]
     },
     {
-        "name": "test2",
+        "name": "Nickelback Lorem Ipsum",
         "hosted": "gh pages link",
-        "technologies": ["Angular"]
+        "description": "",
+        "technologies": ["csharp"]
     },
     {
-        "name": "test2",
+        "name": "Sad Libs",
         "hosted": "gh pages link",
-        "technologies": ["Angular"]
-    },
-    {
-        "name": "test2",
-        "hosted": "gh pages link",
-        "technologies": ["Angular"]
-    },
-    {
-        "name": "test2",
-        "hosted": "gh pages link",
-        "technologies": ["Angular"]
-    },
-    {
-        "name": "test2",
-        "hosted": "gh pages link",
-        "technologies": ["Angular"]
-    },
-    {
-        "name": "test2",
-        "hosted": "gh pages link",
-        "technologies": ["Angular"]
+        "description": "",
+        "technologies": ["html", "javascript"]
     }
 ]

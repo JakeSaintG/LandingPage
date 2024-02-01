@@ -18,6 +18,7 @@ export default function ProjectsSection(props: Props) {
         <PageSection title='Projects' id="projectsSection" style={contentStyle} visualMode={visualMode}>
             <div className={styles.projects_desc}>
                 <p>I like to stay busy! Especially when something I find something challenging, new, or intresting to work on. You'll find projects with all kinds of different technologies, languages, or applications here! I also called out some of my favorites.</p>
+                <p>Also, Katas (link? Something?)</p>
             </div>
             <div className={styles.projects}>
                 {projects.map((e: project) =>
