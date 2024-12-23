@@ -51,16 +51,24 @@
 .switch_button .switch_outer .button_toggle.slider_light {
     background-color: #e7e7e7;
     box-shadow: 8px 8px 16px #b7c4c7;
-    
 }
 
-.switch_button .switch_outer input[type='checkbox']:checked + .button .button_toggle {
+.switch_button
+    .switch_outer
+    input[type='checkbox']:checked
+    + .button
+    .button_toggle {
     left: 58%;
 }
 
 .switch_button .switch_outer input[type='checkbox']:checked + .button .button_indicator {
-    -webkit-animation: indicator 1s forwards;
-    animation: indicator 1s forwards;
+    -webkit-animation: indicator-to-dark 1s forwards;
+    animation: indicator-to-dark 1s forwards;
+}
+
+.switch_button .switch_outer input[type='checkbox']:not(:checked) + .button .button_indicator {
+    -webkit-animation: indicator-to-light 1s forwards;
+    animation: indicator-to-light 1s forwards;
 }
 
 .switch_button .switch_outer .button {
@@ -74,27 +82,41 @@
 .switch_button .switch_outer .button_indicator {
     height: 25px;
     width: 25px;
-    top: 50%;
+    top: 52%;
     transform: translateY(-50%);
-    border-radius: 50%;
-    border: 3px solid #404e4d;
     box-sizing: border-box;
     right: 10px;
     position: relative;
 }
 
-@keyframes indicator {
+@keyframes indicator-to-dark {
     30% {
         opacity: 0;
     }
 
     0% {
-        opacity: 1;
+        opacity: 0;
     }
 
     100% {
         opacity: 1;
-        border: 3px solid #e7e7e7;
-        left: -68%;
+        /* border: 3px solid #e7e7e7; */
+        left: -65%;
+    }
+}
+
+@keyframes indicator-to-light {
+    30% {
+        opacity: 0;
+    }
+
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+        /* border: 3px solid #e7e7e7; */
+        left: -5%;
     }
 }
