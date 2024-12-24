@@ -1,6 +1,6 @@
 .dark_mode_nav {
     background-color: var(--dark-mode-background);
-    box-shadow: 0 8px 16px #364241;
+    box-shadow: 0 8px 16px #23262D;
 }
 
 .light_mode_nav {
@@ -46,7 +46,7 @@ nav::after {
 .nav_item:active {
     border-radius: 15px;
     background: #d7e7ea;
-    box-shadow: inset 8px 8px 16px #b7c4c7, inset -8px -8px 16px #f7ffff;
+    box-shadow: var(--light-raised-boxshadow);
 }
 
 .dark_mode_nav > .socials *,

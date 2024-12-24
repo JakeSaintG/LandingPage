@@ -18,7 +18,7 @@ export default function Navbar(props: Props) {
     props.visualMode === 'dark_mode' ? mode = 'dark_mode_nav' : mode = 'light_mode_nav';
     
     return (
-        <nav className={`${styles.nav} ${styles[mode]}`}>
+        <nav className={styles[mode]}>
             <div className={styles.nav_logo}>Logo</div>
 
             <a className={styles.nav_item} href="#aboutSection">
