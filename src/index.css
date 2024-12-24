@@ -1,26 +1,32 @@
-*{
-    box-sizing: border-box;
-}
+* { box-sizing: border-box }
 
 :root {
     /* Dark Mode */
-    --dark-mode-background: #404e4d;
+    --dark-mode-background: #11141C;
+    --dark-mode-background-gradient: linear-gradient(90deg, #1b1e28, #10131c);
 
-    --dark-rounded-background: linear-gradient(145deg, #445352, #3a4645);
-    --dark-dipped-background: linear-gradient(145deg, #3a4645, #445352);
+    --dark-rounded-background: linear-gradient(145deg, #2b2f37, #05060A);
+    --dark-dipped-background: linear-gradient(145deg, #05060A, #2b2f37);
 
-    --dark-raised-boxshadow: 8px 8px 16px #364241, -8px -8px 16px #4a5a59;
-    --dark-inset-boxshadow: inset 8px 8px 16px #364241, inset -8px -8px 16px #4a5a59;
+    --dark-raised-shadow-only: 6px 6px 12px #05060A;
+
+    --dark-raised-boxshadow: 6px 6px 12px #05060A, -6px -6px 12px #2b2f37;
+    --dark-inset-boxshadow: inset 6px 6px 12px #05060A, inset -6px -6px 12px #2b2f37;
+
 
     /* Light Mode */
     --light-mode-background: #e7e7e7;
+    --light-mode-background-gradient: linear-gradient(90deg, #e7e7e7, #ded8d8);
 
     --light-rounded-background: linear-gradient(145deg, #f7f7f7, #d0d0d0);
     --light-dipped-background: linear-gradient(145deg, #d0d0d0, #f7f7f7);
 
-    --light-raised-boxshadow: 8px 8px 16px #b7c4c7, -8px -8px 16px #f7ffff;
-    --light-inset-boxshadow: inset 8px 8px 16px #b7c4c7, inset -8px -8px 16px #f7ffff;
+    --light-raised-shadow-only: 6px 6px 12px #b7c4c7;
 
+    --light-raised-boxshadow: 6px 6px 12px #b7c4c7, -6px -6px 12px #f7ffff;
+    --light-inset-boxshadow: inset 6px 6px 12px #b7c4c7, inset -6px -6px 12px #f7ffff;
+
+    /* Palette */
     --palette-main-color: #773344;
     --palette-secondary-color: #AD7474;
     --palette-tertiary-color: #E3B5A4;

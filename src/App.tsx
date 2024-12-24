@@ -6,6 +6,7 @@ import ProjectsSection from './LandingPage/ProjectsSection';
 import ExperienceSection from './LandingPage/ExperienceSection';
 import ContactSection from './LandingPage/ContactSection';
 import SlideToggle from './GeneralComponents/SlideToggle';
+import BlogSection from './LandingPage/BlogSection';
 
 export default function App() {
     let [settingsVisibility, setSettingsVisibility] = useState(false);
@@ -61,14 +62,15 @@ export default function App() {
                         styles[`dialog_contents_${pageVisualMode}`]
                     }`}
                 >
-                    <h2>Settings</h2>
+                    <h2 className={styles.settings_header}>Settings</h2>
                     <div>
+                        <p>The only setting that matters!</p>
+
                         <SlideToggle
                             value={pageVisualMode}
                             onChange={handleModeChange}
                             visualMode={pageVisualMode}
                         />
-                        <p>The only setting that matters!</p>
                         <button onClick={toggleSettingsMenu}>Close</button>
                     </div>
                 </div>
@@ -81,6 +83,7 @@ export default function App() {
                 <AboutSection visualMode={pageVisualMode} />
                 <ExperienceSection visualMode={pageVisualMode} />
                 <ProjectsSection visualMode={pageVisualMode} />
+                <BlogSection visualMode={pageVisualMode} />
                 <ContactSection visualMode={pageVisualMode} />
             </div>
         </div>
