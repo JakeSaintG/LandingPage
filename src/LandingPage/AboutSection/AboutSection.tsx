@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef, useState, useSyncExternalStore } from 'react';
+import { useRef, useState } from 'react';
 import PageSection from '../../GeneralComponents/PageSection';
 import styles from './AboutSection.module.css';
 import tidbits from '../../assets/tidbits.json'
@@ -11,10 +11,10 @@ interface Props extends React.HTMLAttributes<HTMLElement>{
 const contentStyle: React.CSSProperties = { };
 
 const tibbitAnimation = [
-    { transform: "translateX(-550px)" },
-    { transform: 'translateX(0)', offset: 0.15 },
-    { transform: 'translateX(0)', offset: 0.85 },
-    { transform: "translateX(550px)" }
+    { transform: "translateX(-650px)" },            // starting position
+    { transform: 'translateX(0)', offset: 0.15 },   // Mid pos + pause
+    { transform: 'translateX(0)', offset: 0.85 },   // End mid pos pause
+    { transform: "translateX(650px)" }              // end pos
 ];
 
 const useInterval = (callback: Function, delay: number) => {
@@ -47,12 +47,12 @@ export default function AboutSection(props: Props) {
     }, 4000);
 
     return (
-        <PageSection title='Jake St. Germain' id="aboutSection" style={contentStyle} visualMode={visualMode}>
+        <PageSection title='Jake St. Germain' id="aboutSection" style={contentStyle} visualMode={visualMode} header='h1'>
             <div className={styles.about_content}>
                 <div>placeholder</div>
                 <div className={`${styles.elevator_pitch} ${aboutVisualMode}`}>
                     <div>
-                        {elevatorPitch.map(e => 
+                        {elevatorPitch.paragraphs.map(e => 
                             <p key={key++} className={styles.project}>
                                 {e}
                             </p>

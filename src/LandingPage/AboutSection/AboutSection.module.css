@@ -20,14 +20,13 @@
     box-shadow: var(--light-inset-boxshadow);
 }
 
-.elevator_pitch * {
-    margin: auto 10px;
-}
+
 
 .tidbit {
     display: flex;
     position: relative;
     justify-content: center;
+    height: 10%;
 }
 
 .tidbit p {
@@ -56,10 +55,16 @@
         grid-template-columns: 40% 60%;
         grid-template-rows: 1fr;
     }
+
+    .elevator_pitch * {
+        margin: auto 10px;
+    }
 }
 
 @media only screen and (min-width: 992px) {
     .about_content {
         grid-template-columns: 1fr 1fr;
     }
+
+
 } 
