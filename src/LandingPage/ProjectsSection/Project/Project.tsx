@@ -30,7 +30,7 @@ export default function Project(props: Props) {
     let key = 0;
 
     return (
-        <div className={styles.project}>
+        <div className={`${styles.project} ${styles[visualMode]}`}>
             <h3>{project.name}</h3>
             <a href="example.com">{project.hosted}</a>
             <div>

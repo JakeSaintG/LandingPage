@@ -20,9 +20,9 @@ export default function ProjectsSection(props: Props) {
                 <p>I like to stay busy! Especially when something I find something challenging, new, or intresting to work on. You'll find projects with all kinds of different technologies, languages, or applications here! I also called out some of my favorites.</p>
                 <p>Also, Katas (link? Something?)</p>
             </div>
-            <div className={styles.projects}>
+            <div className={`${styles.projects} ${styles[visualMode]}`}>
                 {projects.map((e: project) =>
-                    <Project visualMode="" key={key++} project={e}/>
+                    <Project visualMode={visualMode} key={key++} project={e}/>
                 )}
             </div>
         </PageSection>

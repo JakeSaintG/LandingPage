@@ -17,9 +17,16 @@
 }
 
 .project {
-    box-shadow: var(--light-raised-boxshadow);
     border-radius: 15px;
     min-width: 250px;
+}
+
+.projects.light_mode {
+    box-shadow: var(--light-inset-boxshadow);
+}
+
+.projects.dark_mode {
+    box-shadow: var(--dark-inset-boxshadow);
 }
 
 @media only screen and (min-width: 600px) {
