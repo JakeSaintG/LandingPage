@@ -3,36 +3,56 @@
         "name": "PokeUtils",
         "hosted": "gh pages link",
         "description": "An Angular application built using the Cashmere libary. PokéUtils leverages PokéAPI to provide the user with tools that will enchance their journey into the world of Pokémon! ",
-        "technologies": ["angular"]
+        "technologies": ["angular"],
+        "favorite": true,
+        "eductional": false
+    },
+    {
+        "name": "Code:You SQL Practice",
+        "hosted": "",
+        "description": "An educational project for teaching my students the basic concepts of SQL.",
+        "technologies": ["sql"],
+        "favorite": true,
+        "eductional": true
     },
     {
         "name": "SpotBot",
         "hosted": null,
         "description": "",
-        "technologies": ["typescript"]
+        "technologies": ["typescript"],
+        "favorite": false,
+        "eductional": false
     },
     {
         "name": "Daft Punk Sound Board",
         "hosted": null,
         "description": "",
-        "technologies": ["html", "javascript"]
+        "technologies": ["html", "javascript"],
+        "favorite": false,
+        "eductional": false
     },
     {
         "name": "Pokemon Team Builder",
         "hosted": "gh pages link",
         "description": "",
-        "technologies": ["html", "javascript"]
+        "technologies": ["html", "javascript"],
+        "favorite": false,
+        "eductional": false
     },
     {
         "name": "Nickelback Lorem Ipsum",
         "hosted": "gh pages link",
         "description": "",
-        "technologies": ["csharp"]
+        "technologies": ["csharp"],
+        "favorite": false,
+        "eductional": false
     },
     {
         "name": "Sad Libs",
         "hosted": "gh pages link",
         "description": "",
-        "technologies": ["html", "javascript"]
+        "technologies": ["html", "javascript"],
+        "favorite": false,
+        "eductional": false
     }
 ]

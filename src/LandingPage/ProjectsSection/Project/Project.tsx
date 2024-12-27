@@ -1,9 +1,11 @@
+// TODO: Make these icon imports more dynamic/flexible/generic
 import styles from './Project.module.css';
 import cSharpImg from '../../../assets/img/lang_icons/csharp.png';
 import angularImg from '../../../assets/img/lang_icons/angular.png';
 import htmlImg from '../../../assets/img/lang_icons/html.png';
 import javascriptImg from '../../../assets/img/lang_icons/javascript.png';
 import typescriptImg from '../../../assets/img/lang_icons/typescript.png';
+import sqlImg from '../../../assets/img/lang_icons/sql.png';
 
 interface Props extends React.HTMLAttributes<HTMLElement> {
     visualMode: string;
@@ -22,7 +24,8 @@ const langs: Record<string, string> = {
     javascript: javascriptImg,
     typescript: typescriptImg,
     html: htmlImg,
-    angular: angularImg
+    angular: angularImg,
+    sql: sqlImg
 }
 
 export default function Project(props: Props) {
