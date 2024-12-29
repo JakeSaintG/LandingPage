@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import styles from './App.module.css';
+
 import Navbar from './Navbar';
 import AboutSection from './LandingPage/AboutSection';
 import ProjectsSection from './LandingPage/ProjectsSection';
@@ -8,84 +9,86 @@ import ContactSection from './LandingPage/ContactSection';
 import SlideToggle from './GeneralComponents/SlideToggle';
 import BlogSection from './LandingPage/BlogSection';
 
+
 export default function App() {
-    let [settingsVisibility, setSettingsVisibility] = useState(false);
 
-    // TODO: retain visual mode in local storage.
-    let [pageVisualMode, setPageVisualMode] = useState('light_mode');
-    const dialogRef = useRef<HTMLDialogElement | null>(null);
+  let [settingsVisibility, setSettingsVisibility] = useState(false);
 
-    const openDialog = () => {
-        if (dialogRef.current) dialogRef.current.showModal();
-    };
+  // TODO: retain visual mode in local storage.
+  let [pageVisualMode, setPageVisualMode] = useState('light_mode');
+  const dialogRef = useRef<HTMLDialogElement | null>(null);
 
-    const closeDialog = () => {
-        if (dialogRef.current) dialogRef.current.close();
-    };
+  const openDialog = () => {
+      if (dialogRef.current) dialogRef.current.showModal();
+  };
 
-    const toggleSettingsMenu = () => {
-        setSettingsVisibility((settingsVisibility = !settingsVisibility));
-        settingsVisibility ? openDialog() : closeDialog();
-    };
+  const closeDialog = () => {
+      if (dialogRef.current) dialogRef.current.close();
+  };
 
-    // TODO: A fade animation between light and dark mode may be less jarring
-    const handleModeChange = () => {
-        setPageVisualMode(
-            pageVisualMode === 'dark_mode'
-                ? (pageVisualMode = 'light_mode')
-                : (pageVisualMode = 'dark_mode')
-        );
+  const toggleSettingsMenu = () => {
+      setSettingsVisibility((settingsVisibility = !settingsVisibility));
+      settingsVisibility ? openDialog() : closeDialog();
+  };
 
-        if (pageVisualMode === 'dark_mode') {
-            document.body.classList.add(`${styles.dark_mode}`);
-            document.body.classList.remove(`${styles.light_mode}`);
-        } else {
-            document.body.classList.add(`${styles.light_mode}`);
-            document.body.classList.remove(`${styles.dark_mode}`);
-        }
-    };
+  // TODO: A fade animation between light and dark mode may be less jarring
+  const handleModeChange = () => {
+      setPageVisualMode(
+          pageVisualMode === 'dark_mode'
+              ? (pageVisualMode = 'light_mode')
+              : (pageVisualMode = 'dark_mode')
+      );
 
-    useEffect(() => {
-        document.body.classList.add(`${styles.light_mode}`);
-    });
+      if (pageVisualMode === 'dark_mode') {
+          document.body.classList.add(`${styles.dark_mode}`);
+          document.body.classList.remove(`${styles.light_mode}`);
+      } else {
+          document.body.classList.add(`${styles.light_mode}`);
+          document.body.classList.remove(`${styles.dark_mode}`);
+      }
+  };
 
-    return (
-        //TODO: Animate the transition between page and settings
-        //TODO: Move dialog to own component openDialog()/closeDialog() may make that tricky
-        <div>
-            <dialog
-                ref={dialogRef}
-                className={styles[`dialog_${pageVisualMode}`]}
-            >
-                <div
-                    className={`${styles.dialog_contents} ${
-                        styles[`dialog_contents_${pageVisualMode}`]
-                    }`}
-                >
-                    <h2 className={styles.settings_header}>Settings</h2>
-                    <div>
-                        <p>The only setting that matters!</p>
+  useEffect(() => {
+      document.body.classList.add(`${styles.light_mode}`);
+  });
 
-                        <SlideToggle
-                            value={pageVisualMode}
-                            onChange={handleModeChange}
-                            visualMode={pageVisualMode}
-                        />
-                        <button onClick={toggleSettingsMenu}>Close</button>
-                    </div>
-                </div>
-            </dialog>
-            <Navbar
-                toggleSettings={toggleSettingsMenu}
-                visualMode={pageVisualMode}
-            />
-            <div className={`${styles.main_landing_page}`}>
-                <AboutSection visualMode={pageVisualMode} />
-                <ExperienceSection visualMode={pageVisualMode} />
-                <ProjectsSection visualMode={pageVisualMode} />
-                <BlogSection visualMode={pageVisualMode} />
-                <ContactSection visualMode={pageVisualMode} />
-            </div>
-        </div>
-    );
+  return (
+      //TODO: Animate the transition between page and settings
+      //TODO: Move dialog to own component openDialog()/closeDialog() may make that tricky
+      <div>
+          <dialog
+              ref={dialogRef}
+              className={styles[`dialog_${pageVisualMode}`]}
+          >
+              <div
+                  className={`${styles.dialog_contents} ${
+                      styles[`dialog_contents_${pageVisualMode}`]
+                  }`}
+              >
+                  <h2 className={styles.settings_header}>Settings</h2>
+                  <div>
+                      <p>The only setting that matters!</p>
+
+                      <SlideToggle
+                          value={pageVisualMode}
+                          onChange={handleModeChange}
+                          visualMode={pageVisualMode}
+                      />
+                      <button onClick={toggleSettingsMenu}>Close</button>
+                  </div>
+              </div>
+          </dialog>
+          <Navbar
+              toggleSettings={toggleSettingsMenu}
+              visualMode={pageVisualMode}
+          />
+          <div className={`${styles.main_landing_page}`}>
+              <AboutSection visualMode={pageVisualMode} />
+              <ExperienceSection visualMode={pageVisualMode} />
+              <ProjectsSection visualMode={pageVisualMode} />
+              <BlogSection visualMode={pageVisualMode} />
+              <ContactSection visualMode={pageVisualMode} />
+          </div>
+      </div>
+  );
 }
