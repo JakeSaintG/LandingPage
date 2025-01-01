@@ -9,7 +9,12 @@ import { faGear } from '@fortawesome/free-solid-svg-icons';
 
 interface Props extends React.HTMLAttributes<HTMLElement>{
     visualMode: string
-    toggleSettings: any
+    toggleSettings: () => void
+}
+
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const simpleTest = () => {
+    return 'tested';
 }
 
 export default function Navbar(props: Props) {

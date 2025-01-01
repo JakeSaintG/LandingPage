@@ -1,8 +1,22 @@
 import Navbar from './Navbar';
-import { render, screen } from '@testing-library/react';
+import { cleanup, render, screen } from '@testing-library/react';
+import { describe, it, test, expect, afterEach } from 'vitest';
+
+
+
 
 test('renders text from nav', () => {
-    render(<Navbar visualMode='' toggleSettings={console.log('toggled')}/>);
-    const linkElement = screen.getByText(/WIP-About/i);
+    const foo = render(<Navbar visualMode='dark_mode' toggleSettings={ () => console.log('toggled') }/>);
+    const linkElement = foo.getByText(/About/i);
+
+
     expect(linkElement).toBeInTheDocument();
+});
+
+test('adds 1 + 2 to equal 3', () => {
+    expect( 1+2 ).toBe(3)
+})
+
+afterEach(() => {
+    cleanup();
 });
