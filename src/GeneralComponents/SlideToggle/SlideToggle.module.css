@@ -8,7 +8,7 @@
 }
 
 .switch_outer.slider_dark {
-    box-shadow: inset 0px 5px 10px 0px #364241, 0px 3px 6px -2px #4a5a59;
+    box-shadow: var(--dark-inset-boxshadow);
 }
 
 .switch_outer.slider_light {
@@ -43,14 +43,15 @@
 }
 
 .switch_button .switch_outer .button_toggle.slider_dark {
-    background-color: #404e4d;
-    box-shadow: 8px 8px 16px #364241;
-    border: solid 1px #364241;
+    background-color: var(--dark-mode-background);
+    box-shadow: 4px 4px 8px #05060A;
+    /* box-shadow: 8px 8px 16px #364241; */
+    /* border: solid 1px #364241; */
 }
 
 .switch_button .switch_outer .button_toggle.slider_light {
     background-color: #e7e7e7;
-    box-shadow: 8px 8px 16px #b7c4c7;
+    box-shadow: 4px 4px 8px #b7c4c7;
 }
 
 .switch_button
