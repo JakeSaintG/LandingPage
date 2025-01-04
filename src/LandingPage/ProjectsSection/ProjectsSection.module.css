@@ -14,11 +14,16 @@
     grid-template-rows: 1fr 1fr;
     flex-wrap: wrap;
     overflow-x: auto;
+
+
+    /* scrollbar-color: rebeccapurple green;
+    scrollbar-width: thin; */
 }
 
 .project {
     border-radius: 15px;
     min-width: 250px;
+
 }
 
 .projects.light_mode {
