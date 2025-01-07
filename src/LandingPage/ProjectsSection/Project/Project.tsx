@@ -34,13 +34,18 @@ export default function Project(props: Props) {
 
     return (
         <div className={`${styles.project} ${styles[visualMode]}`}>
-            <h3>{project.name}</h3>
-            <a href="example.com">{project.hosted}</a>
-            <div>
-                {project.technologies.map((t) => {
-                    return <img key={key++} src={langs[t]} alt={`Icon for ${t}`} />;
-                })}
+
+            <div className={styles.project_header}>
+                <h3>{project.name}</h3>
+                <div>
+                    {project.technologies.map((t) => {
+                        return <img key={key++} src={langs[t]} alt={`Icon for ${t}`} />;
+                    })}
+                </div>
+
             </div>
+
+            <a href="example.com">{project.hosted}</a>
             <p>{project.description}</p>
         </div>
     );

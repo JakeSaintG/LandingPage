@@ -3,6 +3,8 @@
     display: flex;
     flex-direction: column;
     min-width: 250px;
+
+    max-height: 220px;
 }
 
 .project.light_mode {
@@ -13,12 +15,27 @@
     box-shadow: var(--dark-raised-boxshadow);
 }
 
-.project h3 {
-    text-align: center;
+.project_header {
+    display: flex;
+    margin: 1rem;
+    justify-content: space-between;
 }
 
-.project div img {
+.project_header h3 {
+    margin: 0;
+    padding-top: 4px;
+    height: 30px;
+    text-wrap: wrap;
+}
+
+.project_header div {
+    display: flex;
+}
+
+.project_header div img {
+    margin: auto;
     width: 30px;
+    height: 30px;
 }
 
 @media only screen and (min-width: 600px) {
