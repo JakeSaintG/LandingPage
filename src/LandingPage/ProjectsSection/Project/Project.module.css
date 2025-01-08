@@ -3,7 +3,6 @@
     display: flex;
     flex-direction: column;
     min-width: 250px;
-
     max-height: 220px;
 }
 
@@ -54,3 +53,7 @@
         min-width: 350px;
     }
 } 
+
+/* 
+TODO: Need to handle SHORTER windows...
+*/
