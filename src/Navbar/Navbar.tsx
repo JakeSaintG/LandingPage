@@ -35,6 +35,9 @@ export default function Navbar(props: Props) {
             <a className={styles.nav_item} href="#projectsSection">
                 Projects
             </a>
+            <a className={styles.nav_item} href="#projectsSection">
+                Blog
+            </a>
             <a className={styles.nav_item} href="#contactSection">
                 Contact
             </a>
