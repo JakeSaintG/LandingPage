@@ -9,11 +9,11 @@
     
 }
 
-.dark_mode_content {
+.content.dark_mode {
     box-shadow: var(--dark-raised-boxshadow);
 }
 
-.light_mode_content {
+.content.light_mode {
     box-shadow: var(--light-raised-boxshadow);
 }
 

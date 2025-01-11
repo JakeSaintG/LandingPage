@@ -21,11 +21,11 @@ export default function ExperienceSection(props: Props) {
     //TODO: get rid of this if statement
     if (visualMode === 'dark_mode') {
         activeButtonVisualMode = `${styles.selected_profession} ${styles.selected_profession_dark}`;
+        detailsVisualMode = styles.details_dark;
     } else {
         activeButtonVisualMode = `${styles.selected_profession} ${styles.selected_profession_light}`;
+        detailsVisualMode = styles.details_light;
     }
-
-    visualMode === 'dark_mode' ? detailsVisualMode = styles.details_dark : detailsVisualMode = styles.details_light;
 
     const returnWorkExperience = (event: MouseEvent<HTMLElement>) => {
         setWorkHighlights(workHighlights = workExperience.find(e => e.title === event.currentTarget.id)!.highlights);

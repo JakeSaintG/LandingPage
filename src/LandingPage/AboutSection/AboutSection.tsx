@@ -27,13 +27,9 @@ const useInterval = (callback: Function, delay: number) => {
 }
 
 export default function AboutSection(props: Props) {
-    const { visualMode } = props;
-    let aboutVisualMode: string;
     let [tidbit, setTidbit] = useState('Hello!');
     let key = 0;
     const tidbitRef = useRef<HTMLParagraphElement | null>(null);
-
-    visualMode === 'dark_mode' ? aboutVisualMode = styles.about_dark : aboutVisualMode = styles.about_light;
 
     useInterval(() => {
         let newTidbit: string;
@@ -47,10 +43,10 @@ export default function AboutSection(props: Props) {
     }, 4000);
 
     return (
-        <PageSection title='Jake St. Germain' id="aboutSection" style={contentStyle} visualMode={visualMode} header='h1'>
+        <PageSection title='Jake St. Germain' id="aboutSection" style={contentStyle} visualMode={props.visualMode} header='h1'>
             <div className={styles.about_content}>
                 <div>placeholder</div>
-                <div className={`${styles.elevator_pitch} ${aboutVisualMode}`}>
+                <div className={`${styles.elevator_pitch} ${styles[props.visualMode]}`}>
                     <div>
                         {elevatorPitch.paragraphs.map(e => 
                             <p key={key++} className={styles.project}>

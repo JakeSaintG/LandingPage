@@ -12,15 +12,13 @@
     overflow-x: hidden;
 }
 
-.elevator_pitch.about_dark {
+.elevator_pitch.dark_mode {
     box-shadow: var(--dark-inset-boxshadow);
 }
 
-.elevator_pitch.about_light {
+.elevator_pitch.light_mode {
     box-shadow: var(--light-inset-boxshadow);
 }
-
-
 
 .tidbit {
     display: flex;

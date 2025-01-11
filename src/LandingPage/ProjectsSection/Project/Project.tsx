@@ -29,24 +29,23 @@ const langs: Record<string, string> = {
 }
 
 export default function Project(props: Props) {
-    const { project, visualMode } = props;
     let key = 0;
 
     return (
-        <div className={`${styles.project} ${styles[visualMode]}`}>
+        <div className={`${styles.project} ${styles[props.visualMode]}`}>
 
             <div className={styles.project_header}>
-                <h3>{project.name}</h3>
+                <h3>{props.project.name}</h3>
                 <div>
-                    {project.technologies.map((t) => {
+                    {props.project.technologies.map((t) => {
                         return <img key={key++} src={langs[t]} alt={`Icon for ${t}`} />;
                     })}
                 </div>
 
             </div>
 
-            <a href="example.com">{project.hosted}</a>
-            <p>{project.description}</p>
+            <a href="example.com">{props.project.hosted}</a>
+            <p>{props.project.description}</p>
         </div>
     );
 }

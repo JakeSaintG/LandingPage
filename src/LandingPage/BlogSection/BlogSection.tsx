@@ -11,7 +11,7 @@ export default function ContactSection(props: Props) {
     const { visualMode } = props;
     
     return (
-        <PageSection title='Blog' id="blogSection" style={contentStyle} visualMode={visualMode}>
+        <PageSection title='Blog' id='blogSection' style={contentStyle} visualMode={visualMode}>
             <p>Placeholder</p>
         </PageSection>
     );

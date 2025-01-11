@@ -4,7 +4,7 @@
 }
 
 .projects {
-    box-shadow: var(--light-inset-boxshadow);;
+    box-shadow: var(--light-inset-boxshadow);
     border-radius: 15px;
     height: 100%;
     display: grid;
@@ -14,37 +14,35 @@
     grid-template-rows: 1fr 1fr;
     flex-wrap: wrap;
     overflow-x: auto;
+    overflow-y: hidden;
 
-
-    /* scrollbar-color: rebeccapurple green;
-    scrollbar-width: thin; */
+    scrollbar-color: rebeccapurple green;
+    scrollbar-width: thin;
 }
 
-
- /* width */
- ::-webkit-scrollbar {
+/* width */
+::-webkit-scrollbar {
     width: 10px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
+}
+
+/* Track */
+::-webkit-scrollbar-track {
     background: #f1f1f1;
-  }
-  
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: #888;
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #c81919;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
     background: #555;
-  } 
+}
 
 .project {
     border-radius: 15px;
     min-width: 250px;
-
 }
 
 .projects.light_mode {
@@ -56,11 +54,9 @@
 }
 
 @media only screen and (min-width: 600px) {
-
 }
 
 @media only screen and (min-width: 768px) {
-
     .project {
         min-width: 300px;
     }
@@ -70,4 +66,4 @@
     .project {
         min-width: 350px;
     }
-} 
+}
