@@ -11,7 +11,7 @@
     --dark-raised-shadow-only: 6px 6px 12px #05060A;
 
     --dark-raised-boxshadow: 6px 6px 12px #05060A, -6px -6px 12px #2b2f37;
-    --dark-inset-boxshadow: inset 6px 6px 12px #05060A, inset -6px -6px 12px #2b2f37;
+    --dark-inset-boxshadow: inset 6px 6px 12px #05060A, 2px 3px 6px -2px #2b2f37;
 
 
     /* Light Mode */
@@ -24,7 +24,7 @@
     --light-raised-shadow-only: 6px 6px 12px #b7c4c7;
 
     --light-raised-boxshadow: 6px 6px 12px #b7c4c7, -6px -6px 12px #f7ffff;
-    --light-inset-boxshadow: inset 6px 6px 12px #b7c4c7, inset -6px -6px 12px #f7ffff;
+    --light-inset-boxshadow: inset 6px 6px 12px #b7c4c7, 2px 3px 6px -2px #f7ffff;
 
     /* Palette */
     --palette-main-color: #773344;
