@@ -1,21 +1,28 @@
 [
     {
-        "title": "dev-fulltime",
+        "title": "Software Developer",
+        "id": "dev-fulltime",
+        "current": true,
         "highlights": [
             "Wrote code",
             "Reviewed code",
-            "Was humbled by my team's senior dev"
+            "Was humbled by my team's senior dev",
+            "databricks stuff"
         ]
     },
     {
-        "title": "mentor",
+        "title": "Code:You Mentor",
+        "id": "mentor",
+        "current": true,
         "highlights": [
             "taught code",
             "Reviewed code"
         ]
     },
     {
-        "title": "nurse",
+        "title": "ICU Nurse",
+        "id": "nurse",
+        "current": false,
         "highlights": [
             "Sought additional training certifications in Pediatric Advanced Life Support (PALS) as well as training in PRISMA.",
             "Managed life support equipment and worked with multidisciplinary teammates to deliver compassionate care for families and critically ill patients with debilitating conditions or injuries.",
@@ -28,7 +35,9 @@
         ]
     },
     {
-        "title": "dev-intern",
+        "title": "Software Dev Intern",
+        "id": "dev-intern",
+        "current": false,
         "highlights": [
             "Updated a large production application from Angular 10 to Angular 12 in a timely manner.",
             "Implemented a quality-of-life update by adding a REST API endpoint to return information on previously added sets of data. This would auto-populate a picklist on load and allow the user to more easily add relevant codes to a value set.",
@@ -37,7 +46,9 @@
         ]
     },
     {
-        "title": "dev-student",
+        "title": "Code Louisville Student",
+        "id": "dev-student",
+        "current": false,
         "highlights": [
             "Learned things",
             "Wrote (bad) code",
@@ -45,7 +56,9 @@
         ]
     },
     {
-        "title": "awards",
+        "title": "Awards",
+        "id": "awards",
+        "current": false,
         "highlights": [
             "Pokemon Master",
             "Nurse of the Year Finalist"
