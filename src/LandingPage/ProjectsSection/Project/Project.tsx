@@ -6,6 +6,9 @@ import htmlImg from '../../../assets/img/lang_icons/html.png';
 import javascriptImg from '../../../assets/img/lang_icons/javascript.png';
 import typescriptImg from '../../../assets/img/lang_icons/typescript.png';
 import sqlImg from '../../../assets/img/lang_icons/sql.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 
 interface Props extends React.HTMLAttributes<HTMLElement> {
     visualMode: string;
@@ -17,6 +20,7 @@ export interface project {
     hosted: string | null;
     description: string;
     technologies: string[];
+    repo_link: string;
 }
 
 const langs: Record<string, string> = {
@@ -30,6 +34,13 @@ const langs: Record<string, string> = {
 
 export default function Project(props: Props) {
     let key = 0;
+    let hosted = null;
+
+    if (props.project.hosted) {
+        hosted = <a href={props.project.hosted} target='_blank'>
+            <FontAwesomeIcon icon={faArrowUpRightFromSquare} size="lg" />
+        </a>
+    }
 
     return (
         <div className={`${styles.project} ${styles[props.visualMode]}`}>
@@ -43,9 +54,13 @@ export default function Project(props: Props) {
                 </div>
 
             </div>
-
-            <a href="example.com">{props.project.hosted}</a>
             <p>{props.project.description}</p>
+            <span>
+                <a href={props.project.repo_link} target='_blank'>
+                    <FontAwesomeIcon icon={faGithub} size="lg" />
+                </a>
+                {hosted}
+            </span>
         </div>
     );
 }
