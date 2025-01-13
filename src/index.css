@@ -10,6 +10,9 @@
 
     --dark-raised-shadow-only: 6px 6px 12px #05060A;
 
+    --dark-raised-boxshadow-small: 2px 2px 5px #05060A, -2px -2px 5px #2b2f37;
+    --dark-inset-boxshadow-small: inset 2px 2px 5px #05060A, 2px 3px 6px -2px #2b2f37;
+
     --dark-raised-boxshadow: 6px 6px 12px #05060A, -6px -6px 12px #2b2f37;
     --dark-inset-boxshadow: inset 6px 6px 12px #05060A, 2px 3px 6px -2px #2b2f37;
 
@@ -23,8 +26,11 @@
 
     --light-raised-shadow-only: 6px 6px 12px #b7c4c7;
 
-    --light-raised-boxshadow: 6px 6px 12px #b7c4c7, -6px -6px 12px #f7ffff;
-    --light-inset-boxshadow: inset 6px 6px 12px #b7c4c7, 2px 3px 6px -2px #f7ffff;
+    --light-raised-boxshadow-small: 2px 2px 5px #b7c4c7, -2px -2px 5px #f3fbfb;
+    --light-inset-boxshadow-small: inset 2px 2px 5px #b7c4c7, 2px 3px 6px -2px #f3fbfb;
+
+    --light-raised-boxshadow: 6px 6px 12px #b7c4c7, -6px -6px 12px #f3fbfb;
+    --light-inset-boxshadow: inset 6px 6px 12px #b7c4c7, 2px 3px 6px -2px #f3fbfb;
 
     /* Palette */
     --palette-main-color: #773344;
