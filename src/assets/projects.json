@@ -1,7 +1,8 @@
 [
     {
         "name": "PokeUtils",
-        "hosted": "gh pages link",
+        "hosted": "https://jakesaintg.github.io/PokeUtils/",
+        "repo_link": "https://github.com/JakeSaintG/PokeUtils",
         "description": "An Angular application built using the Cashmere libary. PokéUtils leverages PokéAPI to provide the user with tools that will enchance their journey into the world of Pokémon! ",
         "technologies": ["angular"],
         "favorite": true,
@@ -9,7 +10,8 @@
     },
     {
         "name": "Code:You SQL Practice",
-        "hosted": "",
+        "hosted": null,
+        "repo_link": "https://github.com/JakeSaintG/CodeYouSqlPractice",
         "description": "An educational project for teaching my students the basic concepts of SQL.",
         "technologies": ["sql"],
         "favorite": true,
@@ -18,6 +20,7 @@
     {
         "name": "SpotBot",
         "hosted": null,
+        "repo_link": "https://github.com/JakeSaintG/SpotBot",
         "description": "",
         "technologies": ["typescript"],
         "favorite": false,
@@ -26,6 +29,7 @@
     {
         "name": "Daft Punk Sound Board",
         "hosted": null,
+        "repo_link": "https://github.com/JakeSaintG/Daft-Punk-Soundboard",
         "description": "",
         "technologies": ["html", "javascript"],
         "favorite": false,
@@ -33,26 +37,29 @@
     },
     {
         "name": "Pokemon Team Builder",
-        "hosted": "gh pages link",
-        "description": "",
+        "hosted": "reddit.com",
+        "repo_link": "https://github.com/JakeSaintG/pokemon_teambuilder",
+        "description": "My FIRST full web app! Is it perfect? No. Am I still kinda proud of this thing considering how little I had developed before this? Yes.",
         "technologies": ["html", "javascript"],
         "favorite": false,
         "eductional": false
     },
     {
         "name": "Nickelback Lorem Ipsum",
-        "hosted": "gh pages link",
+        "hosted": null,
+        "repo_link": "https://github.com/JakeSaintG/NickelbackLoremIpsumGenerator",
         "description": "",
         "technologies": ["csharp"],
         "favorite": false,
         "eductional": false
     },
     {
-        "name": "Sad Libs",
-        "hosted": "gh pages link",
+        "name": "Code You Web Demo API",
+        "hosted": null,
+        "repo_link": "https://github.com/JakeSaintG/CodeYouWebDemoApi",
         "description": "",
-        "technologies": ["html", "javascript"],
-        "favorite": false,
-        "eductional": false
+        "technologies": ["typescript", "html"],
+        "favorite": true,
+        "eductional": true
     }
 ]
