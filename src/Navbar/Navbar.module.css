@@ -23,7 +23,7 @@ nav::after {
     height: 5px;
     position: absolute;
     width: 100%;
-    background: linear-gradient(90deg, rgba(119,51,68,1) 0%, rgba(173,116,116,1) 12%, rgba(227,181,164,1) 24%, rgba(236,207,195,1) 36%, rgba(245,233,226,1) 50%, rgba(236,207,195,1) 62%, rgba(227,181,164,1) 74%, rgba(173,116,116,1) 86%, rgba(119,51,68,1) 100%);
+    background: linear-gradient(90deg, var(--palette-main-color) 0%, var(--palette-secondary-color) 12%, var(--palette-tertiary-color) 24%, var(--palette-light-color) 36%, var(--palette-lightest-color) 50%, var(--palette-light-color) 62%, var(--palette-tertiary-color) 74%, var(--palette-secondary-color) 86%, var(--palette-main-color) 100%);
     top: 64px;
 }
 
