@@ -3,7 +3,7 @@
         "name": "PokeUtils",
         "hosted": "https://jakesaintg.github.io/PokeUtils/",
         "repo_link": "https://github.com/JakeSaintG/PokeUtils",
-        "description": "An Angular application built using the Cashmere libary. PokéUtils leverages PokéAPI to provide the user with tools that will enchance their journey into the world of Pokémon! ",
+        "description": "An Angular application that uses the Cashmere libary. PokéUtils leverages PokéAPI to provide tools that will enchance a user's journey into the world of Pokémon! ",
         "technologies": ["angular"],
         "favorite": true,
         "eductional": false
@@ -23,7 +23,7 @@
         "repo_link": "https://github.com/JakeSaintG/SpotBot",
         "description": "",
         "technologies": ["typescript"],
-        "favorite": false,
+        "favorite": true,
         "eductional": false
     },
     {
@@ -59,6 +59,15 @@
         "repo_link": "https://github.com/JakeSaintG/CodeYouWebDemoApi",
         "description": "",
         "technologies": ["typescript", "html"],
+        "favorite": true,
+        "eductional": true
+    },
+    {
+        "name": "Code Katas",
+        "hosted": null,
+        "repo_link": "https://github.com/JakeSaintG/Katas",
+        "description": "",
+        "technologies": ["typescript","powershell","csharp", "dart", "rust"],
         "favorite": true,
         "eductional": true
     }
