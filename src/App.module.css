@@ -96,3 +96,9 @@ dialog {
 .dialog_contents > div > button:active {
   background: none;
 }
+
+@media only screen and (max-height: 550px) and (max-width: 800px){
+  p { 
+    border: solid red 1px;
+  }
+}
