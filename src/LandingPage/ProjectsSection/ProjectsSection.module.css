@@ -1,6 +1,7 @@
 .projects_desc {
     height: 33%;
     min-height: 65px;
+    margin-top: 0;
 }
 
 .projects {
@@ -11,7 +12,7 @@
     padding: 1rem;
     gap: 1rem;
     grid-auto-flow: column;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr;
     flex-wrap: wrap;
     overflow-x: auto;
     overflow-y: hidden;
@@ -53,6 +54,7 @@
     box-shadow: var(--dark-inset-boxshadow);
 }
 
+/* Width */
 @media only screen and (min-width: 600px) {
 }
 
@@ -65,5 +67,18 @@
 @media only screen and (min-width: 992px) {
     .project {
         min-width: 350px;
+    }
+}
+
+/* Height */
+@media only screen and (min-height: 700px) {
+    .projects {
+        grid-template-rows: 1fr 1fr;
+    }
+}
+
+@media only screen and (min-height: 500px) {
+    .projects_desc {
+        margin-top: 1rem;
     }
 }
