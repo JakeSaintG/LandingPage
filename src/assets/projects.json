@@ -1,6 +1,6 @@
 [
     {
-        "name": "PokeUtils",
+        "name": "PokéUtils",
         "hosted": "https://jakesaintg.github.io/PokeUtils/",
         "repo_link": "https://github.com/JakeSaintG/PokeUtils",
         "description": "An Angular application that uses the Cashmere libary. PokéUtils leverages PokéAPI to provide tools that will enchance a user's journey into the world of Pokémon! ",
@@ -21,43 +21,25 @@
         "name": "SpotBot",
         "hosted": null,
         "repo_link": "https://github.com/JakeSaintG/SpotBot",
-        "description": "",
+        "description": "A Discord bot for general use that has extra functionality for Pokèmon GO themed Discord servers.",
         "technologies": ["typescript"],
         "favorite": true,
-        "eductional": false
-    },
-    {
-        "name": "Daft Punk Sound Board",
-        "hosted": null,
-        "repo_link": "https://github.com/JakeSaintG/Daft-Punk-Soundboard",
-        "description": "",
-        "technologies": ["html", "javascript"],
-        "favorite": false,
-        "eductional": false
-    },
-    {
-        "name": "Pokemon Team Builder",
-        "hosted": "reddit.com",
-        "repo_link": "https://github.com/JakeSaintG/pokemon_teambuilder",
-        "description": "My FIRST full web app! Is it perfect? No. Am I still kinda proud of this thing considering how little I had developed before this? Yes.",
-        "technologies": ["html", "javascript"],
-        "favorite": false,
         "eductional": false
     },
     {
         "name": "Nickelback Lorem Ipsum",
         "hosted": null,
         "repo_link": "https://github.com/JakeSaintG/NickelbackLoremIpsumGenerator",
-        "description": "",
+        "description": "Ever wanted to generate Lorem Ipsum text using lines from Nickelback songs? No? Well...you can with this.",
         "technologies": ["csharp"],
         "favorite": false,
         "eductional": false
     },
     {
-        "name": "Code You Web Demo API",
+        "name": "Code:You Web Demo API",
         "hosted": null,
         "repo_link": "https://github.com/JakeSaintG/CodeYouWebDemoApi",
-        "description": "",
+        "description": "An over-engineered backend for teaching development students how to use and develop REST APIs using Express.",
         "technologies": ["typescript", "html"],
         "favorite": true,
         "eductional": true
@@ -66,9 +48,45 @@
         "name": "Code Katas",
         "hosted": null,
         "repo_link": "https://github.com/JakeSaintG/Katas",
-        "description": "",
-        "technologies": ["typescript","powershell","csharp", "dart", "rust"],
+        "description": "A repo for organizing and keeping track of various coding challenge solutions.",
+        "technologies": ["typescript","powershell","csharp", "rust", "dart"],
         "favorite": true,
         "eductional": true
+    },
+    {
+        "name": "Razor PokéDex",
+        "hosted": null,
+        "repo_link": "https://github.com/JakeSaintG/RazorPokeDex",
+        "description": "A demo project for CodeLou's Software 2 class.",
+        "technologies": ["csharp"],
+        "favorite": false,
+        "eductional": false
+    },
+    {
+        "name": "Pokémon Team Builder",
+        "hosted": "https://jakesaintg.github.io/pokemon_teambuilder/",
+        "repo_link": "https://github.com/JakeSaintG/pokemon_teambuilder",
+        "description": "My FIRST full web app! Is it perfect? No. Am I still kinda proud of this thing considering how little I had developed before this? Yes.",
+        "technologies": ["html", "javascript"],
+        "favorite": true,
+        "eductional": false
+    },
+    {
+        "name": "Daft Punk Sound Board",
+        "hosted": null,
+        "repo_link": "https://github.com/JakeSaintG/Daft-Punk-Soundboard",
+        "description": "A goofy side project that I made when I was learning. Still makes me giggle. 😆",
+        "technologies": ["html", "javascript"],
+        "favorite": true,
+        "eductional": false
+    },
+    {
+        "name": "Simple MC Backup",
+        "hosted": null,
+        "repo_link": "https://github.com/JakeSaintG/SimpleMCBackupTool",
+        "description": "A simple Minecraft world backup tool (for Mac and Linux).",
+        "technologies": ["typescript"],
+        "favorite": false,
+        "eductional": false
     }
 ]

@@ -1,18 +1,17 @@
 .project.light_mode {
     box-shadow: var(--light-raised-boxshadow);
-    /* background-color: var(--dark-mode-background); */
 }
 
 .project.dark_mode {
     box-shadow: var(--dark-raised-boxshadow);
-    /* background-color: var(--light-mode-background); */
 }
 
 .project {
     border-radius: 15px;
     min-width: 250px;
+    max-width: 350px;
     height: 100%;
-    padding: .5rem;
+    padding: .25rem;
     overflow: hidden;
     position: relative;
     z-index: 1;
@@ -27,7 +26,7 @@
 }
 
 .project_content {
-    border-radius: 10px;
+    border-radius: 12px;
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -41,18 +40,14 @@
     inset: 0;
 }
 
-.project.light_mode .project_border {
-    background-color: var(--dark-mode-background);
-}
-
-.project.dark_mode .project_border {
-    background-color: var(--light-mode-background);
+.project_border {
+    background-color: var(--palette-primary-color);
 }
 
 .project_border.favorite {
     background: linear-gradient(
         90deg,
-        var(--palette-main-color) 0%,
+        var(--palette-primary-color) 0%,
         var(--palette-secondary-color) 38%,
         var(--palette-tertiary-color) 42%,
         var(--palette-light-color) 46%,
@@ -60,7 +55,7 @@
         var(--palette-light-color) 54%,
         var(--palette-tertiary-color) 58%,
         var(--palette-secondary-color) 62%,
-        var(--palette-main-color) 100%
+        var(--palette-primary-color) 100%
     );
 
     animation: spinning-border 8s linear infinite;
@@ -77,18 +72,17 @@
 .project_header h3 {
     margin: 0;
     padding-top: 4px;
-    height: 20px;
     text-wrap: wrap;
 }
 
 .project_header div {
     display: flex;
+    align-items: center;
+    gap: .25rem;
 }
 
-.project_header div img {
-    margin: auto;
-    width: 30px;
-    height: 30px;
+.project_header div a {
+    color: inherit;
 }
 
 .project p {
@@ -98,8 +92,13 @@
 .project span {
     display: flex;
     flex-direction: row-reverse;
-    margin: .25rem;
-    gap: .25rem;
+    margin: .5rem;
+    gap: .5rem;
+}
+
+.project span img {
+    width: 30px;
+    height: 30px;
 }
 
 @media only screen and (min-width: 600px) {
@@ -107,7 +106,6 @@
 }
 
 @media only screen and (min-width: 768px) {
-
     .project {
         min-width: 300px;
     }
@@ -120,13 +118,7 @@
 } 
 
 @media only screen and (min-height: 550px) {
-    /* .project_header {
-        margin: 1rem;
-    }
 
-    .project p {
-        margin: 0 1rem auto 1rem;
-    } */
 }
 
 @keyframes spinning-border {

@@ -45,31 +45,30 @@ export default function Project(props: Props) {
     let hosted = null;
 
     if (props.project.hosted) {
-        hosted = <a href={props.project.hosted} target='_blank'>
-            <FontAwesomeIcon icon={faArrowUpRightFromSquare} size="xl" />
+        hosted = <a href={props.project.hosted} target='_blank' aria-label='link to hosted page' title='link to hosted page'>
+            <FontAwesomeIcon icon={faArrowUpRightFromSquare} size="lg" />
         </a>
     }
 
     return (
         <div className={`${styles.project} ${styles[props.visualMode]}`}>
-            {/* TODO: only show the spinning border if favorite */}
             <div className={`${styles.project_border} ${props.project.favorite ? styles.favorite : ''}`}></div>
             <div className={styles.project_content}>
                 <div className={styles.project_header}>
 
                     <h3>{props.project.name}</h3>
                     <div>
-                        {props.project.technologies.map((t) => {
-                            return <img key={key++} src={langs[t]} alt={`Icon for ${t}`} />;
-                        })}
+                        <a href={props.project.repo_link} target='_blank' aria-label='link to github repo' title='link to github repo'>
+                            <FontAwesomeIcon icon={faGithub} size="xl"/>
+                        </a>
+                        {hosted}
                     </div>
                 </div>
                 <p>{props.project.description}</p>
                 <span>
-                    <a href={props.project.repo_link} target='_blank'>
-                        <FontAwesomeIcon icon={faGithub} size="xl" />
-                    </a>
-                    {hosted}
+                    {props.project.technologies.map((t) => {
+                        return <img key={key++} src={langs[t]} alt={`Icon for ${t}`} />;
+                    })}
                 </span>
             </div>
         </div>
