@@ -24,6 +24,8 @@ export interface project {
     description: string;
     technologies: string[];
     repo_link: string;
+    favorite: boolean;
+    eductional: boolean;
 }
 
 const langs: Record<string, string> = {
@@ -50,21 +52,26 @@ export default function Project(props: Props) {
 
     return (
         <div className={`${styles.project} ${styles[props.visualMode]}`}>
-            <div className={styles.project_header}>
-                <h3>{props.project.name}</h3>
-                <div>
-                    {props.project.technologies.map((t) => {
-                        return <img key={key++} src={langs[t]} alt={`Icon for ${t}`} />;
-                    })}
+            {/* TODO: only show the spinning border if favorite */}
+            <div className={`${styles.project_border} ${props.project.favorite ? styles.favorite : ''}`}></div>
+            <div className={styles.project_content}>
+                <div className={styles.project_header}>
+
+                    <h3>{props.project.name}</h3>
+                    <div>
+                        {props.project.technologies.map((t) => {
+                            return <img key={key++} src={langs[t]} alt={`Icon for ${t}`} />;
+                        })}
+                    </div>
                 </div>
+                <p>{props.project.description}</p>
+                <span>
+                    <a href={props.project.repo_link} target='_blank'>
+                        <FontAwesomeIcon icon={faGithub} size="xl" />
+                    </a>
+                    {hosted}
+                </span>
             </div>
-            <p>{props.project.description}</p>
-            <span>
-                <a href={props.project.repo_link} target='_blank'>
-                    <FontAwesomeIcon icon={faGithub} size="xl" />
-                </a>
-                {hosted}
-            </span>
         </div>
     );
 }

@@ -1,35 +1,71 @@
 .project.light_mode {
-    /* background-color: var(--light-mode-background); */
     box-shadow: var(--light-raised-boxshadow);
+    /* background-color: var(--dark-mode-background); */
 }
 
 .project.dark_mode {
-    /* background-color: var(--dark-mode-background); */
     box-shadow: var(--dark-raised-boxshadow);
+    /* background-color: var(--light-mode-background); */
 }
 
 .project {
     border-radius: 15px;
-    display: flex;
-    flex-direction: column;
-
-    border: solid 5px transparent;
-
     min-width: 250px;
+    height: 100%;
+    padding: .5rem;
+    overflow: hidden;
     position: relative;
-
-    background-color: green;
-
-    /* background-color: linear-gradient(90deg, var(--palette-main-color) 0%, var(--palette-secondary-color) 12%, var(--palette-tertiary-color) 24%, var(--palette-light-color) 36%, var(--palette-lightest-color) 50%, var(--palette-light-color) 62%, var(--palette-tertiary-color) 74%, var(--palette-secondary-color) 86%, var(--palette-main-color) 100%); */
+    z-index: 1;
 }
 
-.project::before {
-    border-radius: inherit;
-    content: '';
+.project.light_mode .project_content {
+    background-color: var(--light-mode-background);
+}
+
+.project.dark_mode .project_content {
+    background-color: var(--dark-mode-background);
+}
+
+.project_content {
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+    z-index: 3;
+}
+
+.project_border {
     position: absolute;
-    top: 0; right: 0; bottom: 0; left: 0;
-    z-index: -1;
-    background-color: red;
+    z-index: 2;
+    inset: 0;
+}
+
+.project.light_mode .project_border {
+    background-color: var(--dark-mode-background);
+}
+
+.project.dark_mode .project_border {
+    background-color: var(--light-mode-background);
+}
+
+.project_border.favorite {
+    background: linear-gradient(
+        90deg,
+        var(--palette-main-color) 0%,
+        var(--palette-secondary-color) 38%,
+        var(--palette-tertiary-color) 42%,
+        var(--palette-light-color) 46%,
+        var(--palette-lightest-color) 50%,
+        var(--palette-light-color) 54%,
+        var(--palette-tertiary-color) 58%,
+        var(--palette-secondary-color) 62%,
+        var(--palette-main-color) 100%
+    );
+
+    animation: spinning-border 8s linear infinite;
+    -webkit-animation: spinning-border 8s linear infinite;
+    scale: 2.5;
 }
 
 .project_header {
@@ -84,12 +120,20 @@
 } 
 
 @media only screen and (min-height: 550px) {
-    .project_header {
+    /* .project_header {
         margin: 1rem;
-        border: solid blue 1px;
     }
 
     .project p {
         margin: 0 1rem auto 1rem;
+    } */
+}
+
+@keyframes spinning-border {
+    from {
+        rotate: 0deg;
+    }
+    to {
+        rotate: 360deg;
     }
 }
