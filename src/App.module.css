@@ -1,104 +1,133 @@
 .light_mode {
-  background: var(--light-mode-background-gradient);
-  color: var(--dark-mode-background);
+    background: var(--light-mode-background-gradient);
+    color: var(--dark-mode-background);
 }
 
 .dark_mode {
-  background: var(--dark-mode-background-gradient);
-  color: var(--light-mode-background);
+    background: var(--dark-mode-background-gradient);
+    color: var(--light-mode-background);
 }
 
 .main_landing_page {
-  padding-bottom: 1rem;
+    padding-bottom: 1rem;
 }
 
 .main_landing_page::before {
-  height: 65px;
-  display: block;
-  content: ' ';
+    height: 65px;
+    display: block;
+    content: ' ';
 }
 
 dialog {
-  border: none;
-  background: none;
-  border-radius: 15px;
-  height: 40%;
-  width: 40%;
+    border: none;
+    background: none;
+    border-radius: 15px;
+    height: 40%;
+    width: 40%;
 }
 
 .dialog_dark_mode {
-  box-shadow: var(--dark-raised-boxshadow);
-  color: var(--light-mode-background);
+    box-shadow: var(--dark-raised-boxshadow);
+    color: var(--light-mode-background);
 }
 
 .dialog_light_mode {
-  box-shadow: var(--light-raised-boxshadow);
-  color: var(--dark-mode-background);
+    box-shadow: var(--light-raised-boxshadow);
+    color: var(--dark-mode-background);
 }
 
 .dialog_dark_mode::backdrop {
-  background-color: var(--dark-mode-background);
+    background-color: var(--dark-mode-background);
 }
 
 .dialog_light_mode::backdrop {
-  background-color: var(--light-mode-background);
+    background-color: var(--light-mode-background);
 }
 
 .settings_header {
-  margin-top: 0;
+    margin-top: 0;
 }
 
 .dialog_contents_dark_mode > div {
-  box-shadow: var(--dark-inset-boxshadow);
+    box-shadow: var(--dark-inset-boxshadow);
 }
 
 .dialog_contents_light_mode > div {
-  box-shadow: var(--light-inset-boxshadow);
+    box-shadow: var(--light-inset-boxshadow);
 }
 
 .dialog_contents {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .dialog_contents > div {
-  flex-grow: 2;
-  border-radius: 15px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+    flex-grow: 2;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .dialog_contents > div > button {
-  all: unset;
-  cursor: pointer;
-  user-select: none;
-  padding: 0.5rem;
-  margin-bottom: 1rem;
-  border-radius: 25px;
+    all: unset;
+    cursor: pointer;
+    user-select: none;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border-radius: 25px;
 
-  font-family: inherit;
-  font-size: medium;
+    font-family: inherit;
+    font-size: medium;
 }
 
 .dialog_contents_dark_mode > div > button {
-  background: var(--dark-rounded-background);
-  box-shadow: var(--dark-raised-shadow-only);
+    background: var(--dark-rounded-background);
+    box-shadow: var(--dark-raised-shadow-only);
 }
 
 .dialog_contents_light_mode > div > button {
-  background: var(--light-rounded-background);
-  box-shadow: var(--light-raised-shadow-only);
+    background: var(--light-rounded-background);
+    box-shadow: var(--light-raised-shadow-only);
 }
 
 .dialog_contents > div > button:active {
-  background: none;
+    background: none;
 }
 
-@media only screen and (max-height: 550px) and (max-width: 800px){
-  p { 
-    border: solid red 1px;
-  }
+.size_warning {
+    display: none;
+}
+
+@media only screen and (max-height: 550px) and (max-width: 720px) {
+    .size_warning {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+        padding: 0.5rem;
+        position: fixed;
+        bottom: 0px;
+        right: 0px;
+        z-index: 1000;
+        width: 100%;
+        font-weight: bolder;
+        border: yellow dashed 3px;
+    }
+
+    .size_warning * {
+        margin: 0;
+    }
+
+    .size_warning.dark_mode {
+        background: var(--light-mode-background);
+        color: var(--dark-mode-background);
+    }
+
+    .size_warning.light_mode {
+        background: var(--dark-mode-background);
+        color: yellow;
+    }
 }

@@ -8,6 +8,8 @@ import ExperienceSection from './LandingPage/ExperienceSection';
 import ContactSection from './LandingPage/ContactSection';
 import SlideToggle from './GeneralComponents/SlideToggle';
 import BlogSection from './LandingPage/BlogSection';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTriangleExclamation } from '@fortawesome/free-solid-svg-icons';
 
 export default function App() {
     let [settingsVisibility, setSettingsVisibility] = useState(false);
@@ -86,6 +88,13 @@ export default function App() {
                 <ProjectsSection visualMode={pageVisualMode} />
                 <BlogSection visualMode={pageVisualMode} />
                 <ContactSection visualMode={pageVisualMode} />
+            </div>
+            
+            <div className={`${styles.size_warning} ${styles[pageVisualMode]}`}>
+                <FontAwesomeIcon icon={faTriangleExclamation} size='xl'/>
+                <p>
+                    Heads up! Your window sizing may not give you the best experience on this page. Please consider expanding the window a little.
+                </p>
             </div>
         </div>
     );
