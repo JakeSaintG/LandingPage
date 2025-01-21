@@ -1,3 +1,5 @@
+/* TODO: Looks bad in NARROW windows */
+
 .dark_mode {
     background-color: var(--dark-mode-background);
     box-shadow: 0 8px 16px #23262D;
@@ -23,7 +25,7 @@ nav::after {
     height: 5px;
     position: absolute;
     width: 100%;
-    background: linear-gradient(90deg, var(--palette-main-color) 0%, var(--palette-secondary-color) 12%, var(--palette-tertiary-color) 24%, var(--palette-light-color) 36%, var(--palette-lightest-color) 50%, var(--palette-light-color) 62%, var(--palette-tertiary-color) 74%, var(--palette-secondary-color) 86%, var(--palette-main-color) 100%);
+    background: linear-gradient(90deg, var(--palette-primary-color) 0%, var(--palette-secondary-color) 12%, var(--palette-tertiary-color) 24%, var(--palette-light-color) 36%, var(--palette-lightest-color) 50%, var(--palette-light-color) 62%, var(--palette-tertiary-color) 74%, var(--palette-secondary-color) 86%, var(--palette-primary-color) 100%);
     top: 64px;
 }
 

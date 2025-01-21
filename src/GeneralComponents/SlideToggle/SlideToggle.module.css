@@ -1,3 +1,5 @@
+/* TODO: Looks bad in SHORT windows */
+
 .switch_button {
     display: -webkit-box;
     display: flex;
