@@ -7,6 +7,8 @@ interface Props extends React.HTMLAttributes<HTMLElement>{
 
 const contentStyle: React.CSSProperties = {};
 
+
+// Just make this a footer. No need for a whole section (refactor)
 export default function ContactSection(props: Props) {
     const { visualMode } = props;
     
