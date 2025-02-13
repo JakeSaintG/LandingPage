@@ -4,8 +4,9 @@ import {
     faGithub,
     faLinkedinIn,
     faTiktok,
+    faBluesky
 } from '@fortawesome/free-brands-svg-icons';
-import { faGear } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faGear } from '@fortawesome/free-solid-svg-icons';
 
 interface Props extends React.HTMLAttributes<HTMLElement>{
     visualMode: string
@@ -29,9 +30,6 @@ export default function Navbar(props: Props) {
             <a className={styles.nav_item} href="#projectsSection">
                 Blog
             </a>
-            <a className={styles.nav_item} href="#contactSection">
-                Contact
-            </a>
 
             <div className={styles.socials}>
                 <a href="https://www.linkedin.com/in/jake-st-germain/">
@@ -46,6 +44,10 @@ export default function Navbar(props: Props) {
                     <FontAwesomeIcon icon={faTiktok} size="lg" />
                 </a>
 
+                <a href="https://bsky.app/profile/jakesaintg.bsky.social">
+                    <FontAwesomeIcon icon={faBluesky} size="lg" />
+                </a>
+
                 <FontAwesomeIcon
                     icon={faGear}
                     size="lg"
@@ -53,6 +55,10 @@ export default function Navbar(props: Props) {
                     style={{ cursor: 'pointer' }}
                 />
             </div>
+
+            <button>
+                <FontAwesomeIcon icon={faBars} />
+            </button>
         </nav>
     );
 }

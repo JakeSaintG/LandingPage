@@ -16,7 +16,7 @@ nav {
     position: relative;
     flex-direction: row;
     position: fixed;
-    width: 100vw;
+    width: 100%;
     z-index: 1000;
 }
 
@@ -30,19 +30,17 @@ nav::after {
 }
 
 .nav_logo,
-.nav_item,
-.socials {
+.nav_item {
     margin: 5px 1rem 10px 1rem;
 }
 
 .nav_logo {
-    height: 54px;
-    width: 54px;
+    display: none;
 }
 
 .nav_item {
     text-decoration: none;
-    padding: 1rem;
+    padding: 1rem 0;
 }
 
 .light_mode > .nav_item:active {
@@ -68,11 +66,25 @@ nav::after {
 }
 
 .socials {
-    width: 10%;
+    /* width: 10%; */
+    margin: 5px 0 10px auto;
     display: grid;
     padding: 1rem;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     min-width: 4rem;
-    margin-left: auto;
     gap: 5px;
+}
+
+@media only screen and (min-width: 860px) {
+    .nav_item {
+        padding: 1rem;
+    }
+}
+
+@media only screen and (min-width: 590px) {
+    .nav_logo {
+        display: block;
+        height: 54px;
+        width: 54px;
+    }
 }
