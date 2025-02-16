@@ -11,13 +11,24 @@
 }
 
 nav {
-    list-style-type: none;
+    /* list-style-type: none;
     display: flex;
-    position: relative;
-    flex-direction: row;
     position: fixed;
     width: 100%;
-    z-index: 1000;
+    z-index: 1000; */
+
+    display: grid;
+    grid-template-areas: ". foo bar";
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.nested_nav {
+    display: flex;
+    flex-direction: column;
+    grid-area: foo;
+    /* display: flex;
+    flex-direction: row;
+    width: 100%; */
 }
 
 nav::after {
@@ -26,7 +37,7 @@ nav::after {
     position: absolute;
     width: 100%;
     background: linear-gradient(90deg, var(--palette-primary-color) 0%, var(--palette-secondary-color) 12%, var(--palette-tertiary-color) 24%, var(--palette-light-color) 36%, var(--palette-lightest-color) 50%, var(--palette-light-color) 62%, var(--palette-tertiary-color) 74%, var(--palette-secondary-color) 86%, var(--palette-primary-color) 100%);
-    top: 64px;
+    top: 331px;
 }
 
 .nav_logo,
@@ -43,36 +54,40 @@ nav::after {
     padding: 1rem 0;
 }
 
-.light_mode > .nav_item:active {
+.light_mode > .nested_nav > .nav_item:active {
     border-radius: 15px;
     background: var(--light-mode-background);
     box-shadow: var(--light-inset-boxshadow);
 }
 
-.dark_mode > .nav_item:active {
+.dark_mode > .nested_nav > .nav_item:active {
     border-radius: 15px;
     background: var(--dark-mode-background);
     box-shadow: var(--dark-inset-boxshadow);
 }
 
-.dark_mode > .socials *,
-.dark_mode > .nav_item {
+.dark_mode > .nested_nav > .socials *,
+.dark_mode > .nested_nav > .nav_item {
     color: var(--light-mode-background);
 }
 
-.light_mode > .socials *,
-.light_mode > .nav_item {
+.light_mode > .nested_nav > .socials *,
+.light_mode > .nested_nav > .nav_item {
     color: var(--dark-mode-background);
 }
 
 .socials {
-    /* width: 10%; */
-    margin: 5px 0 10px auto;
     display: grid;
     padding: 1rem;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     min-width: 4rem;
     gap: 5px;
+}
+
+nav > button {
+    color: red;
+    font-size: xx-large;
+    grid-area: bar;
 }
 
 @media only screen and (min-width: 860px) {
@@ -86,5 +101,31 @@ nav::after {
         display: block;
         height: 54px;
         width: 54px;
+    }
+
+    nav {
+        list-style-type: none;
+        display: flex;
+        position: fixed;
+        width: 100%;
+        z-index: 1000;
+    }
+    
+    .nested_nav {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+
+    nav::after {
+        top: 64px;
+    }
+
+    .socials {
+        margin: 5px 0 10px auto;
+    }
+
+    nav > button {
+        display: none;
     }
 }
