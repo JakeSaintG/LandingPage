@@ -7,6 +7,7 @@ import {
     faBluesky
 } from '@fortawesome/free-brands-svg-icons';
 import { faBars, faGear } from '@fortawesome/free-solid-svg-icons';
+import { useState } from 'react';
 
 interface Props extends React.HTMLAttributes<HTMLElement>{
     visualMode: string
@@ -14,11 +15,19 @@ interface Props extends React.HTMLAttributes<HTMLElement>{
 }
 
 export default function Navbar(props: Props) {
+    
+    let [navContentVisible, setNavContentVisible] = useState(false);
+
+    let toggled = "";
+    if (navContentVisible) {
+        toggled = styles.toggled;
+    }
+
     return (
         <nav className={styles[props.visualMode]}>
             <div className={styles.nav_logo}>Logo</div>
 
-            <div className={styles.nested_nav}>
+            <div className={`${styles.nested_nav} ${toggled}`}>
 
                 <a className={styles.nav_item} href="#aboutSection">
                     About
@@ -59,7 +68,7 @@ export default function Navbar(props: Props) {
                 </div>
 
             </div>
-            <button>
+            <button onClick={() => setNavContentVisible(navContentVisible = !navContentVisible)}>
                 <FontAwesomeIcon icon={faBars} />
             </button>
         </nav>

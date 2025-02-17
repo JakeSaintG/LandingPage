@@ -13,22 +13,29 @@
 nav {
     /* list-style-type: none;
     display: flex;
-    position: fixed;
     width: 100%;
+    position: fixed;
     z-index: 1000; */
-
+    
+    width: 100%;
     display: grid;
-    grid-template-areas: ". foo bar";
-    grid-template-columns: 1fr 1fr 1fr;
+    position: fixed;
+    grid-template-areas: ". nav nav-button";
+    grid-template-columns: .25fr 1fr .25fr;
 }
 
 .nested_nav {
-    display: flex;
+    display: none;
     flex-direction: column;
-    grid-area: foo;
+    grid-area: nav;
+    margin-top: 64px;
     /* display: flex;
     flex-direction: row;
     width: 100%; */
+}
+
+.nested_nav.toggled {
+    display: flex;
 }
 
 nav::after {
@@ -37,7 +44,7 @@ nav::after {
     position: absolute;
     width: 100%;
     background: linear-gradient(90deg, var(--palette-primary-color) 0%, var(--palette-secondary-color) 12%, var(--palette-tertiary-color) 24%, var(--palette-light-color) 36%, var(--palette-lightest-color) 50%, var(--palette-light-color) 62%, var(--palette-tertiary-color) 74%, var(--palette-secondary-color) 86%, var(--palette-primary-color) 100%);
-    top: 331px;
+    top: 64px;
 }
 
 .nav_logo,
@@ -51,7 +58,8 @@ nav::after {
 
 .nav_item {
     text-decoration: none;
-    padding: 1rem 0;
+    text-align: center;
+    padding: 1rem;
 }
 
 .light_mode > .nested_nav > .nav_item:active {
@@ -77,17 +85,20 @@ nav::after {
 }
 
 .socials {
-    display: grid;
+    display: flex;
+    justify-content: space-between;
     padding: 1rem;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     min-width: 4rem;
-    gap: 5px;
 }
 
 nav > button {
-    color: red;
     font-size: xx-large;
-    grid-area: bar;
+    grid-area: nav-button;
+    height: 64px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+
 }
 
 @media only screen and (min-width: 860px) {
@@ -106,12 +117,11 @@ nav > button {
     nav {
         list-style-type: none;
         display: flex;
-        position: fixed;
-        width: 100%;
         z-index: 1000;
     }
     
     .nested_nav {
+        margin-top: 0;
         display: flex;
         flex-direction: row;
         width: 100%;
@@ -121,8 +131,13 @@ nav > button {
         top: 64px;
     }
 
+    .nav_item {
+        padding: 1rem 0;
+    }
+
     .socials {
         margin: 5px 0 10px auto;
+        gap: 10px;
     }
 
     nav > button {
