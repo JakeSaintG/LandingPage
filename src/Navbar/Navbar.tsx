@@ -43,19 +43,19 @@ export default function Navbar(props: Props) {
                 </a>
 
                 <div className={styles.socials}>
-                    <a href="https://www.linkedin.com/in/jake-st-germain/">
+                    <a href="https://www.linkedin.com/in/jake-st-germain/" target='#'>
                         <FontAwesomeIcon icon={faLinkedinIn} size="lg" />
                     </a>
 
-                    <a href="https://github.com/JakeSaintG">
+                    <a href="https://github.com/JakeSaintG" target='#'>
                         <FontAwesomeIcon icon={faGithub} size="lg" />
                     </a>
 
-                    <a href="https://www.tiktok.com/@jakesaintg">
+                    <a href="https://www.tiktok.com/@jakesaintg" target='#'>
                         <FontAwesomeIcon icon={faTiktok} size="lg" />
                     </a>
 
-                    <a href="https://bsky.app/profile/jakesaintg.bsky.social">
+                    <a href="https://bsky.app/profile/jakesaintg.bsky.social" target='#'>
                         <FontAwesomeIcon icon={faBluesky} size="lg" />
                     </a>
 

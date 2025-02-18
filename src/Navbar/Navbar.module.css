@@ -1,5 +1,3 @@
-/* TODO: Looks bad in NARROW windows */
-
 .dark_mode {
     background-color: var(--dark-mode-background);
     box-shadow: 0 8px 16px #23262D;
@@ -11,12 +9,7 @@
 }
 
 nav {
-    /* list-style-type: none;
-    display: flex;
-    width: 100%;
-    position: fixed;
-    z-index: 1000; */
-    
+    z-index: 1000; 
     width: 100%;
     display: grid;
     position: fixed;
@@ -49,7 +42,7 @@ nav::after {
 
 .nav_logo,
 .nav_item {
-    margin: 5px 1rem 10px 1rem;
+    margin: 5px 0 10px 0;
 }
 
 .nav_logo {
@@ -60,18 +53,24 @@ nav::after {
     text-decoration: none;
     text-align: center;
     padding: 1rem;
+    border-radius: 15px;
+    /* margin: 0 1rem; */
 }
 
 .light_mode > .nested_nav > .nav_item:active {
-    border-radius: 15px;
-    background: var(--light-mode-background);
     box-shadow: var(--light-inset-boxshadow);
 }
 
 .dark_mode > .nested_nav > .nav_item:active {
-    border-radius: 15px;
-    background: var(--dark-mode-background);
     box-shadow: var(--dark-inset-boxshadow);
+}
+
+.light_mode > .nested_nav > .nav_item:hover {
+    box-shadow: var(--light-raised-boxshadow-small);
+}
+
+.dark_mode > .nested_nav > .nav_item:hover {
+    box-shadow: var(--light-raised-boxshadow-small);
 }
 
 .dark_mode > .nested_nav > .socials *,
@@ -132,7 +131,7 @@ nav > button {
     }
 
     .nav_item {
-        padding: 1rem 0;
+        padding: 1rem;
     }
 
     .socials {
