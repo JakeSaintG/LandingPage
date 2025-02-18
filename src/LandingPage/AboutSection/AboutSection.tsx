@@ -31,6 +31,10 @@ export default function AboutSection(props: Props) {
     let key = 0;
     const tidbitRef = useRef<HTMLParagraphElement | null>(null);
 
+    const parseBreak = () => {
+        
+    }
+
     useInterval(() => {
         let newTidbit: string;
 
@@ -49,9 +53,15 @@ export default function AboutSection(props: Props) {
                 <div className={`${styles.elevator_pitch} ${styles[props.visualMode]}`}>
                     <div>
                         {elevatorPitch.paragraphs.map(e => 
-                            <p key={key++} className={styles.project}>
-                                {e}
-                            </p>
+                            {
+                                if (e === "") {
+                                    return <br key={key++} />
+                                }
+
+                                return <p key={key++}>
+                                    {e}
+                                </p>
+                            }
                         )}
                     </div>
                     <span className={styles.tidbit}>
