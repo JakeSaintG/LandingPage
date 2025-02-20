@@ -35,8 +35,8 @@ export default function ProjectsSection(props: Props) {
                 I like to stay busy! Especially when something I find something challenging, new, or intresting to work on. You'll find projects with all kinds of different technologies, languages, or applications here! I also called out some of my favorites. Also, open source contrabution? cashmere?
             </p>
             <span className={styles.show_all_check}>
-                <label htmlFor="show_favorite">Show only favorites</label>
-                <input type="checkbox" name="show_favorite" value="show" onChange={() => setAllProjectsShown(allProjectsShown ? false : true)}/>
+                <label htmlFor="show_favorite">Show only Jake's favorites</label>
+                <input type="checkbox" name="show_favorite" value="show" onChange={() => setAllProjectsShown(allProjectsShown ? false : true)} defaultChecked={true}/>
             </span>
             <div className={`${styles.projects} ${styles[props.visualMode]}`}>
                 {displayedProjects.map((e: project) =>
