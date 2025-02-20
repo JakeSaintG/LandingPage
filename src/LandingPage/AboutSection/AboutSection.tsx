@@ -31,10 +31,6 @@ export default function AboutSection(props: Props) {
     let key = 0;
     const tidbitRef = useRef<HTMLParagraphElement | null>(null);
 
-    const parseBreak = () => {
-        
-    }
-
     useInterval(() => {
         let newTidbit: string;
 

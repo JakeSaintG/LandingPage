@@ -8,10 +8,6 @@
     color: var(--light-mode-background);
 }
 
-.main_landing_page {
-    padding-bottom: 1rem;
-}
-
 .main_landing_page::before {
     height: 65px;
     display: block;
