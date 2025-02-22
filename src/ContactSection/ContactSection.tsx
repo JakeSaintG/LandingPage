@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import PageSection from '../../GeneralComponents/PageSection';
+import PageSection from '../GeneralComponents/PageSection';
 import styles from './ContactSection.module.css';
 import { faBluesky, faTiktok } from '@fortawesome/free-brands-svg-icons';
 

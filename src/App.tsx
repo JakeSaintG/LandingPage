@@ -5,7 +5,7 @@ import Navbar from './Navbar';
 import AboutSection from './LandingPage/AboutSection';
 import ProjectsSection from './LandingPage/ProjectsSection';
 import ExperienceSection from './LandingPage/ExperienceSection';
-import ContactSection from './LandingPage/ContactSection';
+import ContactSection from './ContactSection';
 import SlideToggle from './GeneralComponents/SlideToggle';
 import BlogSection from './LandingPage/BlogSection';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -87,9 +87,8 @@ export default function App() {
                 <ExperienceSection visualMode={pageVisualMode} />
                 <ProjectsSection visualMode={pageVisualMode} />
                 <BlogSection visualMode={pageVisualMode} />
-                <ContactSection visualMode={pageVisualMode} />
             </div>
-            
+            <ContactSection visualMode={pageVisualMode} />
             <div className={`${styles.size_warning} ${styles[pageVisualMode]}`}>
                 <FontAwesomeIcon icon={faTriangleExclamation} size='xl'/>
                 <p>
