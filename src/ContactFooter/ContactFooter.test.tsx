@@ -1,4 +1,4 @@
-import ContactSection from './ContactSection';
+import ContactSection from './ContactFooter';
 import { cleanup, render, screen } from '@testing-library/react';
 import { describe, it, test, expect, afterEach } from 'vitest';
 

@@ -5,7 +5,7 @@ import Navbar from './Navbar';
 import AboutSection from './LandingPage/AboutSection';
 import ProjectsSection from './LandingPage/ProjectsSection';
 import ExperienceSection from './LandingPage/ExperienceSection';
-import ContactSection from './ContactSection';
+import ContactSection from './ContactFooter';
 import SlideToggle from './GeneralComponents/SlideToggle';
 import BlogSection from './LandingPage/BlogSection';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';

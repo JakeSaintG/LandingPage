@@ -1,6 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import PageSection from '../GeneralComponents/PageSection';
-import styles from './ContactSection.module.css';
+import styles from './ContactFooter.module.css';
 import { faBluesky, faTiktok } from '@fortawesome/free-brands-svg-icons';
 
 interface Props extends React.HTMLAttributes<HTMLElement> {
@@ -14,10 +13,6 @@ export default function ContactSection(props: Props) {
     const { visualMode } = props;
 
     return (
-        // <PageSection title='Contact' id="contactSection" style={contentStyle} visualMode={visualMode}>
-        //     <p>Placeholder</p>
-        // </PageSection>
-
         <footer>
             <div className={styles.socials}>
                 <h3>Socials</h3>
