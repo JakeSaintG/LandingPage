@@ -4,10 +4,16 @@
         "id": "dev-fulltime",
         "current": true,
         "highlights": [
-            "Wrote code",
-            "Reviewed code",
-            "Was humbled by my team's senior dev",
-            "databricks stuff"
+            "Developed and maintained tools that were both internal and client-facing.",
+            "Contributed to open source Angular component library.",
+            "databricks stuff",
+            "Python lib",
+            "Deployment pipeline",
+            "Azure Data Factory",
+            "Interoperability with external systems",
+            "Azure Functions (serverless)",
+            "Tooling and monitoring software.",
+            "Chaired a committee that lead monthly learning sessions."
         ]
     },
     {
