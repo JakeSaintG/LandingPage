@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styles from './ContactFooter.module.css';
-import { faBluesky, faTiktok } from '@fortawesome/free-brands-svg-icons';
+import { faBluesky, faDiscord, faTiktok } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 interface Props extends React.HTMLAttributes<HTMLElement> {
     visualMode: string;
@@ -20,14 +21,19 @@ export default function ContactSection(props: Props) {
                     <a href="https://www.tiktok.com/@jakesaintg" target="#">
                         <FontAwesomeIcon icon={faTiktok} size="lg" />
                     </a>
-
                     <a href="https://bsky.app/profile/jakesaintg.bsky.social" target="#">
                         <FontAwesomeIcon icon={faBluesky} size="lg" />
+                    </a>
+                    <a href="https://discordapp.com/users/231257566418698251" target="#">
+                        <FontAwesomeIcon icon={faDiscord} size="lg" />
+                    </a>
+                    <a href="mailto:jake@stgermain.dev?subject=I would like to chat!">
+                        <FontAwesomeIcon icon={faEnvelope} size="lg" />
                     </a>
                 </div>
             </div>
 
-            <div className={styles.contact}>
+            <div className={styles.contact}> 
                 <h3>Contact</h3>
                 <p>jake@stgermain.dev</p>
             </div>

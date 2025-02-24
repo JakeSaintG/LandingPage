@@ -2,11 +2,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styles from './Navbar.module.css';
 import {
     faGithub,
-    faLinkedinIn,
-    faTiktok,
-    faBluesky
+    faLinkedinIn
 } from '@fortawesome/free-brands-svg-icons';
-import { faBars, faGear } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faFile, faGear } from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
 
 interface Props extends React.HTMLAttributes<HTMLElement>{
@@ -42,6 +40,7 @@ export default function Navbar(props: Props) {
                     Blog
                 </a>
 
+                {/* TODO: Some tool tips on each icon may be a good idea */}
                 <div className={styles.menu}>
                     <a href="https://www.linkedin.com/in/jake-st-germain/" target='#'>
                         <FontAwesomeIcon icon={faLinkedinIn} size="lg" />
@@ -49,6 +48,11 @@ export default function Navbar(props: Props) {
 
                     <a href="https://github.com/JakeSaintG" target='#'>
                         <FontAwesomeIcon icon={faGithub} size="lg" />
+                    </a>
+
+                    {/* TODO: Need more up to date resume */}
+                    <a href="https://drive.google.com/file/d/1oTgpw-CbrPvcXfwaFURmpyRsGLjjSKMI/view" target='#'>
+                        <FontAwesomeIcon icon={faFile} size="lg" />
                     </a>
 
                     <FontAwesomeIcon
