@@ -27,15 +27,18 @@ export default function ContactSection(props: Props) {
                     <a href="https://discordapp.com/users/231257566418698251" target="#">
                         <FontAwesomeIcon icon={faDiscord} size="lg" />
                     </a>
-                    <a href="mailto:jake@stgermain.dev?subject=I would like to chat!">
-                        <FontAwesomeIcon icon={faEnvelope} size="lg" />
-                    </a>
                 </div>
             </div>
 
             <div className={styles.contact}> 
                 <h3>Contact</h3>
-                <p>jake@stgermain.dev</p>
+
+                <a href="mailto:jake@stgermain.dev?subject=I would like to chat!">
+                    <FontAwesomeIcon icon={faEnvelope} size="lg" />
+                    &#8287;
+                    <span>jake@stgermain.dev</span>  
+                </a>
+
             </div>
 
             {/* <div className={styles.foo}>foobar</div> */}
