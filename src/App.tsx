@@ -12,11 +12,26 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTriangleExclamation } from '@fortawesome/free-solid-svg-icons';
 
 export default function App() {
-    let [settingsVisibility, setSettingsVisibility] = useState(false);
-
     // TODO: retain visual mode in local storage.
-    let [pageVisualMode, setPageVisualMode] = useState('light_mode');
+    const [pageVisualMode, setPageVisualMode] = useState('light_mode');
+
+    // TODO: A fade animation between light and dark mode may be less jarring
+    const handleModeChange = () => setPageVisualMode(pageVisualMode === 'dark_mode' ? 'light_mode' : 'dark_mode' );
+
+    useEffect(() => {
+        if (pageVisualMode === 'dark_mode') {
+            document.body.classList.add(`${styles.dark_mode}`);
+            document.body.classList.remove(`${styles.light_mode}`);
+        } else {
+            document.body.classList.add(`${styles.light_mode}`);
+            document.body.classList.remove(`${styles.dark_mode}`);
+        }
+    }, [pageVisualMode]);
+
+    const [settingsDialogOpen, setSettingsDialogOpen] = useState(false);
     const dialogRef = useRef<HTMLDialogElement | null>(null);
+
+    const toggleSettingsMenu = () => setSettingsDialogOpen(!settingsDialogOpen);
 
     const openDialog = () => {
         if (dialogRef.current) dialogRef.current.showModal();
@@ -26,31 +41,7 @@ export default function App() {
         if (dialogRef.current) dialogRef.current.close();
     };
 
-    const toggleSettingsMenu = () => {
-        setSettingsVisibility((settingsVisibility = !settingsVisibility));
-        settingsVisibility ? openDialog() : closeDialog();
-    };
-
-    // TODO: A fade animation between light and dark mode may be less jarring
-    const handleModeChange = () => {
-        setPageVisualMode(
-            pageVisualMode === 'dark_mode'
-                ? (pageVisualMode = 'light_mode')
-                : (pageVisualMode = 'dark_mode')
-        );
-
-        if (pageVisualMode === 'dark_mode') {
-            document.body.classList.add(`${styles.dark_mode}`);
-            document.body.classList.remove(`${styles.light_mode}`);
-        } else {
-            document.body.classList.add(`${styles.light_mode}`);
-            document.body.classList.remove(`${styles.dark_mode}`);
-        }
-    };
-
-    useEffect(() => {
-        document.body.classList.add(`${styles.light_mode}`);
-    });
+    useEffect(() => settingsDialogOpen ? openDialog() : closeDialog(), [settingsDialogOpen]);
 
     return (
         //TODO: Animate the transition between page and settings
@@ -90,7 +81,7 @@ export default function App() {
             </div>
             <ContactSection visualMode={pageVisualMode} />
             <div className={`${styles.size_warning} ${styles[pageVisualMode]}`}>
-                <FontAwesomeIcon icon={faTriangleExclamation} size='xl'/>
+                <FontAwesomeIcon icon={faTriangleExclamation} size='xl' aria-hidden="true"/>
                 <p>
                     Heads up! Your window sizing may not give you the best experience on this page. Please consider expanding the window a little.
                 </p>

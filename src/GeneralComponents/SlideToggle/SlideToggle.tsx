@@ -9,16 +9,13 @@ interface Props extends React.HTMLAttributes<HTMLElement>{
     visualMode: string
 }
 
-let sliderColorMode: string;
 let icon: JSX.Element;
 
 export default function SlideToggle( props: Props ) {
     if (props.visualMode === 'dark_mode') {
-        sliderColorMode = styles.slider_dark
-        icon  = <FontAwesomeIcon icon={faMoon} size='xl' />
+        icon  = <FontAwesomeIcon icon={faMoon} size='xl' aria-hidden="true"/>
     } else {
-        sliderColorMode = styles.slider_light
-        icon  = <FontAwesomeIcon icon={faSun} size='xl'  />
+        icon  = <FontAwesomeIcon icon={faSun} size='xl' aria-hidden="true"/>
     }
 
     return (

@@ -14,7 +14,7 @@ interface Props extends React.HTMLAttributes<HTMLElement>{
 
 export default function Navbar(props: Props) {
     
-    let [navContentVisible, setNavContentVisible] = useState(false);
+    const [navContentVisible, setNavContentVisible] = useState(false);
 
     let toggled = "";
     if (navContentVisible) {
@@ -65,7 +65,7 @@ export default function Navbar(props: Props) {
                 </div>
 
             </div>
-            <button onClick={() => setNavContentVisible(navContentVisible = !navContentVisible)}>
+            <button onClick={() => setNavContentVisible(!navContentVisible)}>
                 <FontAwesomeIcon icon={faBars} aria-hidden="true" />
             </button>
         </nav>
