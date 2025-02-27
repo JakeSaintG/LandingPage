@@ -3,7 +3,7 @@
         "title": "Software Developer",
         "id": "dev-fulltime",
         "current": true,
-        "highlights": [
+        "contributions": [
             "Developed and maintained tools that were both internal and client-facing.",
             "Contributed to open source Angular component library.",
             "databricks stuff",
@@ -20,7 +20,7 @@
         "title": "Code:You Mentor",
         "id": "mentor",
         "current": true,
-        "highlights": [
+        "contributions": [
             "taught code",
             "Reviewed code"
         ]
@@ -29,7 +29,7 @@
         "title": "ICU Nurse",
         "id": "nurse",
         "current": false,
-        "highlights": [
+        "contributions": [
             "Sought additional training certifications in Pediatric Advanced Life Support (PALS) as well as training in PRISMA.",
             "Managed life support equipment and worked with multidisciplinary teammates to deliver compassionate care for families and critically ill patients with debilitating conditions or injuries.",
             "Assessed conditions, symptoms, diagnostic tests, and behaviors of pediatric patients to monitor for life-altering changes, responded using quick critical thinking skills, and worked well with multi-disciplinary teams.",
@@ -44,7 +44,7 @@
         "title": "Software Dev Intern",
         "id": "dev-intern",
         "current": false,
-        "highlights": [
+        "contributions": [
             "Updated a large production application from Angular 10 to Angular 12 in a timely manner.",
             "Implemented a quality-of-life update by adding a REST API endpoint to return information on previously added sets of data. This would auto-populate a picklist on load and allow the user to more easily add relevant codes to a value set.",
             "Gained experience working in Azure DevOps, Snowflake Data Cloud, and Azure services. ",
@@ -55,7 +55,7 @@
         "title": "Code:You Student",
         "id": "dev-student",
         "current": false,
-        "highlights": [
+        "contributions": [
             "Learned things",
             "Wrote (bad) code",
             "Made a pokemon app or two"
@@ -65,7 +65,7 @@
         "title": "Awards",
         "id": "awards",
         "current": false,
-        "highlights": [
+        "contributions": [
             "Pokemon Master",
             "Nurse of the Year Finalist"
         ]
