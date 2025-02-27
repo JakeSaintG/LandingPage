@@ -43,16 +43,16 @@ export default function Navbar(props: Props) {
                 {/* TODO: Some tool tips on each icon may be a good idea */}
                 <div className={styles.menu}>
                     <a href="https://www.linkedin.com/in/jake-st-germain/" target='#'>
-                        <FontAwesomeIcon icon={faLinkedinIn} size="lg" />
+                        <FontAwesomeIcon icon={faLinkedinIn} size="lg" aria-hidden="true" />
                     </a>
 
                     <a href="https://github.com/JakeSaintG" target='#'>
-                        <FontAwesomeIcon icon={faGithub} size="lg" />
+                        <FontAwesomeIcon icon={faGithub} size="lg" aria-hidden="true" />
                     </a>
 
                     {/* TODO: Need more up to date resume */}
                     <a href="https://drive.google.com/file/d/1oTgpw-CbrPvcXfwaFURmpyRsGLjjSKMI/view" target='#'>
-                        <FontAwesomeIcon icon={faFile} size="lg" />
+                        <FontAwesomeIcon icon={faFile} size="lg" aria-hidden="true" />
                     </a>
 
                     <FontAwesomeIcon
@@ -60,12 +60,13 @@ export default function Navbar(props: Props) {
                         size="lg"
                         onClick={props.toggleSettings}
                         style={{ cursor: 'pointer' }}
+                        aria-hidden="true"
                         />
                 </div>
 
             </div>
             <button onClick={() => setNavContentVisible(navContentVisible = !navContentVisible)}>
-                <FontAwesomeIcon icon={faBars} />
+                <FontAwesomeIcon icon={faBars} aria-hidden="true" />
             </button>
         </nav>
     );
