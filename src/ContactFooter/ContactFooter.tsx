@@ -7,14 +7,12 @@ interface Props extends React.HTMLAttributes<HTMLElement> {
     visualMode: string;
 }
 
-const contentStyle: React.CSSProperties = {};
-
 // Just make this a footer. No need for a whole section (refactor)
 export default function ContactSection(props: Props) {
     const { visualMode } = props;
 
     return (
-        <footer>
+        <footer className={styles[visualMode]}>
             <div className={styles.socials}>
                 <h3>Socials</h3>
                 <div>
@@ -41,7 +39,6 @@ export default function ContactSection(props: Props) {
 
             </div>
 
-            {/* <div className={styles.foo}>foobar</div> */}
             <div className={styles.footer_base}>1993 Jake St. Germain</div>
         </footer>
     );

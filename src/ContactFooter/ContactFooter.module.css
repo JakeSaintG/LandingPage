@@ -2,14 +2,26 @@
 footer {
     width: 100%;
     margin-top: 1rem;
-    background: var(--light-mode-background);
-    box-shadow: var(--light-raised-boxshadow);
 
     display: grid;
     grid-template-columns: .25fr 1fr 1fr 1fr .25fr;
     grid-template-areas: 
         ". socials . contact ."
         "footerBase footerBase footerBase footerBase footerBase";
+}
+
+footer.light_mode {
+    box-shadow: var(--light-raised-boxshadow);
+
+    /* TODO: It looks pretty alright with no box show. I'll need to sleep on that. */
+    background: var(--light-mode-background);
+}
+
+footer.dark_mode {
+    box-shadow: var(--dark-raised-boxshadow);
+
+    /* TODO: It looks pretty alright with no box show. I'll need to sleep on that. */
+    background: var(--dark-mode-background);
 }
 
 .socials {
