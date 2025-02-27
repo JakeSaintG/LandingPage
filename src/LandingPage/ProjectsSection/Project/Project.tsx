@@ -46,7 +46,7 @@ export default function Project(props: Props) {
 
     if (props.project.hosted) {
         hosted = <a href={props.project.hosted} target='_blank' aria-label='link to hosted page' title='link to hosted page'>
-            <FontAwesomeIcon icon={faArrowUpRightFromSquare} size="lg" />
+            <FontAwesomeIcon icon={faArrowUpRightFromSquare} size="lg" aria-hidden="true"/>
         </a>
     }
 
@@ -59,7 +59,7 @@ export default function Project(props: Props) {
                     <h3>{props.project.name}</h3>
                     <div>
                         <a href={props.project.repo_link} target='_blank' aria-label='link to github repo' title='link to github repo'>
-                            <FontAwesomeIcon icon={faGithub} size="xl"/>
+                            <FontAwesomeIcon icon={faGithub} size="xl" aria-hidden="true"/>
                         </a>
                         {hosted}
                     </div>

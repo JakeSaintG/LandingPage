@@ -18,13 +18,13 @@ export default function ContactSection(props: Props) {
             <div className={styles.socials}>
                 <h3>Socials</h3>
                 <div>
-                    <a href="https://www.tiktok.com/@jakesaintg" target="#">
+                    <a href="https://www.tiktok.com/@jakesaintg" target="#" aria-hidden="true">
                         <FontAwesomeIcon icon={faTiktok} size="lg" />
                     </a>
-                    <a href="https://bsky.app/profile/jakesaintg.bsky.social" target="#">
+                    <a href="https://bsky.app/profile/jakesaintg.bsky.social" target="#" aria-hidden="true">
                         <FontAwesomeIcon icon={faBluesky} size="lg" />
                     </a>
-                    <a href="https://discordapp.com/users/231257566418698251" target="#">
+                    <a href="https://discordapp.com/users/231257566418698251" target="#" aria-hidden="true">
                         <FontAwesomeIcon icon={faDiscord} size="lg" />
                     </a>
                 </div>
@@ -34,7 +34,7 @@ export default function ContactSection(props: Props) {
                 <h3>Contact</h3>
 
                 <a href="mailto:jake@stgermain.dev?subject=I would like to chat!">
-                    <FontAwesomeIcon icon={faEnvelope} size="lg" />
+                    <FontAwesomeIcon icon={faEnvelope} size="lg" aria-hidden="true"/>
                     &#8287;
                     <span>jake@stgermain.dev</span>  
                 </a>
