@@ -16,14 +16,14 @@ let displayedProjects: project[] = [];
 export default function ProjectsSection(props: Props) {
     let key = 0;
 
-    let [allProjectsShown, setAllProjectsShown] = useState(false);
+    const [allProjectsShown, setAllProjectsShown] = useState(false);
 
     if (!allProjectsShown) {
         displayedProjects = projects.reduce(
             (acc, proj) => {
                 if(proj.favorite) acc.push(proj);
                 return acc;
-            }, [] as any[] 
+            }, [] as project[] 
         )
     } else {
         displayedProjects = projects.sort((x, y) => (x.favorite === y.favorite)? 0 : x? -1 : 1);
@@ -36,7 +36,7 @@ export default function ProjectsSection(props: Props) {
             </p>
             <span className={styles.show_all_check}>
                 <label htmlFor="show_favorite">Show only Jake's favorites</label>
-                <input type="checkbox" name="show_favorite" value="show" onChange={() => setAllProjectsShown(allProjectsShown ? false : true)} defaultChecked={true}/>
+                <input type="checkbox" name="show_favorite" value="show" onChange={() => setAllProjectsShown(!allProjectsShown)} defaultChecked={true}/>
             </span>
             <div className={`${styles.projects} ${styles[props.visualMode]}`}>
                 {displayedProjects.map((e: project) =>

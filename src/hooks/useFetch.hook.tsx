@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 
 export function useFetch(url: string) {
-    let [loading, setLoading] = useState(true);
-    let [data, setData] = useState();
-    let [error, setError] = useState();
+    const [loading, setLoading] = useState(true);
+    const [data, setData] = useState();
+    const [error, setError] = useState();
 
     useEffect(() => {
         const controller = new AbortController();
@@ -14,7 +14,6 @@ export function useFetch(url: string) {
             .then(() => setData) //May have an issue here: .then(setData)
             .catch(setError)
             .finally(() => setLoading(true));
-        
         
         return () => {
             controller.abort();
