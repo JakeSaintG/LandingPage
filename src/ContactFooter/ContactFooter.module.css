@@ -10,17 +10,17 @@ footer {
 }
 
 footer.light_mode {
-    box-shadow: var(--light-raised-boxshadow);
+    /* box-shadow: var(--light-raised-boxshadow); */
 
     /* TODO: It looks pretty alright with no box show. I'll need to sleep on that. */
-    background: var(--light-mode-background);
+    /* background: var(--light-mode-background); */
 }
 
 footer.dark_mode {
-    box-shadow: var(--dark-raised-boxshadow);
+    /* box-shadow: var(--dark-raised-boxshadow); */
 
     /* TODO: It looks pretty alright with no box show. I'll need to sleep on that. */
-    background: var(--dark-mode-background);
+    /* background: var(--dark-mode-background); */
 }
 
 .socials {
