@@ -26,6 +26,15 @@
         ]
     },
     {
+        "title": "Personal",
+        "id": "personal",
+        "current": true,
+        "contributions": [
+            "Committed to daily Spanish language training through Babel and Doulingo.",
+            "Committed to daily, MEANINGFUL commits/contribution to personal code projects OR daily meaningful time working on Blender art."
+        ]
+    },
+    {
         "title": "ICU Nurse",
         "id": "nurse",
         "current": false,
@@ -59,6 +68,15 @@
             "Learned things",
             "Wrote (bad) code",
             "Made a pokemon app or two"
+        ]
+    },
+    {
+        "title": "Maintenance",
+        "id": "personal",
+        "current": false,
+        "contributions": [
+            "Committed to daily Spanish language training through Babel and Doulingo.",
+            "Committed to daily, MEANINGFUL commits/contribution to personal code projects OR daily meaningful time working on Blender art."
         ]
     },
     {
