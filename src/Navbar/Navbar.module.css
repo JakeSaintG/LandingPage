@@ -69,7 +69,7 @@ nav::after {
 }
 
 .dark_mode > .nested_nav > .nav_item:hover {
-    box-shadow: var(--light-raised-boxshadow-small);
+    box-shadow: var(--dark-raised-boxshadow-small);
 }
 
 .dark_mode > .nested_nav > .menu *,
@@ -96,6 +96,7 @@ nav > button {
     border: none;
     background-color: transparent;
     cursor: pointer;
+    color: inherit;
 }
 
 @media only screen and (min-width: 860px) {
