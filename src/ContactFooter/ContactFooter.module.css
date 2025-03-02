@@ -2,6 +2,7 @@ footer {
     width: 100%;
     margin-top: 1rem;
     display: grid;
+    text-align: center;
     grid-template-columns: .25fr 1fr 1fr 1fr .25fr;
     grid-template-areas: 
         ". socials . contact ."
@@ -35,6 +36,9 @@ footer.dark_mode {
 .socials div {
     display: flex;
     gap: 1rem;
+    justify-content: space-around;
+    max-width: 200px;
+    margin: 0 auto;
 }
 
 .contact {
@@ -45,4 +49,14 @@ footer.dark_mode {
     grid-area: footerBase;
     text-align: center;
     margin: 1rem 0;
+}
+
+.contact span {
+    display: none;
+}
+
+@media only screen and (min-width: 620px) {
+    .contact span {
+        display: inline;
+    }
 }

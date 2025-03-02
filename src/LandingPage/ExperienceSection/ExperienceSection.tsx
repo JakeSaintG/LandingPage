@@ -3,6 +3,8 @@ import PageSection from '../../GeneralComponents/PageSection';
 import styles from './ExperienceSection.module.css';
 import workExperience from '../../assets/experience.json';
 
+// TODO: This whole thing may need a redesign...it doesnt scale with content well
+
 interface Props extends React.HTMLAttributes<HTMLElement>{
     visualMode: string
 }
