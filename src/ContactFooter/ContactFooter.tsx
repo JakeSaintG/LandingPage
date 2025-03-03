@@ -8,7 +8,7 @@ interface Props extends React.HTMLAttributes<HTMLElement> {
 }
 
 // Just make this a footer. No need for a whole section (refactor)
-export default function ContactSection(props: Props) {
+export default function ContactFooter(props: Props) {
     const { visualMode } = props;
 
     return (
@@ -16,14 +16,14 @@ export default function ContactSection(props: Props) {
             <div className={styles.socials}>
                 <h3>Socials</h3>
                 <div>
-                    <a href="https://www.tiktok.com/@jakesaintg" target="#" aria-hidden="true">
-                        <FontAwesomeIcon icon={faTiktok} size="lg" />
+                    <a href="https://www.tiktok.com/@jakesaintg" aria-label="Opens in new tab; Link out to Jake's TikTok profile." target="#">
+                        <FontAwesomeIcon icon={faTiktok} size="lg" aria-hidden="true"/>
                     </a>
-                    <a href="https://bsky.app/profile/jakesaintg.bsky.social" target="#" aria-hidden="true">
-                        <FontAwesomeIcon icon={faBluesky} size="lg" />
+                    <a href="https://bsky.app/profile/jakesaintg.bsky.social" aria-label="Opens in new tab; Link out to Jake's BlueSky profile." target="#">
+                        <FontAwesomeIcon icon={faBluesky} size="lg" aria-hidden="true"/>
                     </a>
-                    <a href="https://discordapp.com/users/231257566418698251" target="#" aria-hidden="true">
-                        <FontAwesomeIcon icon={faDiscord} size="lg" />
+                    <a href="https://discordapp.com/users/231257566418698251" aria-label="Opens in new tab; Link out to Discord add-friend page." target="#">
+                        <FontAwesomeIcon icon={faDiscord} size="lg" aria-hidden="true"/>
                     </a>
                 </div>
             </div>
@@ -31,7 +31,7 @@ export default function ContactSection(props: Props) {
             <div className={styles.contact}> 
                 <h3>Contact</h3>
 
-                <a href="mailto:jake@stgermain.dev?subject=I would like to chat!">
+                <a href="mailto:jake@stgermain.dev?subject=I would like to chat!" aria-label="Open default email app; Will start composing new email to jake@stgermain.dev">
                     <FontAwesomeIcon icon={faEnvelope} size="lg" aria-hidden="true"/>
                     &#8287;
                     <span>jake@stgermain.dev</span>  
