@@ -46,7 +46,7 @@ export default function App() {
     return (
         //TODO: Animate the transition between page and settings
         //TODO: Move dialog to own component openDialog()/closeDialog() may make that tricky
-        <div>
+        <>
             <dialog
                 ref={dialogRef}
                 className={styles[`dialog_${pageVisualMode}`]}
@@ -86,6 +86,6 @@ export default function App() {
                     Heads up! Your window sizing may not give you the best experience on this page. Please consider expanding the window a little.
                 </p>
             </div>
-        </div>
+        </>
     );
 }

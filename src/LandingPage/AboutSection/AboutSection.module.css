@@ -22,14 +22,11 @@
 
 .tidbit {
     display: flex;
-    position: relative;
     justify-content: center;
-    height: 10%;
 }
 
 .tidbit p {
-    display: inline;
-    position: absolute;
+    height: 20px !important;
     width: 250px;
     text-align: center;
 }
