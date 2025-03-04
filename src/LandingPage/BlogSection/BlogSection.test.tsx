@@ -1,6 +1,7 @@
 import BlogSection from './BlogSection';
 import { cleanup, render, screen } from '@testing-library/react';
-import { describe, it, test, expect, afterEach } from 'vitest';
+import { test, expect, afterEach } from 'vitest';
+// import { describe, it, test, expect, afterEach } from 'vitest';
 
 test('renders text from contact section', () => {
     render(<BlogSection visualMode="" />);
