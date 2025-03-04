@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useLayoutEffect, useRef, useState } from 'react';
 import PageSection from '../../GeneralComponents/PageSection';
 import styles from './AboutSection.module.css';
 import tidbits from '../../assets/tidbits.json'
@@ -15,30 +15,36 @@ const tibbitAnimation = [
     { transform: "translateX(650px)" }              // end pos
 ];
 
-const useInterval = (callback: () => void, delay: number) => {
-    const [activeInterval, setActiveInterval] = useState(false);
-    
-    if (!activeInterval) {
-        setInterval(callback, delay);
-        setActiveInterval(true);
-    }
-}
+const fisherYatesShuffle = (array: string[]) => { 
+    for (let i = array.length - 1; i > 0; i--) { 
+        const j = Math.floor(Math.random() * (i + 1)); 
+        [array[i], array[j]] = [array[j], array[i]]; 
+    } 
+    return array; 
+};
 
 export default function AboutSection(props: Props) {
     const [tidbit, setTidbit] = useState('Hello!');
     let key = 0;
     const tidbitRef = useRef<HTMLParagraphElement | null>(null);
 
-    useInterval(() => {
-        let newTidbit: string;
+    useLayoutEffect(() => {
+        let tibditCount = 0;
+        let displayedTidbits = tidbits;
+        const interval = setInterval(() => {
+            let newTidbit = displayedTidbits[tibditCount];
+    
+            tidbitRef.current?.animate(tibbitAnimation, {duration: 4000}).commitStyles();
+            setTidbit(newTidbit);
 
-        do {
-            newTidbit = tidbits[Math.floor(Math.random() * tidbits.length)];
-        } while (newTidbit === tidbit);
+            if (tibditCount >= (tidbits.length - 1)) {
+                displayedTidbits = fisherYatesShuffle(tidbits);
+                tibditCount = 1;
+            }
+        }, 4000);
 
-        tidbitRef.current?.animate(tibbitAnimation, {duration: 4000}).commitStyles();
-        setTidbit(newTidbit);
-    }, 4000);
+        return () => clearInterval(interval);
+    }, []);
 
     return (
         <PageSection title='Jake St. Germain' id="aboutSection" style={{}} visualMode={props.visualMode} header='h1'>
