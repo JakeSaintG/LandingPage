@@ -5,7 +5,6 @@ interface Props extends React.HTMLAttributes<HTMLElement>{
     visualMode: string
 }
 
-// TODO: The page will randomly scroll down when on the blog section. Find out why.
 export default function BlogSection(props: Props) {
     const { visualMode } = props;
     
