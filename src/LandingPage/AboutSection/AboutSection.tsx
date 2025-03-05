@@ -54,22 +54,26 @@ export default function AboutSection(props: Props) {
             let displayedTidbits = tidbits;
             interval = setInterval(() => {
                 let newTidbit = displayedTidbits[tibditCount++];
+
                 tidbitRef.current?.animate(tibbitAnimation, {duration: 4000}).commitStyles();
 
                 setTidbit(newTidbit);
-
+                
                 if (tibditCount >= (tidbits.length - 1)) {
                     displayedTidbits = fisherYatesShuffle(tidbits);
-                    tibditCount = 1;
+                    tibditCount = 0;
+                    console.log(`last tidbit: ${tidbit}`)
+                    // TODO: If it so happens that arr[0] equals arr[last] after shuffling, then skip it.
+
                 }
             }, 4000);
         }
-
+        
         return () => {
             clearInterval(interval);
         }
     }, [isLoaded]);
-
+    
     return (
         <PageSection title='Jake St. Germain' id="aboutSection" style={{}} visualMode={props.visualMode} header='h1'>
             <div ref={aboutContentRef} className={styles.about_content}>
