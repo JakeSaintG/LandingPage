@@ -1,0 +1,112 @@
+.experience_title {
+    display: none;
+}
+
+.experience_list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.experience_list button {
+    font-size: 14px;
+}
+
+.selected_profession,
+.profession {
+    background-color: unset;
+    border: none;
+    color: unset;
+    margin: .25rem 0;
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.profession:hover {
+    text-decoration: underline;
+}
+
+.profession.light_mode:hover {
+    box-shadow: var(--light-raised-boxshadow-small);
+}
+
+.profession.light_mode:active {
+    box-shadow: var(--light-inset-boxshadow-small);
+    background: var(--light-mode-background);
+}
+
+.profession.dark_mode:hover {
+    box-shadow: var(--dark-raised-boxshadow-small);
+}
+
+.profession.dark_mode:active {
+    box-shadow: var(--dark-inset-boxshadow-small);
+    background: var(--dark-mode-background);
+}
+
+.selected_profession.light_mode {
+    box-shadow: var(--light-inset-boxshadow-small);
+    background: var(--light-mode-background);
+}
+
+.selected_profession.dark_mode {
+    box-shadow: var(--dark-inset-boxshadow-small);
+    background: var(--dark-mode-background);
+}
+
+
+
+@media only screen and (max-width: 600px) {
+    .experience_list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .experience_list button {
+        padding: 0.75rem;
+    }
+
+    .experience_title {
+        margin-bottom: 0;
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+    .experience_list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .experience_title {
+        margin-bottom: 0;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .experience_list button {
+        width: 90%;
+    }
+
+    .experience_title {
+        margin-bottom: 1rem;
+    }
+}
+
+@media only screen and (min-height: 650px) and (min-width: 768px) {
+    .experience_list {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media only screen and (min-height: 700px) {
+    .experience_title {
+        display: block;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .experience_title {
+        display: block;
+    }
+}
