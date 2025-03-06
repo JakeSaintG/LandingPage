@@ -2,13 +2,14 @@ import { MouseEvent, useState } from 'react';
 import PageSection from '../../GeneralComponents/PageSection';
 import styles from './ExperienceSection.module.css';
 import workExperience from '../../assets/experience.json';
+import Experience from './Experience/Experience';
 
 // TODO: This whole thing may need a redesign...it doesnt scale with content well
 interface Props extends React.HTMLAttributes<HTMLElement>{
     visualMode: string
 }
 
-interface work {
+export interface work {
     title: string;
     id: string;
     current: boolean;
@@ -32,9 +33,7 @@ export default function ExperienceSection(props: Props) {
     const [workContributions, setWorkContributions] = useState(workExperience[0].contributions);
     const [activeClass, setActiveClass] = useState('dev-fulltime');
     let details_key = 0;
-    let previous_key = 0;
-    let current_key = 0;
-
+    
     const returnWorkExperience = (event: MouseEvent<HTMLElement>) => {
         setWorkContributions(workExperience.find(e => e.id === event.currentTarget.id)!.contributions);
         setActiveClass(event.currentTarget.id);
@@ -47,33 +46,23 @@ export default function ExperienceSection(props: Props) {
                     <ul>{workContributions.map(e => <li key={details_key++}>{e}</li>)}</ul>
                 </div>
                 <div className={styles.experience}>
-                    <h3 className={styles.current_header}>Current:</h3>
-                    <div className={styles.current_experience}>
-                        {currentWorkExp.map((e: work) =>
-                            <button 
-                                key={current_key++}
-                                className={`${styles[props.visualMode]} ${activeClass === e.id ? `${styles.selected_profession} ${styles[props.visualMode]}` : `${styles.profession}`}`}
-                                id={e.id}
-                                onClick={returnWorkExperience}
-                            >
-                                    {e.title}
-                            </button>
-                        )}
-                    </div>
+                    <Experience 
+                        visualMode={props.visualMode}
+                        activeClass={activeClass}
+                        setWorkExperience={returnWorkExperience}
+                        workExperience={currentWorkExp}
+                        experienceTitle='Current'
+                    >
+                    </Experience>
+                    <Experience 
+                        visualMode={props.visualMode}
+                        activeClass={activeClass}
+                        setWorkExperience={returnWorkExperience}
+                        workExperience={prevWorkExp}
+                        experienceTitle='Previous'
+                    >
+                    </Experience>
 
-                    <h3 className={styles.past_header}>Previous:</h3>
-                    <div className={styles.past_experience}>
-                        {prevWorkExp.map((e: work) =>
-                            <button 
-                                key={previous_key++}
-                                className={`${styles[props.visualMode]} ${activeClass === e.id ? `${styles.selected_profession} ${styles[props.visualMode]}` : `${styles.profession}`}`}
-                                id={e.id}
-                                onClick={returnWorkExperience}
-                            >
-                                    {e.title}
-                            </button>
-                        )}
-                    </div>
                 </div>
             </div>
         </PageSection>

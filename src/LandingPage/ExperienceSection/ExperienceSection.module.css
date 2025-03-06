@@ -12,12 +12,8 @@
 }
 
 .experience {
-    padding: 1rem;
+    padding: 0 1rem;
     height: 100%;
-}
-
-.experience h3 {
-    display: none;
 }
 
 .past_experience,
@@ -34,69 +30,9 @@
     box-shadow: var(--light-inset-boxshadow);
 }
 
-.current_header {
-    grid-area: currentH;
-    margin-top: 0;
-}
-
-.past_header {
-    grid-area: pastH;
-}
-
-.current_experience {
-    grid-area: current;
-}
-
-.past_experience {
-    grid-area: past;
-}
-
-.selected_profession,
-.profession {
-    background-color: unset;
-    border: none;
-    color: unset;
-    margin: .25rem 0;
-    padding: 1rem;
-    border-radius: 10px;
-    text-align: left;
-}
-
 .past_experience button,
 .current_experience button {
     font-size: 14px;
-}
-
-.profession:hover {
-    text-decoration: underline;
-}
-
-.profession.light_mode:hover {
-    box-shadow: var(--light-raised-boxshadow-small);
-}
-
-.profession.light_mode:active {
-    box-shadow: var(--light-inset-boxshadow-small);
-    background: var(--light-mode-background);
-}
-
-.profession.dark_mode:hover {
-    box-shadow: var(--dark-raised-boxshadow-small);
-}
-
-.profession.dark_mode:active {
-    box-shadow: var(--dark-inset-boxshadow-small);
-    background: var(--dark-mode-background);
-}
-
-.selected_profession.light_mode {
-    box-shadow: var(--light-inset-boxshadow-small);
-    background: var(--light-mode-background);
-}
-
-.selected_profession.dark_mode {
-    box-shadow: var(--dark-inset-boxshadow-small);
-    background: var(--dark-mode-background);
 }
 
 @media only screen and (max-width: 600px) {
@@ -114,10 +50,6 @@
     .past_experience button,
     .current_experience button {
         padding: .75rem;
-    }
-
-    .experience h3 {
-        margin-bottom: 0;
     }
 }
 
@@ -147,12 +79,7 @@
     .current_experience button {
         width: 90%;
     }
-
-    .experience h3 {
-        margin-bottom: 1rem;
-    }
 }
-
 
 /* Height and width */
 @media only screen and (min-height: 650px) and (min-width: 768px){
@@ -160,17 +87,5 @@
     .current_experience {
         display: flex;
         flex-direction: column;
-    }
-}
-
-@media only screen and (min-height: 700px) {
-    .experience h3 {
-        display: block;
-    }
-}
-
-@media only screen and (min-width: 768px) {
-    .experience h3 {
-        display: block;
     }
 }
