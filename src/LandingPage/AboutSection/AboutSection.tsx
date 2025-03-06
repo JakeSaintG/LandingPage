@@ -56,22 +56,17 @@ export default function AboutSection(props: Props) {
                 let newTidbit = displayedTidbits[tibditCount++];
 
                 tidbitRef.current?.animate(tibbitAnimation, {duration: 4000}).commitStyles();
-
                 setTidbit(newTidbit);
                 
                 if (tibditCount >= (tidbits.length - 1)) {
                     displayedTidbits = fisherYatesShuffle(tidbits);
                     tibditCount = 0;
-                    console.log(`last tidbit: ${tidbit}`)
                     // TODO: If it so happens that arr[0] equals arr[last] after shuffling, then skip it.
-
                 }
             }, 4000);
         }
-        
-        return () => {
-            clearInterval(interval);
-        }
+
+        return () => clearInterval(interval);
     }, [isLoaded]);
     
     return (
@@ -80,17 +75,11 @@ export default function AboutSection(props: Props) {
                 <div>placeholder</div>
                 <div className={`${styles.elevator_pitch} ${styles[props.visualMode]}`}>
                     <div>
-                        {elevatorPitch.paragraphs.map(e => 
-                            {
-                                if (e === "") {
-                                    return <br key={key++} />
-                                }
+                        {elevatorPitch.paragraphs.map(e => {
+                                if (e === "") return <br key={key++}/>
 
-                                return <p key={key++}>
-                                    {e}
-                                </p>
-                            }
-                        )}
+                                return <p key={key++}>{e}</p>
+                        })}
                     </div>
                     <span className={styles.tidbit}>
                         <p ref={tidbitRef}>{tidbit}</p>
