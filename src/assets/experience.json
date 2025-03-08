@@ -22,7 +22,8 @@
         "current": true,
         "contributions": [
             "taught code",
-            "Reviewed code"
+            "Reviewed code",
+            "created additional learning materials "
         ]
     },
     {
@@ -55,8 +56,9 @@
         "current": false,
         "contributions": [
             "Updated a large production application from Angular 10 to Angular 12 in a timely manner.",
-            "Implemented a quality-of-life update by adding a REST API endpoint to return information on previously added sets of data. This would auto-populate a picklist on load and allow the user to more easily add relevant codes to a value set.",
-            "Gained experience working in Azure DevOps, Snowflake Data Cloud, and Azure services. ",
+            "Implemented a quality-of-life update by adding a REST API endpoint to return information on previously added sets of data.",
+            "Gained experience working in Azure DevOps, Snowflake Data Cloud, and Azure services.",
+            "large scale software deployment 'ring-style'",
             "Collaborated with a team of software engineers by pairing on projects, reviewing code, and working through solutions to difficult healthcare-related problems"
         ]
     },
@@ -66,6 +68,10 @@
         "current": false,
         "contributions": [
             "Learned things",
+            "soaked in as much knowledge as I could",
+            "Churned out learning projects",
+            "went above and beyond",
+            "Web, Web2, C#, Kotlin",
             "Wrote (bad) code",
             "Made a pokemon app or two"
         ]
@@ -85,7 +91,8 @@
         "current": false,
         "contributions": [
             "Pokemon Master",
-            "Nurse of the Year Finalist"
+            "Nurse of the Year Finalist",
+            "Presgany"
         ]
     }
 ]

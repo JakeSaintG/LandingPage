@@ -21,7 +21,7 @@
         "name": "SpotBot",
         "hosted": null,
         "repo_link": "https://github.com/JakeSaintG/SpotBot",
-        "description": "A Discord bot for general use that has extra functionality for Pokèmon GO themed Discord servers.",
+        "description": "A Discord Bot for general use that has extra functionality for Pokèmon GO themed Discord servers.",
         "technologies": ["typescript"],
         "favorite": true,
         "eductional": false
