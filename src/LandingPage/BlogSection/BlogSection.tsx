@@ -14,8 +14,10 @@ export default function BlogSection(props: Props) {
     
     return (
         <PageSection title='Blog' id='blogSection' style={{}} visualMode={visualMode}>
-            <BlogDialog visualMode={props.visualMode}></BlogDialog>
             <BlogPreview visualMode={props.visualMode}></BlogPreview>
+
+
+            {/* <BlogDialog visualMode={props.visualMode}></BlogDialog> */}
         </PageSection>
     );
 }

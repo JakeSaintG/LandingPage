@@ -7,7 +7,9 @@ interface Props extends React.HTMLAttributes<HTMLElement>{
 export default function BlogPreview(props: Props) {
     return (
         <div className={`${styles.placeholder_blog_preview} ${styles[props.visualMode]}`}>
-            Placeholder blog preview
+            <h3>Title</h3>
+            <p>date</p>
+            <p>Preview? Maybe?</p>
         </div>
     )
 }

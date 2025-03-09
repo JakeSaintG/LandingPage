@@ -1,3 +1,9 @@
 .placeholder_blog_preview {
-    color: red
+    color: red;
+
+    border: solid red 1px;
+
+    min-width: 200px;
+    max-width: 200px;
 }
+
