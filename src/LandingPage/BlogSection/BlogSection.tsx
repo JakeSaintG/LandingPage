@@ -14,10 +14,15 @@ export default function BlogSection(props: Props) {
     
     return (
         <PageSection title='Blog' id='blogSection' style={{}} visualMode={visualMode}>
+            <div className={styles.blogs}>
+
+            {/* loop to make these */}
+            <BlogPreview visualMode={props.visualMode}></BlogPreview>
             <BlogPreview visualMode={props.visualMode}></BlogPreview>
 
 
             {/* <BlogDialog visualMode={props.visualMode}></BlogDialog> */}
+            </div>
         </PageSection>
     );
 }
