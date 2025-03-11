@@ -1,13 +1,32 @@
 .placeholder_blog_preview {
-    color: red;
-
-    border: solid red 1px;
+    color: inherit;
+    padding: 1rem;
     border-radius: 12px;
-
-/* temp for outer component styling */
-    max-height: 150px;
-    min-height: 150px;
-    min-width: 200px;
-    max-width: 200px;
+    
+    /* temp for outer component styling */
+    max-height: 160px;
+    min-height: 160px;
+    min-width: 250px;
+    max-width: 250px;
 }
 
+.placeholder_blog_preview.light_mode {
+
+    border: solid var(--dark-mode-background) 2px;
+    box-shadow: var(--light-raised-shadow-only);
+}
+
+.placeholder_blog_preview.dark_mode {
+    border: solid var(--light-mode-background) 2px;
+    box-shadow: var(--dark-raised-shadow-only);
+}
+
+.placeholder_blog_preview h3 {
+    margin: 0;
+}
+
+/* 
+Get some tilting going:
+- https://codepen.io/sirnightowl/pen/Prjzmq
+- https://codepen.io/nxworld/pen/vrpJZN
+*/

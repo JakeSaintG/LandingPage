@@ -1,5 +1,5 @@
 import PageSection from '../../GeneralComponents/PageSection';
-import BlogDialog from './BlogDialog';
+// import BlogDialog from './BlogDialog';
 
 // Temp
 import BlogPreview from './BlogPreview';
@@ -14,7 +14,7 @@ export default function BlogSection(props: Props) {
     
     return (
         <PageSection title='Blog' id='blogSection' style={{}} visualMode={visualMode}>
-            <div className={styles.blogs}>
+            <div className={`${styles.blogs} ${styles[visualMode]}`}>
 
             {/* loop to make these */}
             <BlogPreview visualMode={props.visualMode}></BlogPreview>
