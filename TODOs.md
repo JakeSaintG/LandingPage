@@ -7,3 +7,9 @@ TODO: Make a tiltable DIV component.
 - Resources:
     - https://codepen.io/sirnightowl/pen/Prjzmq
     - https://codepen.io/nxworld/pen/vrpJZN 
+- Maybe not? Seems like a pain... (see below)
+
+TODO: Alternative ways to make the blog preview and project tiles pop on hover
+- underline the title
+- change the border
+- mouse to finger pointer
