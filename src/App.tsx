@@ -79,7 +79,7 @@ export default function App() {
                 <ProjectsSection visualMode={pageVisualMode} />
                 <BlogSection visualMode={pageVisualMode} />
             </main>
-            <ContactFooter visualMode={pageVisualMode} />
+            <ContactFooter />
             <div className={`${styles.size_warning} ${styles[pageVisualMode]}`}>
                 <FontAwesomeIcon icon={faTriangleExclamation} size='xl' aria-hidden="true"/>
                 <p>
