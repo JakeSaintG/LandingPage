@@ -62,7 +62,6 @@ export default function ExperienceSection(props: Props) {
                         experienceTitle='Previous'
                     >
                     </Experience>
-
                 </div>
             </div>
         </PageSection>

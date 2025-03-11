@@ -3,16 +3,9 @@ import styles from './ContactFooter.module.css';
 import { faBluesky, faDiscord, faTiktok } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
-interface Props extends React.HTMLAttributes<HTMLElement> {
-    visualMode: string;
-}
-
-// Just make this a footer. No need for a whole section (refactor)
-export default function ContactFooter(props: Props) {
-    const { visualMode } = props;
-
+export default function ContactFooter() {
     return (
-        <footer className={styles[visualMode]}>
+        <footer >
             <div className={styles.socials}>
                 <h3>Socials</h3>
                 <div>
