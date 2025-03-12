@@ -26,16 +26,16 @@ export default function Navbar(props: Props) {
 
             <div className={`${styles.nested_nav} ${toggled}`}>
 
-                <a className={styles.nav_item} href="#aboutSection" aria-label="Jump to About section of current page.">
+                <a className={styles.nav_item} href="#aboutSection" aria-label="Jump to About section of current page." onClick={() => setNavContentVisible(!navContentVisible)}>
                     About
                 </a>
-                <a className={styles.nav_item} href="#experienceSection" aria-label="Jump to Experience section of current page.">
+                <a className={styles.nav_item} href="#experienceSection" aria-label="Jump to Experience section of current page." onClick={() => setNavContentVisible(!navContentVisible)}>
                     Experience
                 </a>
-                <a className={styles.nav_item} href="#projectsSection" aria-label="Jump to Projects section of current page.">
+                <a className={styles.nav_item} href="#projectsSection" aria-label="Jump to Projects section of current page." onClick={() => setNavContentVisible(!navContentVisible)}>
                     Projects
                 </a>
-                <a className={styles.nav_item} href="#blogSection" aria-label="Jump to Blog section of current page.">
+                <a className={styles.nav_item} href="#blogSection" aria-label="Jump to Blog section of current page." onClick={() => setNavContentVisible(!navContentVisible)}>
                     Blog
                 </a>
 
