@@ -16,7 +16,6 @@
     --dark-raised-boxshadow: 6px 6px 12px #05060A, -6px -6px 12px #2b2f37;
     --dark-inset-boxshadow: inset 6px 6px 12px #05060A, 2px 3px 6px -2px #2b2f37;
 
-
     /* Light Mode */
     --light-mode-background: #e7e7e7;
     --light-mode-background-gradient: linear-gradient(145deg, #e7e7e7, #ded8d8);

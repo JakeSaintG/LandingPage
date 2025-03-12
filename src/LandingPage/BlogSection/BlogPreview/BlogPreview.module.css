@@ -1,8 +1,9 @@
-.placeholder_blog_preview {
+.blog_preview {
     color: inherit;
     padding: 1rem;
     border-radius: 12px;
-    
+    cursor: pointer;
+
     /* temp for outer component styling */
     max-height: 160px;
     min-height: 160px;
@@ -10,23 +11,39 @@
     max-width: 250px;
 }
 
-.placeholder_blog_preview.light_mode {
-
+.blog_preview.light_mode {
     border: solid var(--dark-mode-background) 2px;
     box-shadow: var(--light-raised-shadow-only);
 }
 
-.placeholder_blog_preview.dark_mode {
+.blog_preview.dark_mode {
     border: solid var(--light-mode-background) 2px;
     box-shadow: var(--dark-raised-shadow-only);
 }
 
-.placeholder_blog_preview h3 {
+.blog_preview h3 {
     margin: 0;
 }
 
-/* 
-Get some tilting going:
-- https://codepen.io/sirnightowl/pen/Prjzmq
-- https://codepen.io/nxworld/pen/vrpJZN
-*/
+.blog_preview:hover h3 {
+    color: var(--palette-secondary-color);
+    text-decoration: underline;
+}
+
+.blog_preview:active h3 {
+    color: var(--palette-primary-color);
+    text-decoration: underline;
+}
+
+.tags {
+    display: flex;
+    gap: .5rem;
+}
+
+.tags p {
+    background-color: var(--palette-primary-color);
+    color: var(--light-mode-background);
+    padding: .5rem;
+    border-radius: 15px;
+    font-size: small;
+}
