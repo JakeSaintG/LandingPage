@@ -19,7 +19,8 @@ dialog {
     background: none;
     border-radius: 15px;
     height: 40%;
-    width: 40%;
+    width: 80%;
+    max-width: 475px;
 }
 
 .dialog_dark_mode {
@@ -95,6 +96,19 @@ dialog {
 
 .size_warning {
     display: none;
+}
+
+
+@media only screen and (min-width: 500px) {
+    dialog {
+        width: 60%;
+    }
+}
+
+@media only screen and (min-width: 720px) {
+    dialog {
+        width: 40%;
+    }
 }
 
 @media only screen and (max-height: 550px) and (max-width: 720px) {
