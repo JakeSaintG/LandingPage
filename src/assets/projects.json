@@ -4,7 +4,7 @@
         "hosted": "https://jakesaintg.github.io/PokeUtils/",
         "repo_link": "https://github.com/JakeSaintG/PokeUtils",
         "description": "An Angular application that uses the Cashmere libary. PokéUtils leverages PokéAPI to provide tools that will enchance a user's journey into the world of Pokémon! ",
-        "technologies": ["angular"],
+        "technologies": ["angular", "nodejs"],
         "favorite": true,
         "eductional": false
     },
@@ -22,7 +22,7 @@
         "hosted": null,
         "repo_link": "https://github.com/JakeSaintG/SpotBot",
         "description": "A Discord Bot for general use that has extra functionality for Pokèmon GO themed Discord servers.",
-        "technologies": ["typescript"],
+        "technologies": ["typescript", "deno"],
         "favorite": true,
         "eductional": false
     },
@@ -40,7 +40,7 @@
         "hosted": null,
         "repo_link": "https://github.com/JakeSaintG/CodeYouWebDemoApi",
         "description": "An over-engineered backend for teaching development students how to use and develop REST APIs using Express.",
-        "technologies": ["typescript", "html"],
+        "technologies": ["typescript", "html", "nodejs"],
         "favorite": true,
         "eductional": true
     },
@@ -85,7 +85,7 @@
         "hosted": null,
         "repo_link": "https://github.com/JakeSaintG/SimpleMCBackupTool",
         "description": "A simple Minecraft world backup tool (for Mac and Linux).",
-        "technologies": ["typescript"],
+        "technologies": ["typescript", "nodejs"],
         "favorite": false,
         "eductional": false
     }

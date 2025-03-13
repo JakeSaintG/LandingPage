@@ -9,6 +9,8 @@ import powershellImg from '../../../assets/img/lang_icons/powershell.png';
 import dartImg from '../../../assets/img/lang_icons/dart.png';
 import rustImg from '../../../assets/img/lang_icons/rust.png';
 import sqlImg from '../../../assets/img/lang_icons/sql.png';
+import denoImg from '../../../assets/img/lang_icons/deno.png';
+import nodeJsImg from '../../../assets/img/lang_icons/nodejs.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
@@ -37,7 +39,9 @@ const langs: Record<string, string> = {
     sql: sqlImg,
     powershell: powershellImg,
     dart: dartImg,
-    rust: rustImg
+    rust: rustImg,
+    nodejs: nodeJsImg,
+    deno: denoImg
 }
 
 export default function Project(props: Props) {
