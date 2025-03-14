@@ -32,7 +32,7 @@ export default function ProjectsSection(props: Props) {
     return (
         <PageSection title='Projects' id="projectsSection" style={contentStyle} visualMode={props.visualMode}>
             <p className={styles.projects_desc}>
-                I like to stay busy! Especially when something I find something challenging, new, or intresting to work on. You'll find projects with all kinds of different technologies, languages, or applications here! I also called out some of my favorites. Also, open source contrabution? cashmere?
+                I like to stay busy! Especially when something I find something challenging, new, or intresting to work on. You'll find projects with all kinds of different technologies, languages, or applications here! Don't worry about how many of them are Pokémon based. 😅 I also called out some of my favorites. Also, open source contrabution? cashmere?
             </p>
             <span className={styles.show_all_check}>
                 <label htmlFor="show_favorite">Show only Jake's favorites</label>
