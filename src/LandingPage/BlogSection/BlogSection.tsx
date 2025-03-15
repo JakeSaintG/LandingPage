@@ -1,4 +1,5 @@
 import PageSection from '../../GeneralComponents/PageSection';
+import blogs from '../../assets/blogs.json'
 // import BlogDialog from './BlogDialog';
 
 // Temp
