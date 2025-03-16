@@ -1,0 +1,26 @@
+[
+    {
+        "title": "blog1",
+        "author": "me",
+        "publish_date": "1742095414",
+        "tags": ["tag1", "tag2"],
+        "markdown": "./blogs/md1.md",
+        "visible": true
+    },
+    {
+        "title": "blog3",
+        "author": "me",
+        "publish_date": "1742095414",
+        "tags": ["tag1", "tag2"],
+        "markdown": "./blogs/md2.md",
+        "visible": true
+    },
+    {
+        "title": "blog3",
+        "author": "me",
+        "publish_date": "1742095414",
+        "tags": ["tag1", "tag2"],
+        "markdown": "./blogs/md3.md",
+        "visible": true
+    }
+]
