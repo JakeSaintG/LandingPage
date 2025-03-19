@@ -1,4 +1,3 @@
-// TODO: Make these icon imports more dynamic/flexible/generic
 import styles from './Project.module.css';
 import cSharpImg from '../../../assets/img/lang_icons/csharp.png';
 import angularImg from '../../../assets/img/lang_icons/angular.png';
