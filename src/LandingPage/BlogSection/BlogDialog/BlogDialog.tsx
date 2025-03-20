@@ -1,7 +1,7 @@
 import styles from './BlogDialog.module.css';
 
-interface Props extends React.HTMLAttributes<HTMLElement>{
-    visualMode: string
+interface Props extends React.HTMLAttributes<HTMLElement> {
+    visualMode: string;
 }
 
 // Use marked (2nd response) or react-markdown for rendering an .md file
@@ -11,9 +11,15 @@ interface Props extends React.HTMLAttributes<HTMLElement>{
 // https://www.geeksforgeeks.org/what-is-componentwillmount-method-in-reactjs/
 
 export default function BlogDialog(props: Props) {
+
+
     return (
-        <div className={`${styles.placeholder_blog_preview} ${styles[props.visualMode]}`}>
+
+        <div
+            className={`${styles.placeholder_blog_preview} ${styles[props.visualMode]}`}
+        >
             Placeholder blog dialog
         </div>
-    )
+
+    );
 }
