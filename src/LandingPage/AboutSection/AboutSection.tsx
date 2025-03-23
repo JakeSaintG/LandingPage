@@ -75,10 +75,10 @@ export default function AboutSection(props: Props) {
                 <div>placeholder</div>
                 <div className={`${styles.elevator_pitch} ${styles[props.visualMode]}`}>
                     <div>
-                        {elevatorPitch.paragraphs.map(e => {
-                                if (e === "") return <br key={key++}/>
+                        {elevatorPitch.paragraphs.map(pitch => {
+                                if (pitch === "") return <br key={key++}/>
 
-                                return <p key={key++}>{e}</p>
+                                return <p key={key++}>{pitch}</p>
                         })}
                     </div>
                     <span className={styles.tidbit}>

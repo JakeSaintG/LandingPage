@@ -9,9 +9,6 @@
     padding: 1rem;
     border-radius: 15px;
     overflow-y: auto;
-
-    /* TODO: Need to fix the random heights of this thing */
-    min-height: 50%;
 }
 
 .experience {

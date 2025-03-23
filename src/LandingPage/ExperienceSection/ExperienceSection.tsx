@@ -42,7 +42,7 @@ export default function ExperienceSection(props: Props) {
         <PageSection title='Experience' id="experienceSection" style={{}} visualMode={visualMode}>
             <div className={styles.experience_content}>
                 <div className={`${styles.experience_details} ${styles[props.visualMode]}`}>
-                    <ul>{workContributions.map(e => <li key={details_key++}>{e}</li>)}</ul>
+                    <ul>{workContributions.map(wc => <li key={details_key++}>{wc}</li>)}</ul>
                 </div>
                 <div className={styles.experience}>
                     <Experience 

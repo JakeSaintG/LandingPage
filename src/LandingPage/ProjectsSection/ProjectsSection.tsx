@@ -39,8 +39,8 @@ export default function ProjectsSection(props: Props) {
                 <input type="checkbox" name="show_favorite" value="show" onChange={() => setAllProjectsShown(!allProjectsShown)} defaultChecked={true}/>
             </span>
             <div className={`${styles.projects} ${styles[props.visualMode]}`}>
-                {displayedProjects.map((e: project) =>
-                    <Project visualMode={props.visualMode} key={key++} project={e}/>
+                {displayedProjects.map((proj: project) =>
+                    <Project visualMode={props.visualMode} key={key++} project={proj}/>
                 )}
             </div>
         </PageSection>

@@ -19,14 +19,14 @@ export default function Experience(props: Props) {
                 {props.experienceTitle}:
             </h3>
             <div className={styles.experience_list}>
-                {props.workExperience.map((e: work) =>
+                {props.workExperience.map((work: work) =>
                     <button 
                         key={key++}
-                        className={`${styles[props.visualMode]} ${props.activeClass === e.id ? `${styles.selected_profession} ${styles[props.visualMode]}` : `${styles.profession}`}`}
-                        id={e.id}
+                        className={`${styles[props.visualMode]} ${props.activeClass === work.id ? `${styles.selected_profession} ${styles[props.visualMode]}` : `${styles.profession}`}`}
+                        id={work.id}
                         onClick={props.setWorkExperience}
                     >
-                            {e.title}
+                            {work.title}
                     </button>
                 )}
             </div>
