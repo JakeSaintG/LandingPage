@@ -1,10 +1,20 @@
 import styles from './BlogPreview.module.css';
+import blog from '../BlogSection'
 
 interface Props extends React.HTMLAttributes<HTMLElement> {
     visualMode: string;
     displayBlog: () => void;
+    blog: blog;
 }
 
+export interface blog {
+    title: string,
+    author: string,
+    publish_date: string,
+    tags: string[],
+    markdown: string,
+    visible: boolean
+}
 
 export default function BlogPreview(props: Props) {
     return (

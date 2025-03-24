@@ -1,11 +1,11 @@
 import { useState } from 'react';
-import PageSection from '../../GeneralComponents/PageSection';
-// import blogs from '../../assets/blogs.json'
-// import BlogDialog from './BlogDialog';
-
-// Temp
-import BlogPreview from './BlogPreview';
 import styles from './BlogSection.module.css';
+import PageSection from '../../GeneralComponents/PageSection';
+import blogs from '../../assets/blogs.json'
+import { blog } from './BlogPreview/BlogPreview';
+// import BlogDialog from './BlogDialog';
+import BlogPreview from './BlogPreview';
+
 
 interface Props extends React.HTMLAttributes<HTMLElement>{
     visualMode: string
@@ -13,6 +13,7 @@ interface Props extends React.HTMLAttributes<HTMLElement>{
 
 export default function BlogSection(props: Props) {
     const { visualMode } = props;
+    let key = 0;
 
     const [isBlogDisplayed, setIsBlogDisplayed] = useState(true);
 
@@ -22,12 +23,12 @@ export default function BlogSection(props: Props) {
         <PageSection title='Blog' id='blogSection' style={{}} visualMode={visualMode}>
             <div className={`${styles.blogs} ${styles[visualMode]}`}>
 
+            {blogs.map((b: blog) =>
+                <BlogPreview visualMode={props.visualMode} displayBlog={toggleIsBlogDisplayed} key={key++} blog={b}></BlogPreview>
+            )}
+
             {/* loop to make these */}
-            <BlogPreview visualMode={props.visualMode} displayBlog={toggleIsBlogDisplayed}></BlogPreview>
-            <BlogPreview visualMode={props.visualMode} displayBlog={toggleIsBlogDisplayed}></BlogPreview>
 
-
-            {/* <BlogDialog visualMode={props.visualMode}></BlogDialog> */}
             </div>
         </PageSection>
     );
