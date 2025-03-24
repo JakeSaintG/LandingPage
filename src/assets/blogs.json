@@ -3,7 +3,7 @@
         "title": "blog1",
         "author": "me",
         "publish_date": "1742095414",
-        "tags": ["tag1", "tag2"],
+        "tags": ["Mobile", "React", "SQLite", "POC"],
         "markdown": "./blogs/md1.md",
         "visible": true
     },
