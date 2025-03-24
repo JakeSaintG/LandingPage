@@ -6,10 +6,16 @@ import { blog } from './BlogPreview/BlogPreview';
 // import BlogDialog from './BlogDialog';
 import BlogPreview from './BlogPreview';
 
-
 interface Props extends React.HTMLAttributes<HTMLElement>{
     visualMode: string
 }
+
+const displayedBlogs = blogs.reduce(
+    (acc, proj) => {
+        if(proj.visible) acc.push(proj);
+        return acc;
+    }, [] as blog[] 
+)
 
 export default function BlogSection(props: Props) {
     const { visualMode } = props;
@@ -23,7 +29,8 @@ export default function BlogSection(props: Props) {
         <PageSection title='Blog' id='blogSection' style={{}} visualMode={visualMode}>
             <div className={`${styles.blogs} ${styles[visualMode]}`}>
 
-            {blogs.map((b: blog) =>
+            {displayedBlogs.map((b: blog) =>
+                
                 <BlogPreview visualMode={props.visualMode} displayBlog={toggleIsBlogDisplayed} key={key++} blog={b}></BlogPreview>
             )}
 

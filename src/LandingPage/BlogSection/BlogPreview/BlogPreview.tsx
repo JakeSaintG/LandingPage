@@ -19,8 +19,9 @@ export interface blog {
 export default function BlogPreview(props: Props) {
     return (
         <div className={`${styles.blog_preview} ${styles[props.visualMode]}`} onClick={props.displayBlog}>
-            <h3>Title</h3>
-            <p>date</p>
+            <h3>{props.blog.title}</h3>
+            <p>{props.blog.publish_date}</p>
+
             <div className={styles.tags}>
                 <p>Tag</p>
                 <p>Tag</p>
