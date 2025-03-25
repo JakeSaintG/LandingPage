@@ -46,6 +46,8 @@
 .tags {
     display: flex;
     gap: .5rem;
+    flex-wrap: wrap;
+
 }
 
 .tags p {
@@ -54,4 +56,5 @@
     padding: .25rem .5rem;
     border-radius: 15px;
     font-size: small;
+    margin: 0
 }
