@@ -5,10 +5,8 @@
     cursor: pointer;
 
     /* temp for outer component styling */
-    max-height: 160px;
-    min-height: 160px;
-    min-width: 250px;
-    max-width: 250px;
+    height: 170px;
+    width: 250px;
 }
 
 .blog_preview.light_mode {
@@ -47,7 +45,14 @@
     display: flex;
     gap: .5rem;
     flex-wrap: wrap;
+}
 
+.blog_preview:hover .tags p {
+    background-color: var(--palette-secondary-color);
+}
+
+.blog_preview:active .tags p {
+    background-color: var(--palette-primary-color);
 }
 
 .tags p {

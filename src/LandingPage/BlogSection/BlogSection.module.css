@@ -1,20 +1,26 @@
 
 
 /* this really doesn't plan well for the need to overflow */
-.blogs {
+.blog_indentation {
     padding: 1rem;
     height: 100%;
     gap: 1rem;
     border-radius: 15px;
 
-    display: flex;
-    flex-wrap: wrap;
 }
 
-.blogs.light_mode {
+.blog_indentation.preview {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-auto-flow: column;
+    /* flex-direction: column;
+    flex-wrap: wrap; */
+}
+
+.blog_indentation.light_mode {
     box-shadow: var(--light-inset-boxshadow);
 }
 
-.blogs.dark_mode {
+.blog_indentation.dark_mode {
     box-shadow: var(--dark-inset-boxshadow);
 }

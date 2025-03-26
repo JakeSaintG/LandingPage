@@ -22,20 +22,14 @@ export default function BlogSection(props: Props) {
     let key = 0;
 
     const [isBlogDisplayed, setIsBlogDisplayed] = useState(true);
-
     const toggleIsBlogDisplayed = () => {setIsBlogDisplayed(!isBlogDisplayed)}
 
     return (
         <PageSection title='Blog' id='blogSection' style={{}} visualMode={visualMode}>
-            <div className={`${styles.blogs} ${styles[visualMode]}`}>
-
-            {displayedBlogs.map((b: blog) =>
-                
-                <BlogPreview visualMode={props.visualMode} displayBlog={toggleIsBlogDisplayed} key={key++} blog={b}></BlogPreview>
-            )}
-
-            {/* loop to make these */}
-
+            <div className={`${styles.blog_indentation} ${styles.preview} ${styles[visualMode]}`}>
+                {displayedBlogs.map((b: blog) =>
+                    <BlogPreview visualMode={props.visualMode} displayBlog={toggleIsBlogDisplayed} key={key++} blog={b}></BlogPreview>
+                )}
             </div>
         </PageSection>
     );
