@@ -8,6 +8,7 @@ interface Props extends React.HTMLAttributes<HTMLElement> {
 }
 
 export interface blog {
+    id: string;
     title: string;
     author: string;
     publish_date: string;

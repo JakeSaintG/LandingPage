@@ -1,5 +1,6 @@
 [
     {
+        "id": "1",
         "title": "blog1",
         "author": "me",
         "publish_date": "1742095414",
@@ -8,6 +9,7 @@
         "visible": true
     },
     {
+        "id": "2",
         "title": "blog3",
         "author": "me",
         "publish_date": "1742095414",
@@ -16,6 +18,7 @@
         "visible": true
     },
     {
+        "id": "3",
         "title": "blog3",
         "author": "me",
         "publish_date": "1742095414",
@@ -24,7 +27,26 @@
         "visible": false
     },
     {
+        "id": "4",
         "title": "blog4",
+        "author": "me",
+        "publish_date": "1742095414",
+        "tags": ["tag1", "tag2"],
+        "markdown": "./blogs/md4.md",
+        "visible": true
+    },
+    {
+        "id": "5",
+        "title": "blog5",
+        "author": "me",
+        "publish_date": "1742095414",
+        "tags": ["tag1", "tag2"],
+        "markdown": "./blogs/md4.md",
+        "visible": true
+    },
+    {
+        "id": "6",
+        "title": "blog6",
         "author": "me",
         "publish_date": "1742095414",
         "tags": ["tag1", "tag2"],
