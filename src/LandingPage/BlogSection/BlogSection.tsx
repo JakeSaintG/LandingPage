@@ -3,7 +3,6 @@ import styles from './BlogSection.module.css';
 import PageSection from '../../GeneralComponents/PageSection';
 import blogs from '../../assets/blogs.json';
 import { blog } from './BlogPreview/BlogPreview';
-// import BlogDialog from './BlogDialog';
 import BlogPreview from './BlogPreview';
 
 interface Props extends React.HTMLAttributes<HTMLElement> {
