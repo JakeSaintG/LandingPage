@@ -53,7 +53,7 @@ export default function AboutSection(props: Props) {
             let tibditCount = 0;
             let displayedTidbits = tidbits;
             interval = setInterval(() => {
-                let newTidbit = displayedTidbits[tibditCount++];
+                const newTidbit = displayedTidbits[tibditCount++];
 
                 tidbitRef.current?.animate(tibbitAnimation, {duration: 4000}).commitStyles();
                 setTidbit(newTidbit);

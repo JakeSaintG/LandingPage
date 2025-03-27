@@ -58,8 +58,9 @@
         var(--palette-primary-color) 100%
     );
 
-    animation: spinning-border 8s linear infinite;
-    -webkit-animation: spinning-border 8s linear infinite;
+    /* TODO: Figure out this animation in a way that doesn't break everything under it */
+    /* animation: spinning-border 8s linear infinite; */
+    /* -webkit-animation: spinning-border 8s linear infinite; */
     scale: 2.5;
 }
 

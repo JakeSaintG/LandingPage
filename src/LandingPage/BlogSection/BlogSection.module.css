@@ -1,12 +1,47 @@
-/* this really doesn't plan well for the need to overflow */
+.blog_header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: ". blog_title blog_date";
+    height: 29px;
+    margin-bottom: 1rem;
+}
+
+.blog_header button {
+    width: 45%;
+    min-width: 90px
+}
+
+.blog_header h2 {
+    grid-area: blog_title;
+    text-align: center;
+    margin: 0;
+}
+
+.blog_header h2 {
+    grid-area: blog_title;
+    text-align: center;
+    margin: 0;
+}
+
+.blog_header p {
+    grid-area: blog_date;
+    text-align: right;
+    height: 29px;
+    line-height: 29px;
+    margin: 0;
+}
+
 .blog_indentation {
-    padding: 1rem;
     height: 100%;
+    padding: 1rem;
+    height: calc(100% - 49px);
     gap: 1rem;
     border-radius: 15px;
+    display: flex;
 }
 
 .blog_indentation.preview {
+    height: 100%;
     display: grid;
     grid-template-rows: auto auto auto;
     grid-auto-flow: column;

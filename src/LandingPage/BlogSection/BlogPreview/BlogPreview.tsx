@@ -3,7 +3,7 @@ import blog from '../BlogSection';
 
 interface Props extends React.HTMLAttributes<HTMLElement> {
     visualMode: string;
-    displayBlog: () => void;
+    displayBlog: (id: string) => void;
     blog: blog;
 }
 
@@ -20,7 +20,7 @@ export interface blog {
 export default function BlogPreview(props: Props) {
     const postDate = new Date(
         parseInt(props.blog.publish_date) * 1000
-    ).toDateString();
+    ).toLocaleDateString();
     let key = 0;
     let tags = props.blog.tags;
 
@@ -29,7 +29,7 @@ export default function BlogPreview(props: Props) {
     return (
         <div
             className={`${styles.blog_preview} ${styles[props.visualMode]}`}
-            onClick={props.displayBlog}
+            onClick={() => props.displayBlog(props.blog.id)}
         >
             <h3>{props.blog.title}</h3>
             <p>{postDate}</p>
