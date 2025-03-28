@@ -1,9 +1,10 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import styles from './BlogSection.module.css';
 import PageSection from '../../GeneralComponents/PageSection';
 import blogs from '../../assets/blogs.json';
 import { blog } from './BlogPreview/BlogPreview';
 import BlogPreview from './BlogPreview';
+import Markdown from 'react-markdown';
 
 interface Props extends React.HTMLAttributes<HTMLElement> {
     visualMode: string;
@@ -19,26 +20,40 @@ export default function BlogSection(props: Props) {
     let key = 0;
 
     const [isBlogDisplayed, setIsBlogDisplayed] = useState(false);
-    const [displayedBlogId, setDisplayedBlogId] = useState("");
+    const [displayedBlogId, setDisplayedBlogId] = useState('');
+    const [displayedMarkdown, setDisplayedMarkdown] = useState('');
 
-    const toggleIsBlogDisplayed = (id: string = "") => {
-        if (id !== "") setDisplayedBlogId(id);
+    const displayedBlog: blog | undefined = blogPreviews.find((b) => b.id === displayedBlogId);
+
+    const toggleIsBlogDisplayed = (id: string = '') => {
+        if (id !== '') setDisplayedBlogId(id);
         setIsBlogDisplayed(!isBlogDisplayed);
-    }
+    };
+
+    useEffect(() => {
+        if (isBlogDisplayed && displayedBlog !== undefined) {
+            fetch(displayedBlog.markdown)
+                .then((response) => {
+                    return response.text();
+                })
+                .then((text) => {
+                    setDisplayedMarkdown(text);
+                });
+        }
+    }, [isBlogDisplayed]);
 
     if (isBlogDisplayed) {
-        const displayedBlog = blogPreviews.find(b => b.id === displayedBlogId);
         const date = new Date(parseInt(displayedBlog!.publish_date) * 1000).toDateString();
-        
+
         return (
             <PageSection title="Blog" id="blogSection" style={{}} visualMode={visualMode}>
                 <div className={`${styles.blog_header}`}>
                     <button onClick={() => toggleIsBlogDisplayed()}>{'<='}</button>
                     <h2>{displayedBlog?.title}</h2>
-                    <p>{ date }</p>
+                    <p>{date}</p>
                 </div>
                 <div className={`${styles.blog_indentation} ${styles[visualMode]}`}>
-                    <p>blog shown</p>
+                    <Markdown>{displayedMarkdown}</Markdown>
                 </div>
             </PageSection>
         );

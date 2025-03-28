@@ -5,7 +5,7 @@
         "author": "me",
         "publish_date": "1742095414",
         "tags": ["Mobile", "React", "SQLite", "POC", "Angular"],
-        "markdown": "./blogs/md1.md",
+        "markdown": "src/assets/blogs/test.md",
         "visible": true
     },
     {
@@ -14,7 +14,7 @@
         "author": "me",
         "publish_date": "1742095414",
         "tags": ["tag1", "tag2", "tag3", "tag4", "tag5", "tag6", "tag7", "tag8", "tag9"],
-        "markdown": "./blogs/md2.md",
+        "markdown": "src/assets/blogs/test.md",
         "visible": true
     },
     {
@@ -23,7 +23,7 @@
         "author": "me",
         "publish_date": "1742095414",
         "tags": ["tag1", "tag2"],
-        "markdown": "./blogs/md3.md",
+        "markdown": "src/assets/blogs/test.md",
         "visible": false
     },
     {
@@ -32,7 +32,7 @@
         "author": "me",
         "publish_date": "1742095414",
         "tags": ["tag1", "tag2"],
-        "markdown": "./blogs/md4.md",
+        "markdown": "src/assets/blogs/test.md",
         "visible": true
     },
     {
@@ -41,7 +41,7 @@
         "author": "me",
         "publish_date": "1742095414",
         "tags": ["tag1", "tag2"],
-        "markdown": "./blogs/md4.md",
+        "markdown": "src/assets/blogs/test.md",
         "visible": true
     },
     {
@@ -50,7 +50,7 @@
         "author": "me",
         "publish_date": "1742095414",
         "tags": ["tag1", "tag2"],
-        "markdown": "./blogs/md4.md",
+        "markdown": "src/assets/blogs/test.md",
         "visible": true
     }
 ]
