@@ -60,17 +60,18 @@ export default function BlogSection(props: Props) {
     } else {
         return (
             <PageSection title="Blog" id="blogSection" style={{}} visualMode={visualMode}>
-                <div
-                    className={`${styles.blog_indentation} ${styles.preview} ${styles[visualMode]}`}
-                >
+                <div className={`${styles.blog_indentation} ${styles.preview} ${styles[visualMode]}`}>
+                    <div>
+
                     {blogPreviews.map((b: blog) => (
                         <BlogPreview
-                            visualMode={props.visualMode}
-                            displayBlog={toggleIsBlogDisplayed}
-                            key={key++}
-                            blog={b}
+                        visualMode={props.visualMode}
+                        displayBlog={toggleIsBlogDisplayed}
+                        key={key++}
+                        blog={b}
                         ></BlogPreview>
                     ))}
+                    </div>
                 </div>
             </PageSection>
         );

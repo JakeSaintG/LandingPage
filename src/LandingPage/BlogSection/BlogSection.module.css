@@ -39,11 +39,15 @@
     border-radius: 15px;
 }
 
-.blog_indentation.preview {
+.blog_indentation.preview > div {
     height: 100%;
-    display: grid;
-    grid-template-rows: auto auto auto;
-    grid-auto-flow: column;
+
+display: flex;
+flex-direction: column;
+flex-wrap: wrap;
+gap: 1rem;
+width: fit-content;
+
 }
 
 .blog_indentation.light_mode {
