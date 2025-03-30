@@ -48,6 +48,8 @@ flex-wrap: wrap;
 gap: 1rem;
 width: fit-content;
 
+/* need to do some horizontal overflow */
+
 }
 
 .blog_indentation.light_mode {
