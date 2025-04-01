@@ -2,7 +2,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: ". blog_title blog_date";
-    height: 29px;
+    height: fit-content;
     margin-bottom: 1rem;
 }
 
@@ -32,26 +32,28 @@
 }
 
 .blog_indentation {
-    height: 100%;
     padding: 1rem;
     gap: 1rem;
     border-radius: 15px;
 }
+.blog_indentation.blog_indentation.preview {
+    height: 100%;
+
+}
 
 .blog_indentation.preview > div {
-    height: calc(100% - 49px);
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     gap: 1rem;
     width: 100%;
     height: 100%;
-
     overflow-x: auto;
     overflow-y: hidden;
+}
 
-    /* need to do some horizontal overflow */
-
+.blog_indentation.blog_markdown {
+    flex-grow: 1;
 }
 
 .blog_indentation.light_mode {
