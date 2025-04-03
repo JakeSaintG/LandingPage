@@ -1,7 +1,7 @@
 [
     {
         "id": "1",
-        "title": "blog1 blog1 blog1 blog1 blog1 blog1",
+        "title": "Pokédex App Project: The Grand Ambitions",
         "author": "me",
         "publish_date": "1742095414",
         "tags": ["Mobile", "React", "SQLite", "POC", "Angular"],
@@ -10,7 +10,7 @@
     },
     {
         "id": "2",
-        "title": "blog3",
+        "title": "Pokédex App Project: Getting Started!",
         "author": "me",
         "publish_date": "1742095414",
         "tags": ["tag1", "tag2", "tag3", "tag4", "tag5", "tag6", "tag7", "tag8", "tag9"],
