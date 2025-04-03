@@ -1,14 +1,46 @@
 .blog_header {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas: ". blog_title blog_date";
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+        "blog_back blog_date"
+        "blog_title blog_title";
     height: fit-content;
     margin-bottom: 1rem;
 }
 
 .blog_header button {
+    grid-area: blog_back;
     width: 45%;
-    min-width: 90px
+    min-width: 90px;
+    cursor: pointer;
+    border-radius: 25px;
+    font-family: inherit; 
+    border: none;
+    padding: 0.5rem;
+}
+
+button.light_mode,
+button.dark_mode {
+    background-color: inherit;
+    color: inherit;
+}
+
+button.light_mode:hover {
+    box-shadow: var(--light-raised-boxshadow-small);
+}
+
+button.dark_mode:hover {
+    box-shadow: var(--dark-raised-boxshadow-small);
+}
+
+button.light_mode:active {
+    box-shadow: var(--light-inset-boxshadow-small);
+    background: var(--light-mode-background);
+}
+
+button.dark_mode:active {
+    box-shadow: var(--dark-inset-boxshadow-small);
+    background: var(--dark-mode-background);
 }
 
 .blog_header h2 {
@@ -17,11 +49,6 @@
     margin: 0;
 }
 
-.blog_header h2 {
-    grid-area: blog_title;
-    text-align: center;
-    margin: 0;
-}
 
 .blog_header p {
     grid-area: blog_date;
@@ -32,16 +59,16 @@
 }
 
 .blog_indentation {
-    padding: 1rem;
     gap: 1rem;
     border-radius: 15px;
 }
-.blog_indentation.blog_indentation.preview {
-    height: 100%;
 
+.blog_indentation.preview {
+    height: 100%;
 }
 
 .blog_indentation.preview > div {
+    padding: 1rem;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -53,7 +80,10 @@
 }
 
 .blog_indentation.blog_markdown {
+    padding: 1rem;
     flex-grow: 1;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 .blog_indentation.light_mode {
@@ -62,4 +92,20 @@
 
 .blog_indentation.dark_mode {
     box-shadow: var(--dark-inset-boxshadow);
+}
+
+@media only screen and (min-width: 430px) {
+    .blog_header {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: 
+            "blog_back . blog_date"
+            "blog_title blog_title blog_title";
+    }
+}
+
+@media only screen and (min-width: 790px) {
+    .blog_header {
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-areas: "blog_back blog_title blog_date";
+    }
 }

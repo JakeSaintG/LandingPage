@@ -5,6 +5,8 @@ import blogs from '../../assets/blogs.json';
 import { blog } from './BlogPreview/BlogPreview';
 import BlogPreview from './BlogPreview';
 import Markdown from 'react-markdown';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowLeftLong } from '@fortawesome/free-solid-svg-icons';
 
 interface Props extends React.HTMLAttributes<HTMLElement> {
     visualMode: string;
@@ -49,8 +51,10 @@ export default function BlogSection(props: Props) {
 
         return (
             <PageSection title="Blog" id="blogSection" style={contentStyle} visualMode={visualMode} >
-                <div className={`${styles.blog_header}`}>
-                    <button onClick={() => toggleIsBlogDisplayed()}>{'<='}</button>
+                <div className={`${styles.blog_header} `}>
+                    <button className={styles[visualMode]} onClick={() => toggleIsBlogDisplayed()} aria-label="go back">
+                        <FontAwesomeIcon icon={faArrowLeftLong} size='xl' aria-hidden="true" aria-label="back"/>
+                    </button>
                     <h2>{displayedBlog?.title}</h2>
                     <p>{date}</p>
                 </div>
@@ -64,7 +68,6 @@ export default function BlogSection(props: Props) {
             <PageSection title="Blog" id="blogSection" style={{}} visualMode={visualMode}>
                 <div className={`${styles.blog_indentation} ${styles.preview} ${styles[visualMode]}`}>
                     <div>
-
                     {blogPreviews.map((b: blog) => (
                         <BlogPreview
                         visualMode={props.visualMode}
