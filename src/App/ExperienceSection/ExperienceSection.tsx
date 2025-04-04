@@ -1,5 +1,5 @@
 import { MouseEvent, useState } from 'react';
-import PageSection from '../../GeneralComponents/PageSection';
+import PageSection from '../General/PageSection';
 import styles from './ExperienceSection.module.css';
 import workExperience from '../../assets/experience.json';
 import Experience from './Experience/Experience';

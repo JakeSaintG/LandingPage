@@ -1,5 +1,5 @@
 import { useLayoutEffect, useEffect, useRef, useState } from 'react';
-import PageSection from '../../GeneralComponents/PageSection';
+import PageSection from '../General/PageSection';
 import styles from './AboutSection.module.css';
 import tidbits from '../../assets/tidbits.json'
 import elevatorPitch from '../../assets/elevator_pitch.json';

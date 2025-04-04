@@ -1,15 +1,14 @@
 import { useEffect, useRef, useState } from 'react';
-import styles from './App.module.css';
-
-import Navbar from './Navbar';
-import AboutSection from './LandingPage/AboutSection';
-import ProjectsSection from './LandingPage/ProjectsSection';
-import ExperienceSection from './LandingPage/ExperienceSection';
-import ContactFooter from './ContactFooter';
-import SlideToggle from './GeneralComponents/SlideToggle';
-import BlogSection from './LandingPage/BlogSection';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTriangleExclamation } from '@fortawesome/free-solid-svg-icons';
+import styles from './App.module.css';
+import Navbar from './App/Navbar';
+import SlideToggle from './App/General/SlideToggle';
+import AboutSection from './App/AboutSection';
+import ProjectsSection from './App/ProjectsSection';
+import ExperienceSection from './App/ExperienceSection';
+import BlogSection from './App/BlogSection';
+import ContactFooter from './App/ContactFooter';
 
 export default function App() {
     // TODO: retain visual mode in local storage.

@@ -1,5 +1,5 @@
 import styles from './ProjectsSection.module.css'
-import PageSection from '../../GeneralComponents/PageSection';
+import PageSection from '../General/PageSection';
 import projects from '../../assets/projects.json'
 import Project from './Project/Project';
 import { project } from './Project/Project';

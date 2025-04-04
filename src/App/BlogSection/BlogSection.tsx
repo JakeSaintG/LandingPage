@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import styles from './BlogSection.module.css';
-import PageSection from '../../GeneralComponents/PageSection';
+import PageSection from '../General/PageSection';
 import blogs from '../../assets/blogs.json';
 import { blog } from './BlogPreview/BlogPreview';
 import BlogPreview from './BlogPreview';
