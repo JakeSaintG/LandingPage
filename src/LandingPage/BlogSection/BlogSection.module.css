@@ -49,7 +49,6 @@ button.dark_mode:active {
     margin: 0;
 }
 
-
 .blog_header p {
     grid-area: blog_date;
     text-align: right;
@@ -59,7 +58,6 @@ button.dark_mode:active {
 }
 
 .blog_indentation {
-    gap: 1rem;
     border-radius: 15px;
 }
 
@@ -68,13 +66,13 @@ button.dark_mode:active {
 }
 
 .blog_indentation.preview > div {
-    padding: 1rem;
     display: flex;
+    align-content: flex-start;
     flex-direction: column;
     flex-wrap: wrap;
-    gap: 1rem;
-    width: 100%;
     height: 100%;
+    gap: 1rem;
+    padding: 1rem;
     overflow-x: auto;
     overflow-y: hidden;
 }

@@ -4,15 +4,15 @@
 }
 
 .projects {
-    box-shadow: var(--light-inset-boxshadow);
-    border-radius: 15px;
-    display: grid;
-    padding: 1rem;
+    display: flex;
+    align-content: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
     height: 100%;
     gap: 1rem;
-    grid-auto-flow: column;
-    grid-template-rows: 1fr;
-    flex-wrap: wrap;
+    padding: 1rem;
+    box-shadow: var(--light-inset-boxshadow);
+    border-radius: 15px;
     overflow-x: auto;
     overflow-y: hidden;
 }
