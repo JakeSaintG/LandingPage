@@ -1,0 +1,30 @@
+@media only screen and (max-height: 550px) and (max-width: 720px) {
+    .size_warning {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+        padding: 0.5rem;
+        position: fixed;
+        bottom: 0px;
+        right: 0px;
+        z-index: 1000;
+        width: 100%;
+        font-weight: bolder;
+        border: yellow dashed 3px;
+    }
+
+    .size_warning * {
+        margin: 0;
+    }
+
+    .size_warning.dark_mode {
+        background: var(--light-mode-background);
+        color: var(--dark-mode-background);
+    }
+
+    .size_warning.light_mode {
+        background: var(--dark-mode-background);
+        color: yellow;
+    }
+}

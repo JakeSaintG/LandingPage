@@ -1,24 +1,26 @@
-import { useEffect, useRef, useState } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTriangleExclamation } from '@fortawesome/free-solid-svg-icons';
-import styles from './App.module.css';
-import Navbar from './App/Navbar';
-import SlideToggle from './App/General/SlideToggle';
-import AboutSection from './App/AboutSection';
-import ProjectsSection from './App/ProjectsSection';
-import ExperienceSection from './App/ExperienceSection';
-import BlogSection from './App/BlogSection';
-import ContactFooter from './App/ContactFooter';
+import { useEffect, useRef, useState } from "react";
+import styles from "./App.module.css";
+import Navbar from "./App/Navbar";
+import SlideToggle from "./App/General/SlideToggle";
+import AboutSection from "./App/AboutSection";
+import ProjectsSection from "./App/ProjectsSection";
+import ExperienceSection from "./App/ExperienceSection";
+import BlogSection from "./App/BlogSection";
+import ContactFooter from "./App/ContactFooter";
+import SizeWarning from "./App/General/SizeWarning/SizeWarning";
 
 export default function App() {
     // TODO: retain visual mode in local storage.
-    const [pageVisualMode, setPageVisualMode] = useState('light_mode');
+    const [pageVisualMode, setPageVisualMode] = useState("light_mode");
 
     // TODO: A fade animation between light and dark mode may be less jarring
-    const handleModeChange = () => setPageVisualMode(pageVisualMode === 'dark_mode' ? 'light_mode' : 'dark_mode' );
+    const handleModeChange = () =>
+        setPageVisualMode(
+            pageVisualMode === "dark_mode" ? "light_mode" : "dark_mode"
+        );
 
     useEffect(() => {
-        if (pageVisualMode === 'dark_mode') {
+        if (pageVisualMode === "dark_mode") {
             document.body.classList.add(`${styles.dark_mode}`);
             document.body.classList.remove(`${styles.light_mode}`);
         } else {
@@ -30,8 +32,6 @@ export default function App() {
     const [settingsDialogOpen, setSettingsDialogOpen] = useState(false);
     const dialogRef = useRef<HTMLDialogElement | null>(null);
 
-    const toggleSettingsMenu = () => setSettingsDialogOpen(!settingsDialogOpen);
-
     const openDialog = () => {
         if (dialogRef.current) dialogRef.current.showModal();
     };
@@ -40,11 +40,13 @@ export default function App() {
         if (dialogRef.current) dialogRef.current.close();
     };
 
-    useEffect(() => settingsDialogOpen ? openDialog() : closeDialog(), [settingsDialogOpen]);
+    useEffect(
+        () => (settingsDialogOpen ? openDialog() : closeDialog()),
+        [settingsDialogOpen]
+    );
 
     return (
         //TODO: Animate the transition between page and settings
-        //TODO: Move dialog to own component openDialog()/closeDialog() may make that tricky
         <>
             <dialog
                 ref={dialogRef}
@@ -64,27 +66,36 @@ export default function App() {
                             onChange={handleModeChange}
                             visualMode={pageVisualMode}
                         />
-                        <button onClick={toggleSettingsMenu}>Close</button>
+                        <button onClick={() => setSettingsDialogOpen(!settingsDialogOpen)}>Close</button>
                     </div>
                 </div>
             </dialog>
             <Navbar
-                toggleSettings={toggleSettingsMenu}
+                toggleSettings={() => setSettingsDialogOpen(!settingsDialogOpen)}
                 visualMode={pageVisualMode}
             />
             <main className={`${styles.main_landing_page}`}>
-                <AboutSection visualMode={pageVisualMode} />
-                <ExperienceSection visualMode={pageVisualMode} />
-                <ProjectsSection visualMode={pageVisualMode} />
-                <BlogSection visualMode={pageVisualMode} />
+                <AboutSection visualMode={pageVisualMode}/>
+                <ExperienceSection visualMode={pageVisualMode}/>
+                <ProjectsSection visualMode={pageVisualMode}/>
+                <BlogSection visualMode={pageVisualMode}/>
             </main>
-            <ContactFooter />
+            <ContactFooter/>
+            <SizeWarning visualMode={pageVisualMode}></SizeWarning>
+
+{/* 
             <div className={`${styles.size_warning} ${styles[pageVisualMode]}`}>
-                <FontAwesomeIcon icon={faTriangleExclamation} size='xl' aria-hidden="true"/>
+                <FontAwesomeIcon
+                    icon={faTriangleExclamation}
+                    size="xl"
+                    aria-hidden="true"
+                />
                 <p>
-                    Heads up! Your window sizing may not give you the best experience on this page. Please consider expanding the window a little.
+                    Heads up! Your window sizing may not give you the best
+                    experience on this page. Please consider expanding the
+                    window a little.
                 </p>
-            </div>
+            </div> */}
         </>
     );
 }
