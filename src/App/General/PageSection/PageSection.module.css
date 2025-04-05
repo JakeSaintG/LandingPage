@@ -1,8 +1,22 @@
+:where(h1) {
+    margin-block: 1rem;
+    font-size: 2em;
+}
+
 .page_section {
-    scroll-margin-top: calc(1rem + 69px);
-    height: calc(100vh - 69px - 2rem);
+    scroll-margin-top: 69px;
+    height: calc(100vh - 69px - 1rem);
     margin: 0 1rem;
     min-height: 370px;
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    padding: 1rem;
+    border-radius: 15px;
+    flex: 1 1 auto;
+    min-height: 300px;
 }
 
 .content.dark_mode {
@@ -11,11 +25,4 @@
 
 .content.light_mode {
     box-shadow: var(--light-raised-boxshadow);
-}
-
-.content {
-    padding: 1rem;
-    border-radius: 15px;
-    height: calc(100% - 52px);
-    min-height: 300px;
 }
