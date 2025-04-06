@@ -7,7 +7,7 @@ import ProjectsSection from "./App/ProjectsSection";
 import ExperienceSection from "./App/ExperienceSection";
 import BlogSection from "./App/BlogSection";
 import ContactFooter from "./App/ContactFooter";
-import SizeWarning from "./App/General/SizeWarning/SizeWarning";
+import SizeWarning from "./App/General/SizeWarning";
 
 export default function App() {
     // TODO: retain visual mode in local storage.
@@ -60,7 +60,6 @@ export default function App() {
                     <h2 className={styles.settings_header}>Settings</h2>
                     <div>
                         <p>The only setting that matters!</p>
-
                         <SlideToggle
                             value={pageVisualMode}
                             onChange={handleModeChange}
@@ -82,20 +81,6 @@ export default function App() {
             </main>
             <ContactFooter/>
             <SizeWarning visualMode={pageVisualMode}></SizeWarning>
-
-{/* 
-            <div className={`${styles.size_warning} ${styles[pageVisualMode]}`}>
-                <FontAwesomeIcon
-                    icon={faTriangleExclamation}
-                    size="xl"
-                    aria-hidden="true"
-                />
-                <p>
-                    Heads up! Your window sizing may not give you the best
-                    experience on this page. Please consider expanding the
-                    window a little.
-                </p>
-            </div> */}
         </>
     );
 }

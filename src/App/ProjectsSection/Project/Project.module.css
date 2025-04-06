@@ -46,7 +46,7 @@
 
 .project_border.favorite {
     background: linear-gradient(
-        90deg,
+        0deg,
         var(--palette-primary-color) 0%,
         var(--palette-secondary-color) 38%,
         var(--palette-tertiary-color) 42%,
@@ -57,10 +57,6 @@
         var(--palette-secondary-color) 62%,
         var(--palette-primary-color) 100%
     );
-
-    /* TODO: Figure out this animation in a way that doesn't break everything under it */
-    /* animation: spinning-border 8s linear infinite; */
-    /* -webkit-animation: spinning-border 8s linear infinite; */
     scale: 2.5;
 }
 
@@ -121,13 +117,4 @@
 
 @media only screen and (min-height: 550px) {
 
-}
-
-@keyframes spinning-border {
-    from {
-        rotate: 0deg;
-    }
-    to {
-        rotate: 360deg;
-    }
 }

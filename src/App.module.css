@@ -21,6 +21,7 @@ dialog {
     height: 40%;
     width: 80%;
     max-width: 475px;
+    min-height: 270px;
 }
 
 .dialog_dark_mode {
