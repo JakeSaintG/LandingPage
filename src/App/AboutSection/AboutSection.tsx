@@ -45,13 +45,12 @@ export default function AboutSection(props: Props) {
         };
     }, []);
 
-    // TODO: the text can be a little jumpy when scrolling back to it
     useLayoutEffect(() => {
         let interval: NodeJS.Timeout;
         
         if (isLoaded) {
             let tibditCount = 0;
-            let displayedTidbits = tidbits;
+            let displayedTidbits = fisherYatesShuffle(tidbits);
             interval = setInterval(() => {
                 const newTidbit = displayedTidbits[tibditCount++];
 
