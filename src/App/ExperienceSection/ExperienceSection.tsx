@@ -15,17 +15,13 @@ export interface work {
     contributions: string[];
 }
 
-// TODO: REFACTOR! I'm sorting the array twice with both of these reduce functions.
-// A single function to sort 2 work exp buckets would be better.
-const currentWorkExp = workExperience.reduce( (acc, work) => {
-    if(work.current) acc.push(work);
-    return acc;
-}, [] as work[] );
+const currentWorkExp: work[] = [];
+const prevWorkExp: work[] = [];
 
-const prevWorkExp = workExperience.reduce( (acc, work) => {
-    if(!work.current) acc.push(work);
-    return acc;
-}, [] as work[] );
+workExperience.map( (w: work) => {
+    if(w.current) currentWorkExp.push(w);
+    if(!w.current) prevWorkExp.push(w);
+})
 
 export default function ExperienceSection(props: Props) {
     const {visualMode} = props;
