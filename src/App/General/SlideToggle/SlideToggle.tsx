@@ -7,6 +7,7 @@ interface Props extends React.HTMLAttributes<HTMLElement>{
     value: string
     onChange: ChangeEventHandler<HTMLInputElement>
     visualMode: string
+    label?: string
 }
 
 let icon: JSX.Element;
@@ -20,6 +21,7 @@ export default function SlideToggle( props: Props ) {
 
     return (
         <label className={styles.switch_button} htmlFor="switch">
+            {props.label}
             <div className={`${styles.switch_outer} ${styles[props.visualMode]}`}>
                 <input id="switch" type="checkbox" value={props.value} onChange={props.onChange} />
                 <div className={styles.button}>

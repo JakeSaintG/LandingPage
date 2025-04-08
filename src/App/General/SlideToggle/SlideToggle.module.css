@@ -1,10 +1,12 @@
 .switch_button {
     display: -webkit-box;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     margin: auto;
     height: 55px;
+    gap: 1rem;
 }
 
 .switch_outer.dark_mode {
@@ -57,10 +59,9 @@
 }
 
 .switch_button
-    .switch_outer
-    input[type='checkbox']:checked
-    + .button
-    .button_toggle {
+.switch_outer
+input[type='checkbox']:checked + .button
+.button_toggle {
     left: 58%;
 }
 

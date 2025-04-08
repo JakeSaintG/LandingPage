@@ -14,10 +14,11 @@ export default function App() {
     const [visualMode, setVisualMode] = useState("light_mode");
 
     // TODO: A fade animation between light and dark mode may be less jarring
-    const handleModeChange = () =>
+    const handleModeChange = () =>{ 
         setVisualMode(
             visualMode === "dark_mode" ? "light_mode" : "dark_mode"
         );
+    }
 
     useEffect(() => {
         if (visualMode === "dark_mode") {
@@ -50,20 +51,18 @@ export default function App() {
         <>
             <dialog
                 ref={dialogRef}
-                className={styles[`dialog_${visualMode}`]}
+                className={`${styles.dialog} ${styles[visualMode]}`}
             >
                 <div
-                    className={`${styles.dialog_contents} ${
-                        styles[`dialog_contents_${visualMode}`]
-                    }`}
+                    className={`${styles.dialog_contents} ${styles[visualMode]}`}
                 >
                     <h2 className={styles.settings_header}>Settings</h2>
                     <div>
-                        <p>The only setting that matters!</p>
                         <SlideToggle
                             value={visualMode}
                             onChange={handleModeChange}
                             visualMode={visualMode}
+                            label={`Switch light vs dark mode.`}
                         />
                         <button onClick={() => setSettingsDialogOpen(!settingsDialogOpen)}>Close</button>
                     </div>

@@ -24,21 +24,21 @@ dialog {
     min-height: 270px;
 }
 
-.dialog_dark_mode {
+.dialog.dark_mode {
     box-shadow: var(--dark-raised-boxshadow);
     color: var(--light-mode-background);
 }
 
-.dialog_light_mode {
+.dialog.light_mode {
     box-shadow: var(--light-raised-boxshadow);
     color: var(--dark-mode-background);
 }
 
-.dialog_dark_mode::backdrop {
+.dialog.dark_mode::backdrop {
     background-color: var(--dark-mode-background);
 }
 
-.dialog_light_mode::backdrop {
+.dialog.light_mode::backdrop {
     background-color: var(--light-mode-background);
 }
 
@@ -46,11 +46,11 @@ dialog {
     margin-top: 0;
 }
 
-.dialog_contents_dark_mode > div {
+.dialog_contents.dark_mode > div {
     box-shadow: var(--dark-inset-boxshadow);
 }
 
-.dialog_contents_light_mode > div {
+.dialog_contents.light_mode > div {
     box-shadow: var(--light-inset-boxshadow);
 }
 
@@ -81,18 +81,23 @@ dialog {
     font-size: medium;
 }
 
-.dialog_contents_dark_mode > div > button {
+.dialog_contents.dark_mode > div > button {
     background: var(--dark-rounded-background);
     box-shadow: var(--dark-raised-shadow-only);
 }
 
-.dialog_contents_light_mode > div > button {
+.dialog_contents.light_mode > div > button {
     background: var(--light-rounded-background);
     box-shadow: var(--light-raised-shadow-only);
 }
 
+.dialog_contents > div > button:hover {
+    text-decoration: underline;
+}
+
 .dialog_contents > div > button:active {
     background: none;
+    box-shadow: none;
 }
 
 .size_warning {
