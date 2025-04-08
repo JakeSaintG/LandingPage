@@ -58,9 +58,12 @@ export default function AboutSection(props: Props) {
                 setTidbit(newTidbit);
                 
                 if (tibditCount >= (tidbits.length - 1)) {
+
                     displayedTidbits = fisherYatesShuffle(tidbits);
                     tibditCount = 0;
-                    // TODO: If it so happens that arr[0] equals arr[last] after shuffling, then skip it.
+
+                    // If it happens that the last quip is the same as the first one (repeat) after shuffling, skip it.
+                    if (newTidbit === displayedTidbits[0])  tibditCount = 1;
                 }
             }, 4000);
         }
@@ -75,9 +78,9 @@ export default function AboutSection(props: Props) {
                 <div className={`${styles.elevator_pitch} ${styles[props.visualMode]}`}>
                     <div>
                         {elevatorPitch.paragraphs.map(pitch => {
-                                if (pitch === "") return <br key={key++}/>
+                            if (pitch === "") return <br key={key++}/>
 
-                                return <p key={key++}>{pitch}</p>
+                            return <p key={key++}>{pitch}</p>
                         })}
                     </div>
                     <span className={styles.tidbit}>

@@ -48,7 +48,6 @@ export default function Navbar(props: Props) {
                         <FontAwesomeIcon icon={faGithub} size="lg" aria-hidden="true" />
                     </a>
 
-                    {/* TODO: Need more up to date resume */}
                     <a href="https://drive.google.com/file/d/1oTgpw-CbrPvcXfwaFURmpyRsGLjjSKMI/view" target='#' aria-label="New tab; Link to out Jake's resume in PDF form." title="JakeSaintG's Resume">
                         <FontAwesomeIcon icon={faFile} size="lg" aria-hidden="true" />
                     </a>

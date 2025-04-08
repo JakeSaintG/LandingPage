@@ -11,23 +11,23 @@ import SizeWarning from "./App/General/SizeWarning";
 
 export default function App() {
     // TODO: retain visual mode in local storage.
-    const [pageVisualMode, setPageVisualMode] = useState("light_mode");
+    const [visualMode, setVisualMode] = useState("light_mode");
 
     // TODO: A fade animation between light and dark mode may be less jarring
     const handleModeChange = () =>
-        setPageVisualMode(
-            pageVisualMode === "dark_mode" ? "light_mode" : "dark_mode"
+        setVisualMode(
+            visualMode === "dark_mode" ? "light_mode" : "dark_mode"
         );
 
     useEffect(() => {
-        if (pageVisualMode === "dark_mode") {
+        if (visualMode === "dark_mode") {
             document.body.classList.add(`${styles.dark_mode}`);
             document.body.classList.remove(`${styles.light_mode}`);
         } else {
             document.body.classList.add(`${styles.light_mode}`);
             document.body.classList.remove(`${styles.dark_mode}`);
         }
-    }, [pageVisualMode]);
+    }, [visualMode]);
 
     const [settingsDialogOpen, setSettingsDialogOpen] = useState(false);
     const dialogRef = useRef<HTMLDialogElement | null>(null);
@@ -50,20 +50,20 @@ export default function App() {
         <>
             <dialog
                 ref={dialogRef}
-                className={styles[`dialog_${pageVisualMode}`]}
+                className={styles[`dialog_${visualMode}`]}
             >
                 <div
                     className={`${styles.dialog_contents} ${
-                        styles[`dialog_contents_${pageVisualMode}`]
+                        styles[`dialog_contents_${visualMode}`]
                     }`}
                 >
                     <h2 className={styles.settings_header}>Settings</h2>
                     <div>
                         <p>The only setting that matters!</p>
                         <SlideToggle
-                            value={pageVisualMode}
+                            value={visualMode}
                             onChange={handleModeChange}
-                            visualMode={pageVisualMode}
+                            visualMode={visualMode}
                         />
                         <button onClick={() => setSettingsDialogOpen(!settingsDialogOpen)}>Close</button>
                     </div>
@@ -71,16 +71,16 @@ export default function App() {
             </dialog>
             <Navbar
                 toggleSettings={() => setSettingsDialogOpen(!settingsDialogOpen)}
-                visualMode={pageVisualMode}
+                visualMode={visualMode}
             />
             <main className={`${styles.main_landing_page}`}>
-                <AboutSection visualMode={pageVisualMode}/>
-                <ExperienceSection visualMode={pageVisualMode}/>
-                <ProjectsSection visualMode={pageVisualMode}/>
-                <BlogSection visualMode={pageVisualMode}/>
+                <AboutSection visualMode={visualMode}/>
+                <ExperienceSection visualMode={visualMode}/>
+                <ProjectsSection visualMode={visualMode}/>
+                <BlogSection visualMode={visualMode}/>
             </main>
             <ContactFooter/>
-            <SizeWarning visualMode={pageVisualMode}></SizeWarning>
+            <SizeWarning visualMode={visualMode}></SizeWarning>
         </>
     );
 }
