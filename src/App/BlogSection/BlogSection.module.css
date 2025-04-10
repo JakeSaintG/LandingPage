@@ -84,6 +84,11 @@ button.dark_mode:active {
     overflow-y: auto;
 }
 
+.blog_indentation.blog_markdown img {
+    width: 100%;
+    max-width: 675px;
+}
+
 .blog_indentation.light_mode {
     box-shadow: var(--light-inset-boxshadow);
 }
@@ -96,8 +101,12 @@ button.dark_mode:active {
     .blog_header {
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-areas: 
-            "blog_back . blog_date"
-            "blog_title blog_title blog_title";
+        "blog_back . blog_date"
+        "blog_title blog_title blog_title";
+    }
+
+    .blog_indentation.blog_markdown img {
+        width: 85%;
     }
 }
 
@@ -105,5 +114,9 @@ button.dark_mode:active {
     .blog_header {
         grid-template-columns: 1fr 2fr 1fr;
         grid-template-areas: "blog_back blog_title blog_date";
+    }
+
+    .blog_indentation.blog_markdown img {
+        width: 65%;
     }
 }

@@ -9,7 +9,7 @@ Did we do it?
 console.log('nailed it')
 ```
 
-![cat image](./img/cat.jpg)
+![cat image](./src/assets/blogs/img/cat.jpg)
 
 ![A medium cat image](https://cdn2.thecatapi.com/images/9qLSHCaQQ.jpg)
 
