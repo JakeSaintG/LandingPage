@@ -58,7 +58,6 @@ export default function Project(props: Props) {
             <div className={`${styles.project_border} ${props.project.favorite ? styles.favorite : ''}`}></div>
             <div className={styles.project_content}>
                 <div className={styles.project_header}>
-
                     <h3>{props.project.name}</h3>
                     <div>
                         <a href={props.project.repo_link} target='_blank' aria-label='link to github repo' title='link to github repo'>
