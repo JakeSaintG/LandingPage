@@ -4,7 +4,7 @@ import { test, expect, afterEach } from 'vitest';
 // import { describe, it, test, expect, afterEach } from 'vitest';
 
 test('renders text from contact section', () => {
-    render(<ContactFooter visualMode='' />);
+    render(<ContactFooter />);
     const linkElement = screen.getByText(/Socials/i);
     expect(linkElement).toBeInTheDocument();
 });

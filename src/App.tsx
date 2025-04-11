@@ -11,7 +11,7 @@ import SizeWarning from "./App/General/SizeWarning";
 
 export default function App() {
     // TODO: retain visual mode in local storage.
-    const [visualMode, setVisualMode] = useState("light_mode");
+    const [visualMode, setVisualMode] = useState("dark_mode");
 
     // TODO: A fade animation between light and dark mode may be less jarring
     const handleModeChange = () =>{ 
