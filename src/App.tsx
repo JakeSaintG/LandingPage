@@ -30,21 +30,15 @@ export default function App() {
         }
     }, [visualMode]);
 
-    const [settingsDialogOpen, setSettingsDialogOpen] = useState(false);
     const dialogRef = useRef<HTMLDialogElement | null>(null);
 
     const openDialog = () => {
         if (dialogRef.current) dialogRef.current.showModal();
     };
-
+    
     const closeDialog = () => {
         if (dialogRef.current) dialogRef.current.close();
     };
-
-    useEffect(
-        () => (settingsDialogOpen ? openDialog() : closeDialog()),
-        [settingsDialogOpen]
-    );
 
     return (
         //TODO: Animate the transition between page and settings
@@ -64,12 +58,12 @@ export default function App() {
                             visualMode={visualMode}
                             label={`Switch light vs dark mode.`}
                         />
-                        <button onClick={() => setSettingsDialogOpen(!settingsDialogOpen)}>Close</button>
+                        <button onClick={() => closeDialog()}>Close</button>
                     </div>
                 </div>
             </dialog>
             <Navbar
-                toggleSettings={() => setSettingsDialogOpen(!settingsDialogOpen)}
+                toggleSettings={() => openDialog()}
                 visualMode={visualMode}
             />
             <main className={`${styles.main_landing_page}`}>
