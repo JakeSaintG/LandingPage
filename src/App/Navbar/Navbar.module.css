@@ -12,8 +12,9 @@ nav {
     z-index: 1000; 
     width: 100%;
     display: grid;
-    position: fixed;
-    grid-template-areas: ". nav nav-button";
+    grid-template-areas: 
+        ". nav menu_toggle"
+        "nav_base nav_base nav_base";
     grid-template-columns: .25fr 1fr .25fr;
 }
 
@@ -22,22 +23,18 @@ nav {
     flex-direction: column;
     grid-area: nav;
     margin-top: 64px;
-    /* display: flex;
-    flex-direction: row;
-    width: 100%; */
 }
 
 .nested_nav.toggled {
     display: flex;
 }
 
-nav::after {
-    content: " ";
+.nav_base {
+    /* content: " "; */
     height: 5px;
-    position: absolute;
     width: 100%;
+    grid-area: nav_base;
     background: linear-gradient(90deg, var(--palette-primary-color) 0%, var(--palette-secondary-color) 12%, var(--palette-tertiary-color) 24%, var(--palette-light-color) 36%, var(--palette-lightest-color) 50%, var(--palette-light-color) 62%, var(--palette-tertiary-color) 74%, var(--palette-secondary-color) 86%, var(--palette-primary-color) 100%);
-    top: 64px;
 }
 
 .nav_logo,
@@ -47,6 +44,7 @@ nav::after {
 
 .nav_logo {
     display: none;
+    grid-area: nav_logo;
 }
 
 .nav_item {
@@ -91,7 +89,7 @@ nav::after {
 
 nav > button {
     font-size: xx-large;
-    grid-area: nav-button;
+    grid-area: menu_toggle;
     height: 64px;
     border: none;
     background-color: transparent;
@@ -114,7 +112,10 @@ nav > button {
 
     nav {
         list-style-type: none;
-        display: flex;
+        grid-template-areas: 
+            "nav_logo nav"
+            "nav_base nav_base";
+        grid-template-columns: 54px 1fr;
         z-index: 1000;
     }
     

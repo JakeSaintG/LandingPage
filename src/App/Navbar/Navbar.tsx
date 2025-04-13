@@ -65,6 +65,7 @@ export default function Navbar(props: Props) {
             <button onClick={() => setNavContentVisible(!navContentVisible)}>
                 <FontAwesomeIcon icon={faBars} aria-hidden="true" />
             </button>
+            <div className={styles.nav_base}></div>
         </nav>
     );
 }
