@@ -1,3 +1,7 @@
+.size_warning {
+    display: none;
+}
+
 @media only screen and (max-height: 550px) and (max-width: 720px) {
     .size_warning {
         display: flex;

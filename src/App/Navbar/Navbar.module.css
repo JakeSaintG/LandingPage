@@ -12,6 +12,7 @@ nav {
     z-index: 1000; 
     width: 100%;
     display: grid;
+    position: fixed;
     grid-template-areas: 
         ". nav menu_toggle"
         "nav_base nav_base nav_base";
