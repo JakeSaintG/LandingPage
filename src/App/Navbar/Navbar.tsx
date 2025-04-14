@@ -60,7 +60,6 @@ export default function Navbar(props: Props) {
                         aria-hidden="true"
                         />
                 </div>
-
             </div>
             <button onClick={() => setNavContentVisible(!navContentVisible)}>
                 <FontAwesomeIcon icon={faBars} aria-hidden="true" />
