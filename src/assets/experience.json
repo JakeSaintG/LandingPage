@@ -21,9 +21,10 @@
         "id": "mentor",
         "current": true,
         "contributions": [
-            "taught code",
-            "Reviewed code",
-            "created additional learning materials "
+            "Lead development students through thought-provoking exercises centered around problem solving skills.",
+            "Gave constructive critism during code review and guided students toward solutions.",
+            "Created additional a large handful of learning materials for class exercises as well as individual practice.",
+            "Focused helping students think through their problems. Once they could word what they wanted to do, often times their code would quickly fall into place!"
         ]
     },
     {
@@ -81,8 +82,10 @@
         "id": "mainenance",
         "current": false,
         "contributions": [
-            "Committed to daily Spanish language training through Babel and Doulingo.",
-            "Committed to daily, MEANINGFUL commits/contribution to personal code projects OR daily meaningful time working on Blender art."
+            "Coordinated many different types of campus residence hall maintenance through various computer-driven work processing, databases, spreadsheets and maintenance programs.",
+            "Repaired furniture, broken building fixtures, and minor electrical problems. Most importantly, I learned when to ask questions and call in more seasoned professionals.",
+            "Collaborated with contracted services such as cleaning, maintenance, and pest control to efficiently complete work orders.",
+            "Provided instructional presentations on residence hall maintenance operations during staff training."
         ]
     }
 ]
