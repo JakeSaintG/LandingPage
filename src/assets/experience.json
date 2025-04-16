@@ -4,16 +4,14 @@
         "id": "dev-fulltime",
         "current": true,
         "contributions": [
-            "Developed and maintained tools that were both internal and client-facing.",
-            "Contributed to open source Angular component library.",
+            "Developed and maintained both client-facing and internal tools.",
+            "Contributed to company's open source Angular component library.",
             "databricks stuff",
-            "Python lib",
-            "Deployment pipeline",
-            "Azure Data Factory",
-            "Interoperability with external systems",
-            "Azure Functions (serverless)",
-            "Tooling and monitoring software.",
-            "Chaired a committee that lead monthly learning sessions."
+            "Developed multiple Python libraries that were used by processes with in Databricks.",
+            "Created multiple ADO deployment pipeline for building production applications, querying client systems, interfacing with Databricks, and much more! I was known for \"bending ADO pipelines to my will\".",
+            "Designed and maintained multiple Azure Data Factory and serverless Azure Function solutions for data movement.",
+            "Built solutions for interoperability between proprietary applications and external systems.",
+            "Chaired the company's Open Space Committee that was focused on improvement by leading monthly learning sessions."
         ]
     },
     {
@@ -33,7 +31,8 @@
         "current": true,
         "contributions": [
             "Committed to daily Spanish language training through Babel and Doulingo.",
-            "Committed to daily, MEANINGFUL commits/contribution to personal code projects OR daily meaningful time working on Blender art."
+            "Committed to daily, MEANINGFUL commits/contribution to personal code projects OR daily meaningful time working on Blender art.",
+            "I am currently working on the PokéDex App project! For more information, please see my blog below."
         ]
     },
     {
@@ -46,6 +45,8 @@
             "Assessed conditions, symptoms, diagnostic tests, and behaviors of pediatric patients to monitor for life-altering changes, responded using quick critical thinking skills, and worked well with multi-disciplinary teams.",
             "Responded to rapid changes in patient condition, worked well under pressure, and exercised excellent time management skills with multiple patient assignments.",
             "Lead a Council of my peers to innovate and improve nursing practice.",
+            "Twice nominated for Hospital-Wide Nurse of the Year (2018, 2020) and a one time finalist (2020 Nurse of the Year for my unit).",
+            "Other awards include Nurse Preceptor of the Year (2017) and Press Ganey Care Award (2016)",
             "Followed policies and procedures regarding patient privacy and information detailed in HIPAA.",
             "Adapted quickly to new patient populations, hospital, policies, and procedures to provide support for staff at another (adult) hospital in the same system while they were stretched thin during the COVID-19 pandemic.",
             "Aided in hospital logistics including moving patients, closing units, and arrangement of nursing assignments."
@@ -68,13 +69,11 @@
         "id": "dev-student",
         "current": false,
         "contributions": [
-            "Learned things",
-            "soaked in as much knowledge as I could",
-            "Churned out learning projects",
-            "went above and beyond",
-            "Web, Web2, C#, Kotlin",
-            "Wrote (bad) code",
-            "Made a pokemon app or two"
+            "Went above-and-beyond by not only completing the course materials, but working on multiple side projects to make sure it stuck.",
+            "Any time there was something new or interesting, I would make a side project to find applications for the topic and cement understanding.",
+            "Completed the Code:You \"Basic Web Dev\", \"Web Dev 2 - Node\", and \"Software through C#\" courses.",
+            "Wrote a lot of bad code...but that's part of the process! Without knowing what bad code looks like, I wouldn't know what good code looks like!",
+            "Completed multiple capstone projects and did my best to hit all necessary and optional requirements."
         ]
     },
     {
