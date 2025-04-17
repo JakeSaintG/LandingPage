@@ -1,0 +1,10 @@
+[
+    {
+        "img_location": "brad.jpg",
+        "alt_text": "An image of brad"
+    },
+    {
+        "img_location": "christine.jpg",
+        "alt_text": "An image of christine"
+    }
+]

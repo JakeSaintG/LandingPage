@@ -9,7 +9,7 @@
 }
 
 .main_landing_page::before {
-    height: 65px;
+    height: 70px;
     display: block;
     content: ' ';
 }
