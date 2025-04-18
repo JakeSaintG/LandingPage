@@ -1,8 +1,9 @@
 import { useLayoutEffect, useEffect, useRef, useState } from 'react';
 import PageSection from '../General/PageSection';
 import styles from './AboutSection.module.css';
-import tidbits from '../../assets/tidbits.json'
-import elevatorPitch from '../../assets/elevator_pitch.json';
+import tidbitsJson from '../../assets/tidbits.json'
+import elevatorPitchJson from '../../assets/elevator_pitch.json';
+import showcaseImgJson from '../../assets/showcase_imgs.json';
 
 interface Props extends React.HTMLAttributes<HTMLElement>{
     visualMode: string
@@ -23,7 +24,11 @@ const fisherYatesShuffle = (array: string[]) => {
     return array; 
 };
 
+const showCasePath = './src/assets/img/showcase';
+
 export default function AboutSection(props: Props) {
+    const [showCaseImgIndex, setShowCaseImgIndex] = useState(0);
+    
     const [tidbit, setTidbit] = useState('Hello!');
     const [isLoaded, setIsLoaded] = useState(true);
 
@@ -41,7 +46,7 @@ export default function AboutSection(props: Props) {
         if (aboutContentRef.current) observer.observe(aboutContentRef.current);
         
         return () => {
-            if (aboutContentRef.current) observer.unobserve(aboutContentRef.current);
+            if (aboutContentRef!.current) observer.unobserve(aboutContentRef!.current);
         };
     }, []);
 
@@ -50,16 +55,16 @@ export default function AboutSection(props: Props) {
         
         if (isLoaded) {
             let tibditCount = 0;
-            let displayedTidbits = fisherYatesShuffle(tidbits);
+            let displayedTidbits = fisherYatesShuffle(tidbitsJson);
             interval = setInterval(() => {
                 const newTidbit = displayedTidbits[tibditCount++];
 
                 tidbitRef.current?.animate(tibbitAnimation, {duration: 4000}).commitStyles();
                 setTidbit(newTidbit);
                 
-                if (tibditCount >= (tidbits.length - 1)) {
+                if (tibditCount >= (tidbitsJson.length - 1)) {
 
-                    displayedTidbits = fisherYatesShuffle(tidbits);
+                    displayedTidbits = fisherYatesShuffle(tidbitsJson);
                     tibditCount = 0;
 
                     // If it happens that the last quip is the same as the first one (repeat) after shuffling, skip it.
@@ -74,10 +79,16 @@ export default function AboutSection(props: Props) {
     return (
         <PageSection title='Jake St. Germain' id="aboutSection" style={{}} visualMode={props.visualMode} header='h1'>
             <div ref={aboutContentRef} className={styles.about_content}>
-                <div>placeholder</div>
+                <div className={styles.showcaseImg}>
+                    <img 
+                        src={`${showCasePath}/${showcaseImgJson[showCaseImgIndex].img_location}`}
+                        alt={`${showCasePath}/${showcaseImgJson[showCaseImgIndex].alt_text}`}
+                        // TODO: more accessibility!
+                    />
+                </div>
                 <div className={`${styles.elevator_pitch} ${styles[props.visualMode]}`}>
                     <div>
-                        {elevatorPitch.paragraphs.map(pitch => {
+                        {elevatorPitchJson.paragraphs.map(pitch => {
                             if (pitch === "") return <br key={key++}/>
 
                             return <p key={key++}>{pitch}</p>

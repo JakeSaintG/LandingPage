@@ -3,6 +3,11 @@
     height: 100%;
 }
 
+.showcaseImg {
+    display: flex;
+    justify-content: center;
+}
+
 .elevator_pitch {
     padding: 1rem;
     border-radius: 15px;
@@ -53,6 +58,18 @@
 
     .elevator_pitch * {
         margin: auto 10px;
+    }
+
+    .showcaseImg {
+        height: fit-content;
+        margin: auto;
+        padding-right: 1rem;
+    }
+
+    .showcaseImg img {
+        width: 100%;
+        padding-right: 1rem;
+        border: red 1px solid;
     }
 }
 
