@@ -52,10 +52,10 @@ export default function AboutSection(props: Props) {
 
     useLayoutEffect(() => {
         let interval: NodeJS.Timeout;
-        
+        let tibditCount = 0;
+        let displayedTidbits = fisherYatesShuffle(tidbitsJson);
+
         if (isLoaded) {
-            let tibditCount = 0;
-            let displayedTidbits = fisherYatesShuffle(tidbitsJson);
             interval = setInterval(() => {
                 const newTidbit = displayedTidbits[tibditCount++];
 
@@ -79,13 +79,12 @@ export default function AboutSection(props: Props) {
     return (
         <PageSection title='Jake St. Germain' id="aboutSection" style={{}} visualMode={props.visualMode} header='h1'>
             <div ref={aboutContentRef} className={styles.about_content}>
-                <div className={styles.showcaseImg}>
-                    <img 
-                        src={`${showCasePath}/${showcaseImgJson[showCaseImgIndex].img_location}`}
-                        alt={`${showCasePath}/${showcaseImgJson[showCaseImgIndex].alt_text}`}
-                        // TODO: more accessibility!
-                    />
-                </div>
+                <img 
+                    className={styles.showcaseImg}
+                    src={`${showCasePath}/${showcaseImgJson[showCaseImgIndex].img_location}`}
+                    alt={`${showCasePath}/${showcaseImgJson[showCaseImgIndex].alt_text}`}
+                    // TODO: more accessibility!
+                />
                 <div className={`${styles.elevator_pitch} ${styles[props.visualMode]}`}>
                     <div>
                         {elevatorPitchJson.paragraphs.map(pitch => {
