@@ -3,7 +3,7 @@
     height: 100%;
 }
 
-.showcaseImg {
+.about_content img {
     max-width: 460px;
     height: 100%;
     width: 100%;
@@ -64,7 +64,7 @@
         margin: auto 10px;
     }
 
-    .showcaseImg {
+    .about_content img {
         margin: auto;
         padding-right: 1rem;
     }

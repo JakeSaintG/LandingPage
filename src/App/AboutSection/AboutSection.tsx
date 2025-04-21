@@ -80,10 +80,11 @@ export default function AboutSection(props: Props) {
         <PageSection title='Jake St. Germain' id="aboutSection" style={{}} visualMode={props.visualMode} header='h1'>
             <div ref={aboutContentRef} className={styles.about_content}>
                 <img 
-                    className={styles.showcaseImg}
                     src={`${showCasePath}/${showcaseImgJson[showCaseImgIndex].img_location}`}
-                    alt={`${showCasePath}/${showcaseImgJson[showCaseImgIndex].alt_text}`}
-                    // TODO: more accessibility!
+
+                    // Images here are purely decorative and assistive technologies should ignore them
+                    // https://www.w3.org/WAI/tutorials/images/decorative/
+                    alt=""
                 />
                 <div className={`${styles.elevator_pitch} ${styles[props.visualMode]}`}>
                     <div>
