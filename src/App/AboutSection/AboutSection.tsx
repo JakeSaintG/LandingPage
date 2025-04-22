@@ -53,10 +53,18 @@ export default function AboutSection(props: Props) {
     useLayoutEffect(() => {
         let interval: NodeJS.Timeout;
         let tibditCount = 0;
+        let imageCount = 0;
         let displayedTidbits = fisherYatesShuffle(tidbitsJson);
 
         if (isLoaded) {
+            // TODO: This interval is handling two things that should be their own functions
             interval = setInterval(() => {
+                // Handle the decorative img
+                imageCount++;
+                if (imageCount > (showcaseImgJson.length - 1)) imageCount = 0;
+                setShowCaseImgIndex(imageCount);
+                
+                // Handle the rotating tidbit
                 const newTidbit = displayedTidbits[tibditCount++];
 
                 tidbitRef.current?.animate(tibbitAnimation, {duration: 4000}).commitStyles();
