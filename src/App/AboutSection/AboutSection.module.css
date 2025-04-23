@@ -4,7 +4,7 @@
 }
 
 .about_content img {
-    max-width: 460px;
+    max-width: 560px;
     height: 100%;
     width: 100%;
     object-fit: contain;
@@ -67,6 +67,7 @@
     .about_content img {
         margin: auto;
         padding-right: 1rem;
+        padding-bottom: 0px;
     }
 }
 

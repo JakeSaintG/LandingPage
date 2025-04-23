@@ -1,10 +1,34 @@
 [
     {
-        "img_location": "brad.jpg",
-        "alt_text": "An image of brad"
+        "img_location": "headshot.jpg",
+        "alt_text": ""
     },
     {
-        "img_location": "christine.jpg",
-        "alt_text": "An image of christine"
+        "img_location": "preceptor.png",
+        "alt_text": ""
+    },
+    {
+        "img_location": "costume.jpg",
+        "alt_text": ""
+    },
+    {
+        "img_location": "nurse_finalist.jpg",
+        "alt_text": ""
+    },
+    {
+        "img_location": "snow.jpg",
+        "alt_text": ""
+    },
+    {
+        "img_location": "pacu.jpg",
+        "alt_text": ""
+    },
+    {
+        "img_location": "reef.jpg",
+        "alt_text": ""
+    },
+    {
+        "img_location": "sydney_pride.jpg",
+        "alt_text": ""
     }
 ]

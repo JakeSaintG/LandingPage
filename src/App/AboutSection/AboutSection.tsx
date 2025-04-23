@@ -24,10 +24,10 @@ const fisherYatesShuffle = (array: string[]) => {
     return array; 
 };
 
-const showCasePath = './src/assets/img/decorative';
+const decorativeImgPath = './src/assets/img/decorative';
 
 export default function AboutSection(props: Props) {
-    const [showCaseImgIndex, setShowCaseImgIndex] = useState(0);
+    const [decorativeImgIndex, setDecorativeImgIndex] = useState(0);
     
     const [tidbit, setTidbit] = useState('Hello!');
     const [isLoaded, setIsLoaded] = useState(true);
@@ -62,7 +62,7 @@ export default function AboutSection(props: Props) {
                 // Handle the decorative img
                 imageCount++;
                 if (imageCount > (decorativeImgJson.length - 1)) imageCount = 0;
-                setShowCaseImgIndex(imageCount);
+                setDecorativeImgIndex(imageCount);
                 
                 // Handle the rotating tidbit
                 const newTidbit = displayedTidbits[tibditCount++];
@@ -88,7 +88,7 @@ export default function AboutSection(props: Props) {
         <PageSection title='Jake St. Germain' id="aboutSection" style={{}} visualMode={props.visualMode} header='h1'>
             <div ref={aboutContentRef} className={styles.about_content}>
                 <img 
-                    src={`${showCasePath}/${decorativeImgJson[showCaseImgIndex].img_location}`}
+                    src={`${decorativeImgPath}/${decorativeImgJson[decorativeImgIndex].img_location}`}
 
                     // Images here are purely decorative and assistive technologies should ignore them
                     // https://www.w3.org/WAI/tutorials/images/decorative/
