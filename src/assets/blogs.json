@@ -2,19 +2,19 @@
     {
         "id": "2",
         "title": "Pokédex App Project: Getting Started!",
-        "author": "me",
-        "publish_date": "1742095414",
+        "author": "JakeSaintG",
+        "publish_date": "1734048676",
         "tags": ["Mobile", "App Dev", "SQLite"],
-        "markdown": "src/assets/blogs/test.md",
+        "markdown": "src/assets/blogs/getting_started.md",
         "visible": true
     },
     {
         "id": "1",
         "title": "Pokédex App Project: The Grand Ambitions",
-        "author": "me.",
+        "author": "JakeSaintG",
         "publish_date": "1742095414",
         "tags": ["Mobile", "React", "Flutter", "Maui", "Swift", "Kotlin"],
-        "markdown": "src/assets/blogs/test.md",
+        "markdown": "src/assets/blogs/grand_ambitions.md",
         "visible": true
     }
 ]
