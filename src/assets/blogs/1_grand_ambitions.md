@@ -1,6 +1,8 @@
 ## Pokédex App Project Synopsis
 I’m going to make the same app 6 times! In order to gain familiarity with each of big app development platforms, I will be creating the same basic application for each of them. That's Flutter, Kotlin, Swift, MAUI, and React Native in addition to the POC project made in React. Since I’m very familiar with Pokémon and PokéAPI, that’s what I will be using as a foundation for this project.
 
+> Note! This is a learning exercise and I do not intend to monetize it! I respect the Pokémon Company's and Creature's IP rights.
+
 ## Why? 
 Well, I want to learn mobile app development. The goal of this isn't to become an expert in ALL of the app development platforms but to become familiar enough to get started making projects in any of them if needed.
 
