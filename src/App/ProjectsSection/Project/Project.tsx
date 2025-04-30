@@ -1,4 +1,9 @@
 import styles from './Project.module.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
+
+// Icon imports
 import cSharpImg from '../../../assets/img/lang_icons/csharp.png';
 import angularImg from '../../../assets/img/lang_icons/angular.png';
 import htmlImg from '../../../assets/img/lang_icons/html.png';
@@ -10,9 +15,6 @@ import rustImg from '../../../assets/img/lang_icons/rust.png';
 import sqlImg from '../../../assets/img/lang_icons/sql.png';
 import denoImg from '../../../assets/img/lang_icons/deno.png';
 import nodeJsImg from '../../../assets/img/lang_icons/nodejs.png';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
-import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 
 interface Props extends React.HTMLAttributes<HTMLElement> {
     visualMode: string;

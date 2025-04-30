@@ -24,8 +24,6 @@ const fisherYatesShuffle = (array: string[]) => {
     return array; 
 };
 
-const decorativeImgPath = './src/assets/img/decorative';
-
 export default function AboutSection(props: Props) {
     const [decorativeImgIndex, setDecorativeImgIndex] = useState(0);
     
@@ -88,7 +86,7 @@ export default function AboutSection(props: Props) {
         <PageSection title='Jake St. Germain' id="aboutSection" style={{}} visualMode={props.visualMode} header='h1'>
             <div ref={aboutContentRef} className={styles.about_content}>
                 <img 
-                    src={`${decorativeImgPath}/${decorativeImgJson[decorativeImgIndex].img_location}`}
+                    src={(`./assets/img/decorative/${decorativeImgJson[decorativeImgIndex].img_location}`)}
 
                     // Images here are purely decorative and assistive technologies should ignore them
                     // https://www.w3.org/WAI/tutorials/images/decorative/
