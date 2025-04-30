@@ -5,7 +5,7 @@
         "author": "JakeSaintG",
         "publish_date": "1734048676",
         "tags": ["Mobile", "App Dev", "SQLite"],
-        "markdown": "src/assets/blogs/2_getting_started.md",
+        "markdown": "./assets/blogs/2_getting_started.md",
         "visible": true
     },
     {
@@ -14,7 +14,7 @@
         "author": "JakeSaintG",
         "publish_date": "1742095414",
         "tags": ["Mobile", "React", "Flutter", "Maui", "Swift", "Kotlin"],
-        "markdown": "src/assets/blogs/1_grand_ambitions.md",
+        "markdown": "./assets/blogs/1_grand_ambitions.md",
         "visible": true
     }
 ]
