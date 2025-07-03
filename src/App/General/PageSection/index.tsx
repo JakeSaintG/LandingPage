@@ -1,1 +1,1 @@
-export { default } from './PageSection';
+export { PageSection } from './PageSection';

@@ -1,5 +1,5 @@
 import { MouseEvent, useState } from 'react';
-import PageSection from '../General/PageSection';
+import { PageSection } from '../General/PageSection';
 import styles from './ExperienceSection.module.css';
 import workExperience from '../../assets/experience.json';
 import Experience from './Experience/Experience';
@@ -23,7 +23,7 @@ workExperience.map( (w: work) => {
     if(!w.current) prevWorkExp.push(w);
 })
 
-export default function ExperienceSection(props: Props) {
+export function ExperienceSection(props: Props) {
     const {visualMode} = props;
     const [workContributions, setWorkContributions] = useState(workExperience[0].contributions);
     const [activeClass, setActiveClass] = useState('dev-fulltime');

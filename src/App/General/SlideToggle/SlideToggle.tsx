@@ -12,7 +12,7 @@ interface Props extends React.HTMLAttributes<HTMLElement>{
 
 let icon: JSX.Element;
 
-export default function SlideToggle( props: Props ) {
+export function SlideToggle( props: Props ) {
     if (props.visualMode === 'dark_mode') {
         icon  = <FontAwesomeIcon icon={faMoon} size='xl' aria-hidden="true"/>
     } else {

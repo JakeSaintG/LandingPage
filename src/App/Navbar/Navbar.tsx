@@ -12,7 +12,7 @@ interface Props extends React.HTMLAttributes<HTMLElement>{
     toggleSettings: () => void
 }
 
-export default function Navbar(props: Props) {
+export function Navbar(props: Props) {
     const [navContentVisible, setNavContentVisible] = useState(false);
 
     let toggled = "";

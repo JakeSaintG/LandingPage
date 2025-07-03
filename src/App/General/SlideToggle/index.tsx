@@ -1,1 +1,1 @@
-export { default } from './SlideToggle';
+export { SlideToggle } from './SlideToggle';

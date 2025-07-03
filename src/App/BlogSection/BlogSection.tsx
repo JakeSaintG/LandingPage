@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import styles from './BlogSection.module.css';
-import PageSection from '../General/PageSection';
+import { PageSection } from '../General/PageSection';
 import blogs from '../../assets/blogs.json';
 import { blog } from './BlogPreview/BlogPreview';
 import BlogPreview from './BlogPreview';
@@ -19,7 +19,7 @@ const blogPreviews = blogs.reduce((acc, proj) => {
     return acc;
 }, [] as blog[]);
 
-export default function BlogSection(props: Props) {
+export function BlogSection(props: Props) {
     const { visualMode } = props;
     let key = 0;
 

@@ -1,1 +1,1 @@
-export { default } from './ContactFooter';
+export { ContactFooter } from './ContactFooter';

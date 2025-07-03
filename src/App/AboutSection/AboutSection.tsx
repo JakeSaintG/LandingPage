@@ -1,5 +1,5 @@
 import { useLayoutEffect, useEffect, useRef, useState } from 'react';
-import PageSection from '../General/PageSection';
+import { PageSection } from '../General/PageSection';
 import styles from './AboutSection.module.css';
 import tidbitsJson from '../../assets/tidbits.json'
 import elevatorPitchJson from '../../assets/elevator_pitch.json';
@@ -26,7 +26,7 @@ const fisherYatesShuffle = (array: string[]) => {
 
 const decorativeImgPath = './src/assets/img/decorative';
 
-export default function AboutSection(props: Props) {
+export function AboutSection(props: Props) {
     const [decorativeImgIndex, setDecorativeImgIndex] = useState(0);
     
     const [tidbit, setTidbit] = useState('Hello!');
