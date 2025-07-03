@@ -1,18 +1,24 @@
 import styles from './Project.module.css';
-import cSharpImg from '../../../assets/img/lang_icons/csharp.png';
-import angularImg from '../../../assets/img/lang_icons/angular.png';
-import htmlImg from '../../../assets/img/lang_icons/html.png';
-import javascriptImg from '../../../assets/img/lang_icons/javascript.png';
-import typescriptImg from '../../../assets/img/lang_icons/typescript.png';
-import powershellImg from '../../../assets/img/lang_icons/powershell.png';
-import dartImg from '../../../assets/img/lang_icons/dart.png';
-import rustImg from '../../../assets/img/lang_icons/rust.png';
-import sqlImg from '../../../assets/img/lang_icons/sql.png';
-import denoImg from '../../../assets/img/lang_icons/deno.png';
-import nodeJsImg from '../../../assets/img/lang_icons/nodejs.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
+
+/* TODO: Should I do these a little more dynamically?
+It would look nice to do like I do in aboutsection...
+...but I like the more "safe" nature of my solution here.*/
+
+// Icon imports (eww I hate all the ../)
+import cSharpImg from '../../../../public/assets/img/lang_icons/csharp.png';
+import angularImg from '../../../../public/assets/img/lang_icons/angular.png';
+import htmlImg from '../../../../public/assets/img/lang_icons/html.png';
+import javascriptImg from '../../../../public/assets/img/lang_icons/javascript.png';
+import typescriptImg from '../../../../public/assets/img/lang_icons/typescript.png';
+import powershellImg from '../../../../public/assets/img/lang_icons/powershell.png';
+import dartImg from '../../../../public/assets/img/lang_icons/dart.png';
+import rustImg from '../../../../public/assets/img/lang_icons/rust.png';
+import sqlImg from '../../../../public/assets/img/lang_icons/sql.png';
+import denoImg from '../../../../public/assets/img/lang_icons/deno.png';
+import nodeJsImg from '../../../../public/assets/img/lang_icons/nodejs.png';
 
 interface Props extends React.HTMLAttributes<HTMLElement> {
     visualMode: string;
