@@ -3,10 +3,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 
-/* TODO: Should I do these a little more dynamically?
-It would look nice to do like I do in aboutsection...
-...but I like the more "safe" nature of my solution here.*/
-
 // Icon imports (eww I hate all the ../)
 import cSharpImg from '../../../../public/assets/img/lang_icons/csharp.png';
 import angularImg from '../../../../public/assets/img/lang_icons/angular.png';

@@ -51,7 +51,7 @@ export default function BlogSection(props: Props) {
 
         return (
             <PageSection title="Blog" id="blogSection" style={contentStyle} visualMode={visualMode} >
-                <div className={`${styles.blog_header} `}>
+                <div className={styles.blog_header}>
                     <button className={styles[visualMode]} onClick={() => toggleIsBlogDisplayed()} aria-label="go back">
                         <FontAwesomeIcon icon={faArrowLeftLong} size='xl' aria-hidden="true" aria-label="back"/>
                     </button>
