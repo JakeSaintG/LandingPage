@@ -1,1 +1,1 @@
-export { default } from './SizeWarning';
+export { SizeWarning } from './SizeWarning';

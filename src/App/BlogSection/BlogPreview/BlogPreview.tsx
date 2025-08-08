@@ -1,5 +1,4 @@
 import styles from './BlogPreview.module.css';
-import blog from '../BlogSection';
 
 interface Props extends React.HTMLAttributes<HTMLElement> {
     visualMode: string;

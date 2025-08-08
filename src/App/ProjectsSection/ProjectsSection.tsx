@@ -1,5 +1,5 @@
 import styles from './ProjectsSection.module.css'
-import PageSection from '../General/PageSection';
+import { PageSection } from '../General/PageSection';
 import projects from '../../assets/projects.json'
 import Project from './Project/Project';
 import { project } from './Project/Project';
@@ -13,7 +13,7 @@ const contentStyle: React.CSSProperties = { display: 'flex', flexDirection: 'col
 
 let displayedProjects: project[] = [];
 
-export default function ProjectsSection(props: Props) {
+export function ProjectsSection(props: Props) {
     let key = 0;
 
     const [allProjectsShown, setAllProjectsShown] = useState(false);

@@ -6,8 +6,7 @@ interface Props extends React.HTMLAttributes<HTMLElement>{
     visualMode: string
 }
 
-export default function SizeWarning( props: Props ) {
-
+export function SizeWarning( props: Props ) {
     return (
         <div className={`${styles.size_warning} ${styles[props.visualMode]}`}>
             <FontAwesomeIcon

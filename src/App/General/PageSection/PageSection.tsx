@@ -10,7 +10,7 @@ interface Props extends React.HTMLAttributes<HTMLElement>{
     header?: string
 }
 
-export default function PageSection( props: Props ) {
+export function PageSection( props: Props ) {
     let h = (<h2 className={styles.section_title}>{props.title}</h2>);
 
     if (props.header === 'h1') h = (<h1 className={styles.section_title}>{props.title}</h1>);

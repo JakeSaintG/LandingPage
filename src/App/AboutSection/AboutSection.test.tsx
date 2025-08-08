@@ -1,4 +1,4 @@
-import AboutSection from './AboutSection';
+import { AboutSection } from './AboutSection';
 import { cleanup, render } from '@testing-library/react';
 import { test, afterEach, beforeEach, vi } from 'vitest';
 // import { cleanup, render, screen } from '@testing-library/react';

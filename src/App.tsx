@@ -1,13 +1,13 @@
 import { useEffect, useRef, useState } from "react";
 import styles from "./App.module.css";
-import Navbar from "./App/Navbar";
-import SlideToggle from "./App/General/SlideToggle";
-import AboutSection from "./App/AboutSection";
-import ProjectsSection from "./App/ProjectsSection";
-import ExperienceSection from "./App/ExperienceSection";
-import BlogSection from "./App/BlogSection";
-import ContactFooter from "./App/ContactFooter";
-import SizeWarning from "./App/General/SizeWarning";
+import { Navbar } from "./App/Navbar";
+import { SlideToggle } from "./App/General/SlideToggle";
+import { AboutSection } from "./App/AboutSection";
+import { ProjectsSection } from "./App/ProjectsSection";
+import { ExperienceSection } from "./App/ExperienceSection";
+import { BlogSection } from "./App/BlogSection";
+import { ContactFooter } from "./App/ContactFooter";
+import { SizeWarning } from "./App/General/SizeWarning";
 
 export default function App() {
     // TODO: retain visual mode in local storage.

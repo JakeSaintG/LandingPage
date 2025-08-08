@@ -3,7 +3,7 @@ import styles from './ContactFooter.module.css';
 import { faBluesky, faDiscord, faTiktok } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
-export default function ContactFooter() {
+export function ContactFooter() {
     return (
         <footer >
             <div className={styles.socials}>
